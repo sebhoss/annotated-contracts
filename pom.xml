@@ -17,17 +17,17 @@
   <!--                                  PARENT                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
+    <groupId>com.github.sebhoss</groupId>
+    <artifactId>java-parent</artifactId>
+    <version>1.0.0</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <groupId>com.github.sebhoss.contract</groupId>
-  <artifactId>parent</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <artifactId>annotated-contracts</artifactId>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
   <inceptionYear>2012</inceptionYear>
   <url>http://github.com/sebhoss/annotated-contracts</url>
@@ -38,41 +38,40 @@
   <!--                                 MODULES                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
-    <module>annotations</module>
-    <module>testutils</module>
-    <module>aop</module>
-    <module>verifier</module>
-    <module>paranamer</module>
-    <module>el</module>
-    <module>juel</module>
-    <module>javascript</module>
-    <module>jexl</module>
-    <module>mvel</module>
-    <module>ognl</module>
-    <module>spring</module>
-    <module>guice</module>
-    <module>guice-example</module>
+    <module>contract-annotations</module>
+    <module>contract-testutils</module>
+    <module>contract-aop</module>
+    <module>contract-verifier</module>
+    <module>contract-paranamer</module>
+    <module>contract-el</module>
+    <module>contract-juel</module>
+    <module>contract-javascript</module>
+    <module>contract-jexl</module>
+    <module>contract-mvel</module>
+    <module>contract-ognl</module>
+    <module>contract-spring</module>
+    <module>contract-guice</module>
+    <module>contract-guice-example</module>
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                 LICENSE                                 -->
+  <!--                                PROPERTIES                               -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <licenses>
-    <license>
-      <name>WTFPL - Do What The Fuck You Want To Public License</name>
-      <url>http://sam.zoy.org/wtfpl/COPYING</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+  <properties>
+    <scm.connection>scm:git:git://github.com/sebhoss/annotated-contracts.git</scm.connection>
+    <scm.developerConnection>scm:git:git@github.com:sebhoss/annotated-contracts.git</scm.developerConnection>
+    <scm.url>http://github.com/sebhoss/annotated-contracts</scm.url>
+    <issueManagement.url>http://github.com/sebhoss/annotated-contracts/issues</issueManagement.url>
+  </properties>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                                  SOURCE                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <scm>
-    <connection>scm:git:git://github.com/sebhoss/annotated-contracts.git</connection>
-    <developerConnection>scm:git:git@github.com:sebhoss/annotated-contracts.git</developerConnection>
+    <connection>${scm.connection}</connection>
+    <developerConnection>${scm.developerConnection}</developerConnection>
     <tag>master</tag>
-    <url>${project.url}</url>
+    <url>${scm.url}</url>
   </scm>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -80,186 +79,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <issueManagement>
     <system>GitHub</system>
-    <url>${project.url}/issues</url>
+    <url>${issueManagement.url}</url>
   </issueManagement>
 
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                DEVELOPERS                               -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <developers>
-    <developer>
-      <id>HoS</id>
-      <name>Sebastian Hoß</name>
-      <email>mail@shoss.de</email>
-      <roles>
-        <role>Developer</role>
-      </roles>
-      <timezone>1</timezone>
-    </developer>
-  </developers>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                PROPERTIES                               -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <properties>
-    <global.encoding>UTF-8</global.encoding>
-    <global.java>1.7</global.java>
-    <coverage>0</coverage>
-
-    <project.build.sourceEncoding>${global.encoding}</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>${global.encoding}</project.reporting.outputEncoding>
-  </properties>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                   BUILD                                 -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.3.7</version>
-        <executions>
-          <execution>
-            <id>bundle-manifest</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>manifest</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <instructions>
-            <Bundle-Copyright>Sebastian Hoß (mail@shoss.de)</Bundle-Copyright>
-            <Bundle-Category>DbC</Bundle-Category>
-            <Bundle-DocURL>${project.url}</Bundle-DocURL>
-            <Bundle-RequiredExecutionEnvironment>JavaSE-1.7</Bundle-RequiredExecutionEnvironment>
-          </instructions>
-        </configuration>
-      </plugin>
-
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>2.1.2</version>
-        <configuration>
-          <archive>
-            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-          </archive>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <outputDirectory>${project.build.directory}/api</outputDirectory>
-          <archive>
-            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-          </archive>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.5.1</version>
-        <configuration>
-          <source>${global.java}</source>
-          <target>${global.java}</target>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <archive>
-            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-          </archive>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>2.5</version>
-        <configuration>
-          <effort>Max</effort>
-          <threshold>Low</threshold>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>2.7.1</version>
-        <configuration>
-          <failurePriority>0</failurePriority>
-          <minimumTokens>24</minimumTokens>
-          <targetJdk>${global.java}</targetJdk>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-              <goal>cpd-check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>2.5.1</version>
-        <configuration>
-          <check>
-            <haltOnFailure>true</haltOnFailure>
-            <branchRate>${coverage}</branchRate>
-            <lineRate>${coverage}</lineRate>
-            <totalBranchRate>${coverage}</totalBranchRate>
-            <totalLineRate>${coverage}</totalLineRate>
-            <packageLineRate>${coverage}</packageLineRate>
-            <packageBranchRate>${coverage}</packageBranchRate>
-          </check>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>clean</goal>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 </project>
