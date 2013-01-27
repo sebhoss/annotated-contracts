@@ -1,4 +1,3 @@
-annotated-contracts
-===================
+h1. annotated-contracts
 
-Design by Contract based on annotations
+h2. Design by Contract based on annotations

@@ -7,29 +7,32 @@
  */
 package com.github.sebhoss.contract.annotation;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+
 /**
  * A single clause of a method contract.
  */
+@SuppressWarnings(CompilerWarnings.NLS)
 public @interface Clause {
 
-    /** TODO: Write documentation! */
-    public static final String THIS   = "this";  //$NON-NLS-1$
+    /** Identifier for the enclosing instance whose method is called. */
+    public static final String THIS   = "this";
 
-    /** TODO: Write documentation! */
-    public static final String RETURN = "return"; //$NON-NLS-1$
+    /** Identifier for the returned value of the method call (if any). */
+    public static final String RETURN = "return";
 
     /**
-     * @return TODO: Write documentation!
+     * @return The boolean expression to check.
      */
     String value();
 
     /**
-     * @return TODO: Write documentation!
+     * @return The error message to use.
      */
     String message() default "";
 
     /**
-     * @return TODO: Write documentation!
+     * @return The exception to throw.
      */
     Class<? extends RuntimeException> exception() default IllegalArgumentException.class;
 

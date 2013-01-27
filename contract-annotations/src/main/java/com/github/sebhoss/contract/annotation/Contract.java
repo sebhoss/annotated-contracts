@@ -15,7 +15,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * TODO: Write documentation!
+ * Defines a method-level contract between a caller and a called instance.
  */
 @Documented
 @Inherited
@@ -24,12 +24,12 @@ import java.lang.annotation.Target;
 public @interface Contract {
 
     /**
-     * @return TODO: Write documentation!
+     * @return Set of preconditions which must be fulfilled before the method can be run.
      */
     Clause[] preconditions() default {};
 
     /**
-     * @return TODO: Write documentation!
+     * @return Set of postconditions which must be fulfilled before the method can return.
      */
     Clause[] postconditions() default {};
 
