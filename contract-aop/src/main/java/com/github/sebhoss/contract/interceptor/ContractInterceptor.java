@@ -1,8 +1,10 @@
-/* This program is free software. It comes without any warranty, to
+/**
+ * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
  * and/or modify it under the terms of the Do What The Fuck You Want
  * To Public License, Version 2, as published by Sam Hocevar. See
- * http://sam.zoy.org/wtfpl/COPYING for more details. */
+ * http://www.wtfpl.net/ for more details.
+ */
 package com.github.sebhoss.contract.interceptor;
 
 import javax.inject.Inject;
@@ -20,8 +22,8 @@ public final class ContractInterceptor implements MethodInterceptor {
 
     @Override
     public Object invoke(final MethodInvocation invocation) throws Throwable {
-        final ContractVerifier contractVerifier = this.contractVerifierFactory.createContractVerifier(invocation.getThis(),
-                invocation.getMethod(), invocation.getArguments());
+        final ContractVerifier contractVerifier = this.contractVerifierFactory.createContractVerifier(
+                invocation.getThis(), invocation.getMethod(), invocation.getArguments());
 
         if (contractVerifier.hasPreconditions()) {
             contractVerifier.verifyPreconditions();
