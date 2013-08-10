@@ -1,4 +1,4 @@
-/**
+/*
  * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
  * and/or modify it under the terms of the Do What The Fuck You Want
@@ -15,6 +15,9 @@ import org.aopalliance.intercept.MethodInvocation;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 
+/**
+ * AOP interceptor which verifies a method contract.
+ */
 public final class ContractInterceptor implements MethodInterceptor {
 
     @Inject
