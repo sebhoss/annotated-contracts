@@ -5,18 +5,8 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://www.wtfpl.net/ for more details.
  */
+@NotNullByDefault
 package com.github.sebhoss.contract.verifier;
 
-import javax.el.ExpressionFactory;
+import com.github.sebhoss.common.annotation.NotNullByDefault;
 
-import com.google.inject.AbstractModule;
-
-public class JuelModule extends AbstractModule {
-
-    @Override
-    protected void configure() {
-        this.bind(ExpressionFactory.class).toInstance(ExpressionFactory.newInstance());
-        this.bind(ContractContextFactory.class).to(JuelBasedContractContextFactory.class);
-    }
-
-}
