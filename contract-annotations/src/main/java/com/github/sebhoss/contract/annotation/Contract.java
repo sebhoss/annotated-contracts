@@ -1,4 +1,4 @@
-/**
+/*
  * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
  * and/or modify it under the terms of the Do What The Fuck You Want
@@ -14,6 +14,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import javax.annotation.Nonnull;
+
 /**
  * Defines a method-level contract between a caller and a called instance.
  */
@@ -26,11 +28,13 @@ public @interface Contract {
     /**
      * @return Set of preconditions which must be fulfilled before the method can be run.
      */
+    @Nonnull
     Clause[] preconditions() default {};
 
     /**
      * @return Set of postconditions which must be fulfilled before the method can return.
      */
+    @Nonnull
     Clause[] postconditions() default {};
 
 }
