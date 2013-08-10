@@ -1,4 +1,4 @@
-/**
+/*
  * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
  * and/or modify it under the terms of the Do What The Fuck You Want
@@ -7,29 +7,36 @@
  */
 package com.github.sebhoss.contract.verifier;
 
+import com.github.sebhoss.contract.annotation.Contract;
+
 /**
- * TODO: Write documentation!
- * 
+ * Verifies a {@link Contract}.
  */
 public interface ContractVerifier {
 
     /**
-     * @return TODO: Write documentation!
+     * @return <code>true</code> if the contract has {@link Contract#preconditions() preconditions}, <code>false</code>
+     *         otherwise.
      */
     boolean hasPreconditions();
 
     /**
-     * @return TODO: Write documentation!
+     * @return <code>true</code> if the contract has {@link Contract#postconditions() postconditions},
+     *         <code>false</code> otherwise.
      */
     boolean hasPostconditions();
 
     /**
-     * TODO: Write documentation!
+     * Verifies the {@link Contract#preconditions() preconditions} of a contract.
      */
     void verifyPreconditions();
 
     /**
+     * Verifies the {@link Contract#postconditions() postconditions} of a contract under consideration of a given method
+     * result.
+     * 
      * @param invocationResult
+     *            The result of the method call. <b>May be <code>null</code></b>. TODO: Use @Nullable annotation
      */
     void verifyPostconditions(Object invocationResult);
 

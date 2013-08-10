@@ -1,3 +1,10 @@
+/*
+ * This program is free software. It comes without any warranty, to
+ * the extent permitted by applicable law. You can redistribute it
+ * and/or modify it under the terms of the Do What The Fuck You Want
+ * To Public License, Version 2, as published by Sam Hocevar. See
+ * http://www.wtfpl.net/ for more details.
+ */
 /**
  * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
@@ -14,6 +21,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.utils.MethodFactory;
 
@@ -21,7 +29,7 @@ import com.github.sebhoss.contract.utils.MethodFactory;
  * TODO: Write documentation!
  * 
  */
-@SuppressWarnings({ "static-method", "nls" })
+@SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class AnnotationBasedContractRetrievalTest {
 
     /** TODO: Write documentation! */
@@ -29,11 +37,10 @@ public final class AnnotationBasedContractRetrievalTest {
     public final ExpectedException thrown = ExpectedException.none();
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldThrowNPEForNullMethod() throws Exception {
+    public void shouldThrowNPEForNullMethod() {
         // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
         this.thrown.expect(NullPointerException.class);

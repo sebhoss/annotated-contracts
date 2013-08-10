@@ -1,4 +1,4 @@
-/**
+/*
  * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
  * and/or modify it under the terms of the Do What The Fuck You Want
@@ -9,6 +9,7 @@ package com.github.sebhoss.contract.utils;
 
 import java.lang.reflect.Method;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
@@ -16,12 +17,8 @@ import com.github.sebhoss.contract.annotation.Contract;
  * TODO: Write documentation!
  * 
  */
-@SuppressWarnings("nls")
+@SuppressWarnings(CompilerWarnings.NLS)
 public final class MethodFactory {
-
-    private MethodFactory() {
-        // Utility class
-    }
 
     /**
      * @return TODO: Write documentation!
@@ -32,6 +29,10 @@ public final class MethodFactory {
      */
     public static Method createMethodWithoutContract() throws NoSuchMethodException, SecurityException {
         final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithoutContract", new Class[] {});
+
+        if (declaredMethod == null) {
+            throw new NullPointerException("Could not create method!");
+        }
 
         return declaredMethod;
     }
@@ -45,6 +46,10 @@ public final class MethodFactory {
      */
     public static Method createMethodWithEmptyContract() throws NoSuchMethodException, SecurityException {
         final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithEmptyContract", new Class[] {});
+
+        if (declaredMethod == null) {
+            throw new NullPointerException("Could not create method!");
+        }
 
         return declaredMethod;
     }
@@ -60,6 +65,10 @@ public final class MethodFactory {
         final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithPrecondition",
                 new Class[] { int.class });
 
+        if (declaredMethod == null) {
+            throw new NullPointerException("Could not create method!");
+        }
+
         return declaredMethod;
     }
 
@@ -73,7 +82,15 @@ public final class MethodFactory {
     public static Method createMethodWithPostcondition() throws NoSuchMethodException, SecurityException {
         final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithPostcondition", new Class[] {});
 
+        if (declaredMethod == null) {
+            throw new NullPointerException("Could not create method!");
+        }
+
         return declaredMethod;
+    }
+
+    private MethodFactory() {
+        // Utility class
     }
 
     private static interface Methods {
