@@ -14,10 +14,17 @@ import com.github.sebhoss.contract.annotation.Clause;
 
 import de.odysseus.el.util.SimpleContext;
 
+/**
+ * JUEL-based implementation of the {@link ContractContextFactory}.
+ */
 public final class JuelBasedContractContextFactory implements ContractContextFactory {
 
     final ExpressionFactory expressionFactory;
 
+    /**
+     * @param expressionFactory
+     *            The expression factory to use.
+     */
     @Inject
     public JuelBasedContractContextFactory(final ExpressionFactory expressionFactory) {
         this.expressionFactory = expressionFactory;

@@ -14,11 +14,20 @@ import org.apache.commons.jexl2.JexlEngine;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * JEXL-based implementation of the {@link ContractContext}.
+ */
 public final class JEXLContractContext implements ContractContext {
 
     private final JexlContext jexlContext;
     private final JexlEngine  jexlEngine;
 
+    /**
+     * @param jexlContext
+     *            The JEXL context to use.
+     * @param jexlEngine
+     *            The JEXL engine to use.
+     */
     @Inject
     public JEXLContractContext(final JexlContext jexlContext, final JexlEngine jexlEngine) {
         this.jexlContext = jexlContext;

@@ -14,6 +14,9 @@ import org.apache.commons.jexl2.MapContext;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * JEXL-based implementation of the {@link ContractContextFactory}.
+ */
 public final class JEXLBasedContractContextFactory implements ContractContextFactory {
 
     private final JexlEngine jexlEngine;

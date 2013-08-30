@@ -13,10 +13,17 @@ import javax.inject.Inject;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * MVEL-based implementation of the {@link ContractContextFactory}.
+ */
 public final class MVELBasedContractContextFactory implements ContractContextFactory {
 
     private final Map<String, Object> constants;
 
+    /**
+     * @param constants
+     *            The MVEL constants to use.
+     */
     @Inject
     public MVELBasedContractContextFactory(final Map<String, Object> constants) {
         this.constants = constants;

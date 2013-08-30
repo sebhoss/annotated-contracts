@@ -10,6 +10,9 @@ import ognl.OgnlContext;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * OGNL-based implementation of the {@link ContractContextFactory}.
+ */
 public final class OgnlBasedContractContextFactory implements ContractContextFactory {
 
     @Override

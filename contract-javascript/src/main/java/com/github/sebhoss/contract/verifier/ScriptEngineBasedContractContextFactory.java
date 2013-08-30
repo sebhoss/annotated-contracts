@@ -11,10 +11,17 @@ import javax.script.ScriptEngine;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * {@link ScriptEngine}-based implementation of the {@link ContractContextFactory}.
+ */
 public final class ScriptEngineBasedContractContextFactory implements ContractContextFactory {
 
     private final ScriptEngine engine;
 
+    /**
+     * @param engine
+     *            The ScriptEngine to use.
+     */
     @Inject
     public ScriptEngineBasedContractContextFactory(final ScriptEngine engine) {
         this.engine = engine;

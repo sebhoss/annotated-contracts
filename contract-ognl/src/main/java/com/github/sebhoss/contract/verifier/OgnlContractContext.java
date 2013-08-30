@@ -14,10 +14,17 @@ import ognl.OgnlException;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * OGNL-based implementation of the {@link ContractContext}.
+ */
 public final class OgnlContractContext implements ContractContext {
 
     private final OgnlContext ognlContext;
 
+    /**
+     * @param ognlContext
+     *            The backing OGNL context to use.
+     */
     @Inject
     public OgnlContractContext(final OgnlContext ognlContext) {
         this.ognlContext = ognlContext;

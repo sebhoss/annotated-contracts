@@ -14,10 +14,17 @@ import org.mvel2.MVEL;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * MVEL-based implementation of the {@link ContractContext}.
+ */
 public final class MVELContractContext implements ContractContext {
 
     private final Map<String, Object> tokens;
 
+    /**
+     * @param tokens
+     *            The MVEL tokens to check agains.
+     */
     @Inject
     public MVELContractContext(final Map<String, Object> tokens) {
         this.tokens = tokens;

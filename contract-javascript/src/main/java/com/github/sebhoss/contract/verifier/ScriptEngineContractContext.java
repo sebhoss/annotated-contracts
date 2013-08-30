@@ -12,10 +12,17 @@ import javax.script.ScriptException;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * {@link ScriptEngine}-based implementation of the {@link ContractContext}.
+ */
 public final class ScriptEngineContractContext implements ContractContext {
 
     private final ScriptEngine engine;
 
+    /**
+     * @param engine
+     *            The ScriptEngine to use.
+     */
     @Inject
     public ScriptEngineContractContext(final ScriptEngine engine) {
         this.engine = engine;
