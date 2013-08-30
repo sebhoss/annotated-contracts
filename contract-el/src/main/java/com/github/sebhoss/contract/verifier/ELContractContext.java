@@ -12,11 +12,20 @@ import javax.el.ValueExpression;
 
 import com.github.sebhoss.contract.annotation.Clause;
 
+/**
+ * {@link ContractContext} which uses an {@link ELContext} as basis.
+ */
 public final class ELContractContext implements ContractContext {
 
     private final ELContext         elContext;
     private final ExpressionFactory expressionFactory;
 
+    /**
+     * @param elContext
+     *            The EL-context to use.
+     * @param expressionFactory
+     *            The EL-expression-factory to use.
+     */
     public ELContractContext(final ELContext elContext, final ExpressionFactory expressionFactory) {
         this.elContext = elContext;
         this.expressionFactory = expressionFactory;
