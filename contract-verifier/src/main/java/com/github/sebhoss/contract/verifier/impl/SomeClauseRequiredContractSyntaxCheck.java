@@ -1,9 +1,8 @@
 /*
- * This program is free software. It comes without any warranty, to
- * the extent permitted by applicable law. You can redistribute it
- * and/or modify it under the terms of the Do What The Fuck You Want
- * To Public License, Version 2, as published by Sam Hocevar. See
- * http://www.wtfpl.net/ for more details.
+ * Copyright © 2012 Sebastian Hoß <mail@shoss.de>
+ * This work is free. You can redistribute it and/or modify it under the
+ * terms of the Do What The Fuck You Want To Public License, Version 2,
+ * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
 package com.github.sebhoss.contract.verifier.impl;
 
@@ -17,9 +16,9 @@ public final class SomeClauseRequiredContractSyntaxCheck implements ContractSynt
 
     @Override
     public void validate(final Contract contract) {
-    	if (contract == null) {
-    		throw new NullPointerException("There is no contract!");
-    	}
+        if (contract == null) {
+            throw new NullPointerException("There is no contract!");
+        }
         if (contract.preconditions().length == 0 && contract.postconditions().length == 0) {
             throw new IllegalStateException("Don't use @Contract without any Pre- or Postconditions!"); //$NON-NLS-1$
         }

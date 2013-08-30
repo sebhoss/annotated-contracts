@@ -1,9 +1,8 @@
 /*
- * This program is free software. It comes without any warranty, to
- * the extent permitted by applicable law. You can redistribute it
- * and/or modify it under the terms of the Do What The Fuck You Want
- * To Public License, Version 2, as published by Sam Hocevar. See
- * http://www.wtfpl.net/ for more details.
+ * Copyright © 2012 Sebastian Hoß <mail@shoss.de>
+ * This work is free. You can redistribute it and/or modify it under the
+ * terms of the Do What The Fuck You Want To Public License, Version 2,
+ * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
 package com.github.sebhoss.contract.verifier.impl;
 
@@ -16,7 +15,6 @@ import com.github.sebhoss.contract.verifier.ContractVerifier;
 
 /**
  * TODO: Write documentation!
- * 
  */
 public final class DelegatingContractVerifier implements ContractVerifier {
 
@@ -43,31 +41,31 @@ public final class DelegatingContractVerifier implements ContractVerifier {
 
     @Override
     public boolean hasPreconditions() {
-        return this.contract.preconditions().length > 0;
+        return contract.preconditions().length > 0;
     }
 
     @Override
     public boolean hasPostconditions() {
-        return this.contract.postconditions().length > 0;
+        return contract.postconditions().length > 0;
     }
 
     @Override
     public void verifyPreconditions() {
-        this.checkClauses(this.contract.preconditions());
+        checkClauses(contract.preconditions());
     }
 
     @Override
     public void verifyPostconditions(final Object invocationResult) {
-        this.context.setInvocationResult(invocationResult);
+        context.setInvocationResult(invocationResult);
 
-        this.checkClauses(this.contract.postconditions());
+        checkClauses(contract.postconditions());
     }
 
     @SuppressWarnings(CompilerWarnings.NULL)
     private void checkClauses(final Clause[] clauses) {
         for (final Clause clause : clauses) {
-            if (this.context.isInViolationWith(clause)) {
-                throw this.exceptionFactory.breachOfContract(clause);
+            if (context.isInViolationWith(clause)) {
+                throw exceptionFactory.breachOfContract(clause);
             }
         }
     }

@@ -1,9 +1,8 @@
 /*
- * This program is free software. It comes without any warranty, to
- * the extent permitted by applicable law. You can redistribute it
- * and/or modify it under the terms of the Do What The Fuck You Want
- * To Public License, Version 2, as published by Sam Hocevar. See
- * http://www.wtfpl.net/ for more details.
+ * Copyright © 2012 Sebastian Hoß <mail@shoss.de>
+ * This work is free. You can redistribute it and/or modify it under the
+ * terms of the Do What The Fuck You Want To Public License, Version 2,
+ * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
 package com.github.sebhoss.contract.verifier;
 
@@ -33,7 +32,7 @@ public final class ParanamerBasedParameterNamesLookup implements ParameterNamesL
 
     @Override
     public String[] lookupParameterNames(final Method method) {
-        final String[] lookupParameterNames = this.namer.lookupParameterNames(method);
+        final String[] lookupParameterNames = namer.lookupParameterNames(method);
 
         if (lookupParameterNames == null) {
             throw new NullPointerException("could not look up parameters"); //$NON-NLS-1$

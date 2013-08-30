@@ -1,9 +1,8 @@
 /*
- * This program is free software. It comes without any warranty, to
- * the extent permitted by applicable law. You can redistribute it
- * and/or modify it under the terms of the Do What The Fuck You Want
- * To Public License, Version 2, as published by Sam Hocevar. See
- * http://www.wtfpl.net/ for more details.
+ * Copyright © 2012 Sebastian Hoß <mail@shoss.de>
+ * This work is free. You can redistribute it and/or modify it under the
+ * terms of the Do What The Fuck You Want To Public License, Version 2,
+ * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
 package com.github.sebhoss.guice;
 
@@ -18,7 +17,7 @@ public class InsuranceCompany {
             @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
             @Clause("damage <= 5000") }, postconditions = { @Clause("return >= 0"), @Clause("return <= 2000") })
     public double calculateCover(final double damage) {
-        return this.coverRate * damage;
+        return coverRate * damage;
     }
 
 }

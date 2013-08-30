@@ -1,9 +1,8 @@
 /*
- * This program is free software. It comes without any warranty, to
- * the extent permitted by applicable law. You can redistribute it
- * and/or modify it under the terms of the Do What The Fuck You Want
- * To Public License, Version 2, as published by Sam Hocevar. See
- * http://www.wtfpl.net/ for more details.
+ * Copyright © 2012 Sebastian Hoß <mail@shoss.de>
+ * This work is free. You can redistribute it and/or modify it under the
+ * terms of the Do What The Fuck You Want To Public License, Version 2,
+ * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
 package com.github.sebhoss.contract.verifier.impl;
 
@@ -25,7 +24,6 @@ import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
 
 /**
  * TODO: Write documentation!
- * 
  */
 public final class InjectableContractVerifierFactory implements ContractVerifierFactory {
 
@@ -67,13 +65,13 @@ public final class InjectableContractVerifierFactory implements ContractVerifier
     @SuppressWarnings(CompilerWarnings.NULL)
     @Override
     public ContractVerifier createContractVerifier(final Object instance, final Method method, final Object[] arguments) {
-        final Contract contract = this.contractRetrieval.retrieveContract(method);
-        this.contractSyntaxCheck.validate(contract);
-        final String[] parameterNames = this.parameterNamesLookup.lookupParameterNames(method);
-        this.contractSemanticCheck.validate(contract, parameterNames);
-        final ContractContext context = this.contractContextFactory.createContext(instance, arguments, parameterNames);
+        final Contract contract = contractRetrieval.retrieveContract(method);
+        contractSyntaxCheck.validate(contract);
+        final String[] parameterNames = parameterNamesLookup.lookupParameterNames(method);
+        contractSemanticCheck.validate(contract, parameterNames);
+        final ContractContext context = contractContextFactory.createContext(instance, arguments, parameterNames);
 
-        return new DelegatingContractVerifier(contract, context, this.contractExceptionFactory);
+        return new DelegatingContractVerifier(contract, context, contractExceptionFactory);
     }
 
 }
