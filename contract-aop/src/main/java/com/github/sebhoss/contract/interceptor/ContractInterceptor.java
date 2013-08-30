@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 
@@ -22,6 +23,7 @@ public final class ContractInterceptor implements MethodInterceptor {
     @Inject
     private ContractVerifierFactory contractVerifierFactory;
 
+    @SuppressWarnings(CompilerWarnings.NULL)
     @Override
     public Object invoke(final MethodInvocation invocation) throws Throwable {
         final ContractVerifier contractVerifier = contractVerifierFactory.createContractVerifier(invocation.getThis(),
