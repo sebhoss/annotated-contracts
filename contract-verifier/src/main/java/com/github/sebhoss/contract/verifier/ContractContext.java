@@ -9,18 +9,21 @@ package com.github.sebhoss.contract.verifier;
 import com.github.sebhoss.contract.annotation.Clause;
 
 /**
- * TODO: Write documentation!
+ * A contract context encapsulates most likely a method invocation and therefore knows about the parameter-names and
+ * -values. It is used by an instance of {@link ContractVerifier}.
  */
 public interface ContractContext {
 
     /**
      * @param invocationResult
+     *            The result of the encapsulated method invocation.
      */
     void setInvocationResult(Object invocationResult);
 
     /**
      * @param clause
-     * @return TODO: Write documentation!
+     *            The clause to check against.
+     * @return <code>true</code> if this context is in violation with the given clause, <code>false</code> otherwise.
      */
     boolean isInViolationWith(Clause clause);
 

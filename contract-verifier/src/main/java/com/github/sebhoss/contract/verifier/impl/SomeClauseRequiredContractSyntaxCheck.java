@@ -16,9 +16,6 @@ public final class SomeClauseRequiredContractSyntaxCheck implements ContractSynt
 
     @Override
     public void validate(final Contract contract) {
-        if (contract == null) {
-            throw new NullPointerException("There is no contract!");
-        }
         if (contract.preconditions().length == 0 && contract.postconditions().length == 0) {
             throw new IllegalStateException("Don't use @Contract without any Pre- or Postconditions!"); //$NON-NLS-1$
         }

@@ -9,13 +9,14 @@ package com.github.sebhoss.contract.verifier;
 import java.lang.reflect.Method;
 
 /**
- * TODO: Write documentation!
+ * Looks-up the used parameter-names on a method declaration.
  */
 public interface ParameterNamesLookup {
 
     /**
      * @param method
-     * @return TODO: Write documentation!
+     *            The method to investigate.
+     * @return The found parameter-names.
      */
     String[] lookupParameterNames(Method method);
 

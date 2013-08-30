@@ -9,13 +9,15 @@ package com.github.sebhoss.contract.verifier;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Performs a semantic check of a contract defition.
  */
 public interface ContractSemanticCheck {
 
     /**
      * @param contract
+     *            The contract to check.
      * @param parameterNames
+     *            The parameter-names, most likely taken from a method declaration.
      */
     void validate(Contract contract, String[] parameterNames);
 

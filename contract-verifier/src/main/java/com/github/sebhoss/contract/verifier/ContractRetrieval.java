@@ -11,13 +11,15 @@ import java.lang.reflect.Method;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Retrieves the contract definition from a method declaration. Note that contract do not have to be defined by
+ * annotations necessarily.
  */
 public interface ContractRetrieval {
 
     /**
      * @param method
-     * @return TODO: Write documentation!
+     *            The method to create a contract for.
+     * @return A suitable contract for the given method.
      */
     Contract retrieveContract(Method method);
 

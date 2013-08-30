@@ -10,7 +10,6 @@ import java.lang.reflect.Method;
 
 import javax.inject.Inject;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractContext;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
@@ -61,8 +60,6 @@ public final class InjectableContractVerifierFactory implements ContractVerifier
         this.contractExceptionFactory = contractExceptionFactory;
     }
 
-    // XXX: Required until Eclipse can do null analysis on fields
-    @SuppressWarnings(CompilerWarnings.NULL)
     @Override
     public ContractVerifier createContractVerifier(final Object instance, final Method method, final Object[] arguments) {
         final Contract contract = contractRetrieval.retrieveContract(method);

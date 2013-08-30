@@ -14,7 +14,7 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 
 /**
- * TODO: Write documentation!
+ * Delegates syntax checks to a set of encapsulated syntax check instances.
  */
 public final class DelegatingContractSyntaxCheck implements ContractSyntaxCheck {
 
@@ -22,7 +22,7 @@ public final class DelegatingContractSyntaxCheck implements ContractSyntaxCheck 
 
     /**
      * @param checks
-     *            TODO: Write documentation!
+     *            The syntax checks to perform.
      */
     @Inject
     public DelegatingContractSyntaxCheck(final Set<ContractSyntaxCheck> checks) {

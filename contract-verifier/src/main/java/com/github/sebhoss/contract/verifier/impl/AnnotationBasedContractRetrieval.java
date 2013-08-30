@@ -12,7 +12,7 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
 
 /**
- * TODO: Write documentation!
+ * Retrieves contracts based on annotations.
  */
 public final class AnnotationBasedContractRetrieval implements ContractRetrieval {
 

@@ -9,15 +9,18 @@ package com.github.sebhoss.contract.verifier;
 import java.lang.reflect.Method;
 
 /**
- * TODO: Write documentation!
+ * Creates {@link ContractVerifier}s.
  */
 public interface ContractVerifierFactory {
 
     /**
      * @param targetObject
+     *            The calling instance.
      * @param calledMethod
+     *            The called method on the instance.
      * @param givenArguments
-     * @return TODO: Write documentation!
+     *            The given method arguments
+     * @return A suitable contract verifier for the method invocation.
      */
     ContractVerifier createContractVerifier(Object targetObject, Method calledMethod, Object[] givenArguments);
 

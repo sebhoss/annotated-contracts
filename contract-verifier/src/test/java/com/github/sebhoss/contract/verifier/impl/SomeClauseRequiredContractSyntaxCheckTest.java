@@ -17,7 +17,7 @@ import com.github.sebhoss.contract.utils.ContractFactory;
 /**
  * TODO: Write documentation!
  */
-@SuppressWarnings({ "static-method", "nls" })
+@SuppressWarnings({ "static-method", "nls", "null" })
 public final class SomeClauseRequiredContractSyntaxCheckTest {
 
     /** TODO: Write documentation! */

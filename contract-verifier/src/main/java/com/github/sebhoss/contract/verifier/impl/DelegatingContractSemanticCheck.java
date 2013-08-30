@@ -14,7 +14,7 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
 
 /**
- * TODO: Write documentation!
+ * Delegates semantic checks to a set of encapsulated semantic check instances.
  */
 public final class DelegatingContractSemanticCheck implements ContractSemanticCheck {
 
@@ -22,7 +22,7 @@ public final class DelegatingContractSemanticCheck implements ContractSemanticCh
 
     /**
      * @param checks
-     *            TODO: Write documentation!
+     *            The semantic checks to perform.
      */
     @Inject
     public DelegatingContractSemanticCheck(final Set<ContractSemanticCheck> checks) {

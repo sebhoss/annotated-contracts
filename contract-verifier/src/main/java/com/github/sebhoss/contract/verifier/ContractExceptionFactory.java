@@ -9,13 +9,14 @@ package com.github.sebhoss.contract.verifier;
 import com.github.sebhoss.contract.annotation.Clause;
 
 /**
- * TODO: Write documentation!
+ * Creates new exceptions in case a breach of contract occurred.
  */
 public interface ContractExceptionFactory {
 
     /**
      * @param clause
-     * @return TODO: Write documentation!
+     *            The contract clause which was breached.
+     * @return A suitable exception signaling the breach of contract.
      */
     RuntimeException breachOfContract(Clause clause);
 

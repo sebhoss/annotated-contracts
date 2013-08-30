@@ -9,12 +9,13 @@ package com.github.sebhoss.contract.verifier;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Performs a syntax check on contracts.
  */
 public interface ContractSyntaxCheck {
 
     /**
      * @param contract
+     *            The contract to check.
      */
     void validate(Contract contract);
 

@@ -19,7 +19,7 @@ import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 /**
  * TODO: Write documentation!
  */
-@SuppressWarnings("static-method")
+@SuppressWarnings({ "static-method", "null" })
 public final class DelegatingSyntaxCheckTest {
 
     /**

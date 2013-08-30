@@ -35,7 +35,7 @@ public interface ContractVerifier {
      * result.
      * 
      * @param invocationResult
-     *            The result of the method call. <b>May be <code>null</code></b>. TODO: Use @Nullable annotation
+     *            The result of the method call.
      */
     void verifyPostconditions(Object invocationResult);
 
