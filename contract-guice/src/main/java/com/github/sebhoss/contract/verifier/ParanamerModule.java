@@ -10,6 +10,9 @@ import com.google.inject.AbstractModule;
 import com.thoughtworks.paranamer.AdaptiveParanamer;
 import com.thoughtworks.paranamer.Paranamer;
 
+/**
+ * Guice module which configures Paranamer to be used for parameter-names lookup.
+ */
 public class ParanamerModule extends AbstractModule {
 
     @Override

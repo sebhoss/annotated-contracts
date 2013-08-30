@@ -12,6 +12,9 @@ import com.github.sebhoss.contract.verifier.ParanamerModule;
 import com.github.sebhoss.contract.verifier.impl.SyntaxCheckModule;
 import com.google.inject.AbstractModule;
 
+/**
+ * Guice module for the default behavior for annotated contracts. Uses JUEL and Paranamer for contract checking.
+ */
 public class DefaultGuiceModule extends AbstractModule {
 
     @Override

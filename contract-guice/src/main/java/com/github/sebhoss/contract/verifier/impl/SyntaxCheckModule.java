@@ -10,6 +10,12 @@ import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
 
+/**
+ * Guice module which configures the syntax contract checks. Additional syntax checks can be provided by declaring a new
+ * Guice module which binds to {@link ContractSyntaxCheck}.
+ * 
+ * @see <a href="https://code.google.com/p/google-guice/wiki/Multibindings">Guice Multibindings</a>
+ */
 public final class SyntaxCheckModule extends AbstractModule {
 
     @Override

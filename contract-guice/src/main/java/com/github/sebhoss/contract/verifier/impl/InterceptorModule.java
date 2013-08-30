@@ -13,6 +13,9 @@ import com.github.sebhoss.contract.interceptor.ContractInterceptor;
 import com.google.inject.AbstractModule;
 import com.google.inject.matcher.Matchers;
 
+/**
+ * Guice module which configures the contract interceptor.
+ */
 public class InterceptorModule extends AbstractModule {
 
     @Override

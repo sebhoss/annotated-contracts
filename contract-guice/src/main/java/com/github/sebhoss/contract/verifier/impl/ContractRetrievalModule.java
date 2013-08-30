@@ -9,6 +9,9 @@ package com.github.sebhoss.contract.verifier.impl;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
 import com.google.inject.AbstractModule;
 
+/**
+ * Guice module which configures the contract retrieval.
+ */
 public final class ContractRetrievalModule extends AbstractModule {
 
     @Override

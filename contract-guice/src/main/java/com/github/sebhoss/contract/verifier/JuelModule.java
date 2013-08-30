@@ -10,6 +10,9 @@ import javax.el.ExpressionFactory;
 
 import com.google.inject.AbstractModule;
 
+/**
+ * Guice module which configures JUEL for contract clause retrieval.
+ */
 public class JuelModule extends AbstractModule {
 
     @Override

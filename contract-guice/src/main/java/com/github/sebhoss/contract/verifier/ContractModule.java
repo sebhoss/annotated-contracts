@@ -6,7 +6,7 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import com.github.sebhoss.contract.verifier.impl.ContractCheckModule;
+import com.github.sebhoss.contract.verifier.impl.ContractVerifierModule;
 import com.github.sebhoss.contract.verifier.impl.ContractExceptionModule;
 import com.github.sebhoss.contract.verifier.impl.ContractRetrievalModule;
 import com.github.sebhoss.contract.verifier.impl.ContractSemanticCheckModule;
@@ -14,6 +14,9 @@ import com.github.sebhoss.contract.verifier.impl.InterceptorModule;
 import com.github.sebhoss.contract.verifier.impl.SyntaxCheckModule;
 import com.google.inject.AbstractModule;
 
+/**
+ * Guice module which configures all injections around contracts.
+ */
 public final class ContractModule extends AbstractModule {
 
     @Override
@@ -22,7 +25,7 @@ public final class ContractModule extends AbstractModule {
         install(new ContractRetrievalModule());
         install(new ContractSemanticCheckModule());
         install(new SyntaxCheckModule());
-        install(new ContractCheckModule());
+        install(new ContractVerifierModule());
         install(new InterceptorModule());
     }
 

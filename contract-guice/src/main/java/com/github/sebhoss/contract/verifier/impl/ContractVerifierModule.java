@@ -9,7 +9,10 @@ package com.github.sebhoss.contract.verifier.impl;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.google.inject.AbstractModule;
 
-public final class ContractCheckModule extends AbstractModule {
+/**
+ * Guice module which configures the contract verifier factory.
+ */
+public final class ContractVerifierModule extends AbstractModule {
 
     @Override
     protected void configure() {

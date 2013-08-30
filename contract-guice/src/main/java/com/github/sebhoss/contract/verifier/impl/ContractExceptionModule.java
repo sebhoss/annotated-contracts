@@ -9,6 +9,9 @@ package com.github.sebhoss.contract.verifier.impl;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 import com.google.inject.AbstractModule;
 
+/**
+ * Guice module which configures the contract exception factory.
+ */
 public final class ContractExceptionModule extends AbstractModule {
 
     @Override
