@@ -9,10 +9,18 @@ package com.github.sebhoss.guice;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
+/**
+ * Simple domain model, which has several contracts added to its only method.
+ */
 public class InsuranceCompany {
 
     private final double coverRate = 0.5d;
 
+    /**
+     * @param damage
+     *            The insured loss.
+     * @return The payout of this insurance company.
+     */
     @Contract(preconditions = {
             @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
             @Clause("damage <= 5000") }, postconditions = { @Clause("return >= 0"), @Clause("return <= 2000") })

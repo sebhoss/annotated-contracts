@@ -12,17 +12,39 @@ import org.junit.Test;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+/**
+ * Test cases for the {@link InsuranceCompany}.
+ */
 @SuppressWarnings("static-method")
 public class InsuranceCompanyTest {
 
+    /**
+     * Ensures that the insurance company can calculate payouts based on a positive damage input.
+     */
     @Test
-    public void shouldNoticePrecondition() {
+    public void shouldAcceptPositiveDamages() {
         // Given
         final Injector injector = Guice.createInjector(new GuiceModule());
         final InsuranceCompany instance = injector.getInstance(InsuranceCompany.class);
 
         // When
         final double result = instance.calculateCover(10);
+
+        // Then
+        Assert.assertEquals(5.0, result, 0d);
+    }
+
+    /**
+     * Ensures that the insurance company can calculate payouts based on a positive damage input.
+     */
+    @Test
+    public void shouldNotAcceptNegativeDamages() {
+        // Given
+        final Injector injector = Guice.createInjector(new GuiceModule());
+        final InsuranceCompany instance = injector.getInstance(InsuranceCompany.class);
+
+        // When
+        final double result = instance.calculateCover(-10);
 
         // Then
         Assert.assertEquals(5.0, result, 0d);
