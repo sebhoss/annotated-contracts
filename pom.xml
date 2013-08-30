@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    This program is free software. It comes without any warranty, to
-    the extent permitted by applicable law. You can redistribute it
-    and/or modify it under the terms of the Do What The Fuck You Want
-    To Public License, Version 2, as published by Sam Hocevar. See
-    http://www.wtfpl.net/ for more details.
-
--->
-<!--
- This program is free software. It comes without any warranty, to
- the extent permitted by applicable law. You can redistribute it
- and/or modify it under the terms of the Do What The Fuck You Want
- To Public License, Version 2, as published by Sam Hocevar. See
- http://www.wtfpl.net/ for more details.
--->
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -29,7 +13,7 @@
   <parent>
     <groupId>com.github.sebhoss</groupId>
     <artifactId>java-parent</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -65,35 +49,27 @@
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                PROPERTIES                               -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <properties>
-    <scm.connection>scm:git:git://github.com/sebhoss/annotated-contracts.git</scm.connection>
-    <scm.developerConnection>scm:git:git@github.com:sebhoss/annotated-contracts.git</scm.developerConnection>
-    <scm.url>http://github.com/sebhoss/annotated-contracts</scm.url>
-    <issueManagement.url>http://github.com/sebhoss/annotated-contracts/issues</issueManagement.url>
-  </properties>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                                  SOURCE                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <scm>
-    <connection>${scm.connection}</connection>
-    <developerConnection>${scm.developerConnection}</developerConnection>
+    <connection>scm:git:git://github.com/sebhoss/annotated-contracts.git</connection>
+    <developerConnection>scm:git:git@github.com:sebhoss/annotated-contracts.git</developerConnection>
     <tag>master</tag>
-    <url>${scm.url}</url>
+    <url>${project.url}</url>
   </scm>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                  ISSUES                                 -->
+  <!--                               DEPENDENCIES                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <issueManagement>
-    <system>GitHub</system>
-    <url>${issueManagement.url}</url>
-  </issueManagement>
-
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>com.github.sebhoss</groupId>
+        <artifactId>java-bom</artifactId>
+        <version>1.0.2</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-annotations</artifactId>
@@ -170,9 +146,9 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>com.github.sebhoss.common</groupId>
-      <artifactId>common-annotation</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <groupId>com.github.sebhoss</groupId>
+      <artifactId>common-annotations</artifactId>
+      <version>1.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.cal10n</groupId>
