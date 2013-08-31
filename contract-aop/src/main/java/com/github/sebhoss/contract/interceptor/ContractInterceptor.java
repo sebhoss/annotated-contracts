@@ -6,6 +6,7 @@
  */
 package com.github.sebhoss.contract.interceptor;
 
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import org.aopalliance.intercept.MethodInterceptor;
@@ -21,6 +22,8 @@ import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 public final class ContractInterceptor implements MethodInterceptor {
 
     @Inject
+    // @Nullable required for FindBugs analysis
+    @Nullable
     private ContractVerifierFactory contractVerifierFactory;
 
     @SuppressWarnings(CompilerWarnings.NULL)
