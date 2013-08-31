@@ -7,7 +7,9 @@
 package com.github.sebhoss.guice;
 
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -15,8 +17,12 @@ import com.google.inject.Injector;
 /**
  * Test cases for the {@link InsuranceCompany}.
  */
-@SuppressWarnings("static-method")
+@SuppressWarnings({ "static-method", "null", "nls" })
 public class InsuranceCompanyTest {
+
+    /** Catches expected exceptions */
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     /**
      * Ensures that the insurance company can calculate payouts based on a positive damage input.
@@ -44,10 +50,11 @@ public class InsuranceCompanyTest {
         final InsuranceCompany instance = injector.getInstance(InsuranceCompany.class);
 
         // When
-        final double result = instance.calculateCover(-10);
+        thrown.expect(IllegalStateException.class);
+        thrown.expectMessage("Reported damage must be positive!");
 
         // Then
-        Assert.assertEquals(5.0, result, 0d);
+        instance.calculateCover(-10);
     }
 
 }
