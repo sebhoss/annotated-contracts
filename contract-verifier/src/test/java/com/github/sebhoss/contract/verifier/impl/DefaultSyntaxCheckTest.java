@@ -29,39 +29,6 @@ public final class DefaultSyntaxCheckTest {
      * TODO: Write documentation!
      */
     @Test
-    public void shouldThrowNullPointerExceptionForNullContract() {
-        // Given
-        final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
-        thrown.expect(NullPointerException.class);
-
-        // When
-        syntaxCheck.validate(null);
-
-        // Then
-        Assert.fail("NULL contracts should not validate!");
-    }
-
-    /**
-     * TODO: Write documentation!
-     */
-    @Test
-    public void shouldThrowCorrectMessageForNullContract() {
-        // Given
-        final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
-        thrown.expect(NullPointerException.class);
-        thrown.expectMessage("There is no contract!");
-
-        // When
-        syntaxCheck.validate(null);
-
-        // Then
-        Assert.fail("NULL contracts should not validate!");
-    }
-
-    /**
-     * TODO: Write documentation!
-     */
-    @Test
     public void shouldThrowIllegalStateExceptionWithoutPreAndPostconditions() {
         // Given
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();

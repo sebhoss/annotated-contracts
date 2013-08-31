@@ -28,23 +28,6 @@ public final class SomeClauseRequiredContractSyntaxCheckTest {
      * TODO: Write documentation!
      */
     @Test
-    public void shouldNotAllowNullInput() {
-        // Given
-        final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
-        thrown.expect(NullPointerException.class);
-        thrown.expectMessage("There is no contract!");
-
-        // When
-        syntaxCheck.validate(null);
-
-        // Then
-        Assert.fail("NULL should not be valid input!");
-    }
-
-    /**
-     * TODO: Write documentation!
-     */
-    @Test
     public void shouldNotAllowEmptyContract() {
         // Given
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
