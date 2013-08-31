@@ -36,18 +36,17 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
     @SuppressWarnings(CompilerWarnings.NLS)
     @Override
     public RuntimeException breachOfContract(final Clause clause) {
-        final boolean needsStringConstructor = clause.message().isEmpty();
+        final boolean needsStringConstructor = !clause.message().isEmpty();
 
         try {
             RuntimeException contractException;
 
             if (needsStringConstructor) {
                 final Constructor<? extends RuntimeException> constructors = clause.exception().getConstructor(
-                        new Class[] { String.class });
+                        String.class);
                 contractException = constructors.newInstance(clause.message());
             } else {
-                final Constructor<? extends RuntimeException> constructors = clause.exception().getConstructor(
-                        new Class[] {});
+                final Constructor<? extends RuntimeException> constructors = clause.exception().getConstructor();
                 contractException = constructors.newInstance();
             }
 
