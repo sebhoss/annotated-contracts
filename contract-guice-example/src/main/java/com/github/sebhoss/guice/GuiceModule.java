@@ -19,7 +19,7 @@ public class GuiceModule extends AbstractModule {
     protected void configure() {
         install(new DefaultGuiceModule());
 
-        this.bind(InsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).asEagerSingleton();
     }
 
 }
