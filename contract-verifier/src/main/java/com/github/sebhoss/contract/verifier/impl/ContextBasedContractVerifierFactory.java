@@ -24,7 +24,7 @@ import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
 /**
  * TODO: Write documentation!
  */
-public final class InjectableContractVerifierFactory implements ContractVerifierFactory {
+public final class ContextBasedContractVerifierFactory implements ContractVerifierFactory {
 
     private final ContractRetrieval        contractRetrieval;
     private final ContractSyntaxCheck      contractSyntaxCheck;
@@ -48,7 +48,7 @@ public final class InjectableContractVerifierFactory implements ContractVerifier
      *            TODO: Write documentation!
      */
     @Inject
-    public InjectableContractVerifierFactory(final ContractRetrieval contractRetrieval,
+    public ContextBasedContractVerifierFactory(final ContractRetrieval contractRetrieval,
             final ContractSyntaxCheck contractSyntaxCheck, final ParameterNamesLookup parameterNamesLookup,
             final ContractSemanticCheck contractSemanticCheck, final ContractContextFactory contractContextFactory,
             final ContractExceptionFactory contractExceptionFactory) {
