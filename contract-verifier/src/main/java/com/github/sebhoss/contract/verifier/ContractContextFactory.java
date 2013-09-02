@@ -7,15 +7,18 @@
 package com.github.sebhoss.contract.verifier;
 
 /**
- * Runtime-Hook
+ * Creates instances of a {@link ContractContext}.
  */
 public interface ContractContextFactory {
 
     /**
      * @param instance
+     *            The called instance.
      * @param arguments
+     *            The given parameters.
      * @param parameterNames
-     * @return TODO: Write documentation!
+     *            The given parameter names.
+     * @return A context which validates a contract with the given inputs.
      */
     ContractContext createContext(Object instance, Object[] arguments, String[] parameterNames);
 
