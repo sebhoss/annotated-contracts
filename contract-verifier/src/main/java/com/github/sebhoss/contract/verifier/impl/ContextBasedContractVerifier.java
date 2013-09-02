@@ -14,9 +14,9 @@ import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 
 /**
- * TODO: Write documentation!
+ * A {@link ContractVerifier} which delegates its work to a {@link ContractContext}.
  */
-public final class DelegatingContractVerifier implements ContractVerifier {
+public final class ContextBasedContractVerifier implements ContractVerifier {
 
     private final Contract                 contract;
 
@@ -26,13 +26,13 @@ public final class DelegatingContractVerifier implements ContractVerifier {
 
     /**
      * @param contract
-     *            TODO: Write documentation!
+     *            The contract to verify
      * @param context
-     *            TODO: Write documentation!
+     *            The context in which the context is to be verified.
      * @param exceptionFactory
-     *            TODO: Write documentation!
+     *            The exception factory to use in case a contract clause was violated.
      */
-    public DelegatingContractVerifier(final Contract contract, final ContractContext context,
+    public ContextBasedContractVerifier(final Contract contract, final ContractContext context,
             final ContractExceptionFactory exceptionFactory) {
         this.contract = contract;
         this.context = context;

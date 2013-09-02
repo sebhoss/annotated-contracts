@@ -68,7 +68,7 @@ public final class InjectableContractVerifierFactory implements ContractVerifier
         contractSemanticCheck.validate(contract, parameterNames);
         final ContractContext context = contractContextFactory.createContext(instance, arguments, parameterNames);
 
-        return new DelegatingContractVerifier(contract, context, contractExceptionFactory);
+        return new ContextBasedContractVerifier(contract, context, contractExceptionFactory);
     }
 
 }
