@@ -14,16 +14,16 @@ import org.junit.Test;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 
 /**
- * TODO: Write documentation!
+ * Test cases for the {@link ContractFactory}.
  */
 @SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class ContractFactoryTest {
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the constructor of the {@link ContractFactory} is not invokable.
      */
     @Test
-    public void shouldNotBeInvocable() {
+    public void shouldNotBeInvokable() {
         // Given
         final Class<?> clazz = ContractFactory.class;
 
@@ -37,11 +37,13 @@ public final class ContractFactoryTest {
     }
 
     /**
+     * Ensures that the constructor of the {@link ContractFactory} is invokable via reflection.
+     * 
      * @throws Exception
-     *             TODO: Write documentation!
+     *             In case an exceptions occurs during instance creation.
      */
     @Test
-    public void shouldBeInvocableViaReflection() throws Exception {
+    public void shouldBeInvokableViaReflection() throws Exception {
         // given
         final Class<?> clazz = ContractFactory.class;
         final Constructor<?> constructor = clazz.getDeclaredConstructors()[0];

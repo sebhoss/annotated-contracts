@@ -12,26 +12,26 @@ import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Factory which creates {@link Contract} instances.
  */
 public final class ContractFactory {
 
     /**
-     * @return TODO: Write documentation!
+     * @return An empty contract without any pre- or postconditions.
      */
     public static Contract emptyContract() {
         return ContractFactory.contract(new Clause[] {}, new Clause[] {});
     }
 
     /**
-     * @return TODO: Write documentation!
+     * @return A contract with a precondition.
      */
     public static Contract contractWithPrecondition() {
         return ContractFactory.contract(new Clause[] { ContractFactory.alwaysTrueDefaultClause() }, new Clause[] {});
     }
 
     /**
-     * @return TODO: Write documentation!
+     * @return A contract with a postcondition.
      */
     public static Contract contractWithPostcondition() {
         return ContractFactory.contract(new Clause[] {}, new Clause[] { ContractFactory.alwaysTrueDefaultClause() });
@@ -39,8 +39,8 @@ public final class ContractFactory {
 
     /**
      * @param clauses
-     *            TODO: Write documentation!
-     * @return TODO: Write documentation!
+     *            The preconditions to use.
+     * @return A contract with the given preconditions.
      */
     public static Contract contractWithPreconditions(final Clause... clauses) {
         return ContractFactory.contract(clauses, new Clause[] {});
@@ -48,8 +48,8 @@ public final class ContractFactory {
 
     /**
      * @param clauses
-     *            TODO: Write documentation!
-     * @return TODO: Write documentation!
+     *            The postconditions to use.
+     * @return A contract with the given postconditions.
      */
     public static Contract contractWithPostconditions(final Clause... clauses) {
         return ContractFactory.contract(new Clause[] {}, clauses);
@@ -57,10 +57,10 @@ public final class ContractFactory {
 
     /**
      * @param preconditions
-     *            TODO: Write documentation!
+     *            The preconditions to use.
      * @param postconditions
-     *            TODO: Write documentation!
-     * @return TODO: Write documentation!
+     *            The postconditions to use.
+     * @return A contract with the given pre- and postconditions.
      */
     public static Contract contract(final Clause[] preconditions, final Clause[] postconditions) {
         return new Contract() {
@@ -84,7 +84,7 @@ public final class ContractFactory {
     }
 
     /**
-     * @return TODO: Write documentation!
+     * @return A clause which always validates as <code>true</code>.
      */
     public static Clause alwaysTrueDefaultClause() {
         return ContractFactory.clause("true", "", IllegalArgumentException.class); //$NON-NLS-1$ //$NON-NLS-2$
@@ -92,8 +92,8 @@ public final class ContractFactory {
 
     /**
      * @param condition
-     *            TODO: Write documentation!
-     * @return TODO: Write documentation!
+     *            The clause condition to use.
+     * @return A clause with the given condition.
      */
     public static Clause clause(final String condition) {
         return ContractFactory.clause(condition, "", IllegalArgumentException.class); //$NON-NLS-1$
@@ -101,10 +101,10 @@ public final class ContractFactory {
 
     /**
      * @param condition
-     *            TODO: Write documentation!
+     *            The clause condition to use.
      * @param message
-     *            TODO: Write documentation!
-     * @return TODO: Write documentation!
+     *            The clause message to use.
+     * @return A clause with the given condition and message.
      */
     public static Clause clause(final String condition, final String message) {
         return ContractFactory.clause(condition, message, IllegalArgumentException.class);
@@ -112,12 +112,12 @@ public final class ContractFactory {
 
     /**
      * @param condition
-     *            TODO: Write documentation!
+     *            The clause condition to use.
      * @param message
-     *            TODO: Write documentation!
+     *            The clause message to use.
      * @param exception
-     *            TODO: Write documentation!
-     * @return TODO: Write documentation!
+     *            The clause exception to use.
+     * @return A clause with the given condition, message and exception.
      */
     public static Clause clause(final String condition, final String message,
             final Class<? extends RuntimeException> exception) {

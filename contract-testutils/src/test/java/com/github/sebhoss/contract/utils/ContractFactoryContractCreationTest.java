@@ -14,13 +14,13 @@ import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Test cases for the {@link ContractFactory}'s creation of new {@link Contract} instances.
  */
 @SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class ContractFactoryContractCreationTest {
 
     /**
-     * TODO: Write documentation!
+     * Ensures that an empty contract can be created.
      */
     @Test
     public void shouldCreateEmptyContract() {
@@ -35,7 +35,7 @@ public final class ContractFactoryContractCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that an empty contract doesn't contains any preconditions.
      */
     @Test
     public void shouldCreateEmptyContractWithoutPreconditions() {
@@ -53,7 +53,7 @@ public final class ContractFactoryContractCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with a precondition can be created.
      */
     @Test
     public void shouldCreateContractWithPrecondition() {
@@ -69,7 +69,7 @@ public final class ContractFactoryContractCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with preconditions can be created.
      */
     @Test
     public void shouldCreateContractWithPreconditions() {
@@ -86,7 +86,7 @@ public final class ContractFactoryContractCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with a postcondition can be created.
      */
     @Test
     public void shouldCreateContractWithPostcondition() {
@@ -103,7 +103,7 @@ public final class ContractFactoryContractCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with postconditions can be created.
      */
     @Test
     public void shouldCreateContractWithPostconditions() {
@@ -122,14 +122,14 @@ public final class ContractFactoryContractCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with pre- and postconditions can be created.
      */
     @Test
     public void shouldCreateContractWithPreAndPostconditions() {
         // Given
-        final Clause[] preconditions = new Clause[] { ContractFactory.alwaysTrueDefaultClause(),
+        final Clause[] preconditions = { ContractFactory.alwaysTrueDefaultClause(),
                 ContractFactory.alwaysTrueDefaultClause() };
-        final Clause[] postconditions = new Clause[] { ContractFactory.alwaysTrueDefaultClause(),
+        final Clause[] postconditions = { ContractFactory.alwaysTrueDefaultClause(),
                 ContractFactory.alwaysTrueDefaultClause() };
 
         // When

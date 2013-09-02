@@ -24,13 +24,13 @@ import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Test cases for the {@link MethodFactory}.
  */
 @SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class MethodFactoryTest {
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a non-<code>null</code> method can be created without any contract.
      */
     @Test
     public void shouldCreateNonNullMethodWithoutContract() {
@@ -45,7 +45,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has no contract.
      */
     @Test
     public void shouldCreateMethodWithoutContract() {
@@ -63,7 +63,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that non-<code>null</code> method can be created with an empty contract.
      */
     @Test
     public void shouldCreateNonNullMethodWithEmptyContract() {
@@ -78,7 +78,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has an non-<code>null</code> contract.
      */
     @Test
     public void shouldCreateNonNullMethodWithEmptyNonNullContract() {
@@ -96,7 +96,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract without any preconditions.
      */
     @Test
     public void shouldCreateMethodWithEmptyContractWithoutPreconditions() {
@@ -114,7 +114,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract without any postconditions.
      */
     @Test
     public void shouldCreateMethodWithEmptyContractWithoutPostconditions() {
@@ -132,7 +132,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a non-<code>null</code> method can be created with a precondition.
      */
     @Test
     public void shouldCreateNonNullMethodWithPrecondition() {
@@ -147,7 +147,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a non-<code>null</code> contract.
      */
     @Test
     public void shouldCreateNonNullMethodWithNonNullPreconditionContract() {
@@ -165,7 +165,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract with non-<code>null</code> preconditions.
      */
     @Test
     public void shouldCreateNonNullMethodWithNonNullPrecondition() {
@@ -184,7 +184,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract with a single precondition.
      */
     @Test
     public void shouldCreateMethodWithPrecondition() {
@@ -203,7 +203,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract without any postconditions.
      */
     @Test
     public void shouldCreateMethodWithoutPostconditions() {
@@ -222,7 +222,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a non-<code>null</code> method with a contract which contains postcondition can be created.
      */
     @Test
     public void shouldCreateNonNullMethodWithPostcondition() {
@@ -237,7 +237,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a non-<code>null</code> contract.
      */
     @Test
     public void shouldCreateNonNullMethodWithNonNullPostconditionContract() {
@@ -255,7 +255,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract with non-<code>null</code> postconditions.
      */
     @Test
     public void shouldCreateNonNullMethodWithNonNullPostcondition() {
@@ -274,7 +274,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract which contains postconditions.
      */
     @Test
     public void shouldCreateMethodWithPostcondition() {
@@ -293,7 +293,7 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned method has a contract without any preconditions.
      */
     @Test
     public void shouldCreateMethodWithoutPreconditions() {
@@ -312,10 +312,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the constructor is not invokable.
      */
     @Test
-    public void shouldNotBeInvocable() {
+    public void shouldNotBeInvokable() {
         // Given
         final Class<?> clazz = MethodFactory.class;
 
@@ -329,13 +329,13 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the constructor is invokable via reflection.
      * 
      * @throws Exception
-     *             In case <code>constructor.newInstance()</code> fails.
+     *             In case something goes wrong during instance creation.
      */
     @Test
-    public void shouldBeInvocableViaReflection() throws Exception {
+    public void shouldBeInvokableViaReflection() throws Exception {
         // given
         final Class<?> clazz = MethodFactory.class;
         final Constructor<?> constructor = clazz.getDeclaredConstructors()[0];

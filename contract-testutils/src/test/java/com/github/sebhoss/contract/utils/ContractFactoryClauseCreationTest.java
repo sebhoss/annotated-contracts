@@ -13,13 +13,13 @@ import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 
 /**
- * TODO: Write documentation!
+ * Test cases for the {@link ContractFactory}'s creation of new {@link Clause} instances.
  */
 @SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public class ContractFactoryClauseCreationTest {
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a clause which validates to <code>true</code> is not <code>null</code>.
      */
     @Test
     public void shouldCreateAlwaysTrueClause() {
@@ -34,7 +34,7 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a clause which validates to <code>true</code> can be created.
      */
     @Test
     public void shouldCreateAlwaysTrueClauseWithTrueCondition() {
@@ -49,7 +49,7 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a clause which validates to <code>true</code> has an empty message.
      */
     @Test
     public void shouldCreateAlwaysTrueClauseWithEmptyMessage() {
@@ -64,7 +64,8 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a clause which validates to <code>true</code> throws an {@link IllegalArgumentException} in case
+     * something goes wrong.
      */
     @Test
     public void shouldCreateAlwaysTrueClauseWithCorrectException() {
@@ -80,7 +81,7 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a returned clause is not <code>null</code>.
      */
     @Test
     public void shouldNotCreateNullClause() {
@@ -95,7 +96,7 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned clause contains the given condition.
      */
     @Test
     public void shouldCreateClauseWithGivenCondition() {
@@ -114,7 +115,7 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned clause contains the given condition and message.
      */
     @Test
     public void shouldCreateClauseWithGivenConditionAndMessage() {
@@ -134,7 +135,7 @@ public class ContractFactoryClauseCreationTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the returned clause contains the given condition, message and exception.
      */
     @Test
     public void shouldCreateClauseWithGivenConditionAndMessageAndException() {
