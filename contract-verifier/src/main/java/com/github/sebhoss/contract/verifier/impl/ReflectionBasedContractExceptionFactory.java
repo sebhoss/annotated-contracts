@@ -18,7 +18,7 @@ import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 
 /**
- * TODO: Write documentation!
+ * Creates contract violation exceptions with the help of reflection.
  */
 public final class ReflectionBasedContractExceptionFactory implements ContractExceptionFactory {
 

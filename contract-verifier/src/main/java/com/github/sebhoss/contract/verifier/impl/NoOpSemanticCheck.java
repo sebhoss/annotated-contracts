@@ -10,7 +10,7 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
 
 /**
- * TODO: Write documentation!
+ * Performs no semantic check on a contract.
  */
 public final class NoOpSemanticCheck implements ContractSemanticCheck {
 

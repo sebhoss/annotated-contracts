@@ -22,7 +22,7 @@ import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
 
 /**
- * TODO: Write documentation!
+ * Creates {@link ContractVerifier} which are based on a {@link ContractContext}.
  */
 public final class ContextBasedContractVerifierFactory implements ContractVerifierFactory {
 
@@ -35,17 +35,17 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
 
     /**
      * @param contractRetrieval
-     *            TODO: Write documentation!
+     *            The instance to use for contract retrieval.
      * @param contractSyntaxCheck
-     *            TODO: Write documentation!
+     *            The contract syntax checks to perform.
      * @param parameterNamesLookup
-     *            TODO: Write documentation!
+     *            The instance to look up parameter names.
      * @param contractSemanticCheck
-     *            TODO: Write documentation!
+     *            The contract semantic checks to perform.
      * @param contractContextFactory
-     *            TODO: Write documentation!
+     *            The factory to create a contract context.
      * @param contractExceptionFactory
-     *            TODO: Write documentation!
+     *            The factory to create contract violation exceptions.
      */
     @Inject
     public ContextBasedContractVerifierFactory(final ContractRetrieval contractRetrieval,

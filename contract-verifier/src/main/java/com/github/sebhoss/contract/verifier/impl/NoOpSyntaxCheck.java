@@ -10,7 +10,7 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 
 /**
- * TODO: Write documentation!
+ * Performs no syntax check on a contract.
  */
 public final class NoOpSyntaxCheck implements ContractSyntaxCheck {
 
