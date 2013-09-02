@@ -13,34 +13,34 @@ import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
- * TODO: Write documentation!
+ * Factory for {@link Method} instances.
  */
 @SuppressWarnings(CompilerWarnings.NLS)
 public final class MethodFactory {
 
     /**
-     * @return TODO: Write documentation!
+     * @return Method without a contract.
      */
     public static Method createMethodWithoutContract() {
         return createMethod("methodWithoutContract");
     }
 
     /**
-     * @return TODO: Write documentation!
+     * @return Method with an empty contract.
      */
     public static Method createMethodWithEmptyContract() {
         return createMethod("methodWithEmptyContract");
     }
 
     /**
-     * @return TODO: Write documentation!
+     * @return Method with a contract which contains a precondition.
      */
     public static Method createMethodWithPrecondition() {
         return createMethod("methodWithPrecondition", int.class);
     }
 
     /**
-     * @return TODO: Write documentation!
+     * @return Method with a contract which contains a postcondition.
      */
     public static Method createMethodWithPostcondition() {
         return createMethod("methodWithPostcondition");
