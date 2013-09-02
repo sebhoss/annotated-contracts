@@ -16,7 +16,7 @@ public final class ContractVerifierModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        this.bind(ContractVerifierFactory.class).to(InjectableContractVerifierFactory.class);
+        this.bind(ContractVerifierFactory.class).to(ContextBasedContractVerifierFactory.class);
     }
 
 }
