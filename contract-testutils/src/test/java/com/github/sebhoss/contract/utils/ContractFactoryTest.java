@@ -11,10 +11,12 @@ import java.lang.reflect.Constructor;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+
 /**
  * TODO: Write documentation!
  */
-@SuppressWarnings({ "static-method", "nls" })
+@SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class ContractFactoryTest {
 
     /**

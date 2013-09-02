@@ -19,13 +19,14 @@ import java.lang.reflect.Method;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
 /**
  * TODO: Write documentation!
  */
-@SuppressWarnings({ "static-method", "nls" })
+@SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class MethodFactoryTest {
 
     /**

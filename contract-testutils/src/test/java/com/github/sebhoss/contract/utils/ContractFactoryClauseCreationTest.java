@@ -9,12 +9,13 @@ package com.github.sebhoss.contract.utils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 
 /**
  * TODO: Write documentation!
  */
-@SuppressWarnings({ "nls", "static-method" })
+@SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public class ContractFactoryClauseCreationTest {
 
     /**
