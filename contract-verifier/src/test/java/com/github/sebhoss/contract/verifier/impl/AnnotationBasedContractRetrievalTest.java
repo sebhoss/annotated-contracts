@@ -18,55 +18,51 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.utils.MethodFactory;
 
 /**
- * TODO: Write documentation!
+ * Test cases for the {@link AnnotationBasedContractRetrieval}.
  */
 @SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
 public final class AnnotationBasedContractRetrievalTest {
 
-    /** TODO: Write documentation! */
+    /** Catches expected exceptions in a test case. */
     @Rule
     public final ExpectedException thrown = ExpectedException.none();
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a {@link NullPointerException} is thrown for a <code>null</code> reference.
      */
     @Test
     public void shouldThrowNPEForNullMethod() {
         // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
-        thrown.expect(NullPointerException.class);
 
         // When
-        retrieval.retrieveContract(null);
+        thrown.expect(NullPointerException.class);
 
         // Then
-        Assert.fail("Contract-retrieval should not work with NULL!");
+        retrieval.retrieveContract(null);
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * Ensures that a {@link IllegalStateException} is thrown for a method without contract.
      */
     @Test
-    public void shouldThrowISEForMethodWithoutContract() throws Exception {
+    public void shouldThrowISEForMethodWithoutContract() {
         // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
         final Method method = MethodFactory.createMethodWithoutContract();
-        thrown.expect(IllegalStateException.class);
 
         // When
-        retrieval.retrieveContract(method);
+        thrown.expect(IllegalStateException.class);
 
         // Then
-        Assert.fail("Annotation-based contract-retrieval can only work on methods with an contract annotation.");
+        retrieval.retrieveContract(method);
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * Ensures that a contract can be found on a method with an empty contract.
      */
     @Test
-    public void shouldFindContract() throws Exception {
+    public void shouldFindContract() {
         // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
         final Method method = MethodFactory.createMethodWithEmptyContract();

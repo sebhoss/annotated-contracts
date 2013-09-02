@@ -20,71 +20,44 @@ public final class MethodFactory {
 
     /**
      * @return TODO: Write documentation!
-     * @throws NoSuchMethodException
-     *             TODO: Write documentation!
-     * @throws SecurityException
-     *             TODO: Write documentation!
      */
-    public static Method createMethodWithoutContract() throws NoSuchMethodException, SecurityException {
-        final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithoutContract", new Class[] {});
-
-        if (declaredMethod == null) {
-            throw new NullPointerException("Could not create method!");
-        }
-
-        return declaredMethod;
+    public static Method createMethodWithoutContract() {
+        return createMethod("methodWithoutContract");
     }
 
     /**
      * @return TODO: Write documentation!
-     * @throws NoSuchMethodException
-     *             TODO: Write documentation!
-     * @throws SecurityException
-     *             TODO: Write documentation!
      */
-    public static Method createMethodWithEmptyContract() throws NoSuchMethodException, SecurityException {
-        final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithEmptyContract", new Class[] {});
-
-        if (declaredMethod == null) {
-            throw new NullPointerException("Could not create method!");
-        }
-
-        return declaredMethod;
+    public static Method createMethodWithEmptyContract() {
+        return createMethod("methodWithEmptyContract");
     }
 
     /**
      * @return TODO: Write documentation!
-     * @throws NoSuchMethodException
-     *             TODO: Write documentation!
-     * @throws SecurityException
-     *             TODO: Write documentation!
      */
-    public static Method createMethodWithPrecondition() throws NoSuchMethodException, SecurityException {
-        final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithPrecondition",
-                new Class[] { int.class });
-
-        if (declaredMethod == null) {
-            throw new NullPointerException("Could not create method!");
-        }
-
-        return declaredMethod;
+    public static Method createMethodWithPrecondition() {
+        return createMethod("methodWithPrecondition", int.class);
     }
 
     /**
      * @return TODO: Write documentation!
-     * @throws NoSuchMethodException
-     *             TODO: Write documentation!
-     * @throws SecurityException
-     *             TODO: Write documentation!
      */
-    public static Method createMethodWithPostcondition() throws NoSuchMethodException, SecurityException {
-        final Method declaredMethod = Methods.class.getDeclaredMethod("methodWithPostcondition", new Class[] {});
+    public static Method createMethodWithPostcondition() {
+        return createMethod("methodWithPostcondition");
+    }
 
-        if (declaredMethod == null) {
-            throw new NullPointerException("Could not create method!");
+    private static Method createMethod(final String methodName, final Class<?>... parameterTypes) {
+        try {
+            final Method declaredMethod = Methods.class.getDeclaredMethod(methodName, parameterTypes);
+
+            if (declaredMethod == null) {
+                throw new NullPointerException();
+            }
+
+            return declaredMethod;
+        } catch (NoSuchMethodException | SecurityException exception) {
+            throw new IllegalArgumentException(methodName);
         }
-
-        return declaredMethod;
     }
 
     private MethodFactory() {
