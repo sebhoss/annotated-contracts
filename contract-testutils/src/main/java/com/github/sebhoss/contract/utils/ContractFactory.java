@@ -16,10 +16,6 @@ import com.github.sebhoss.contract.annotation.Contract;
  */
 public final class ContractFactory {
 
-    private ContractFactory() {
-        // Utility class
-    }
-
     /**
      * @return TODO: Write documentation!
      */
@@ -148,6 +144,10 @@ public final class ContractFactory {
             }
 
         };
+    }
+
+    private ContractFactory() {
+        // Utility class
     }
 
 }
