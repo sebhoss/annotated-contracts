@@ -24,17 +24,15 @@ import com.github.sebhoss.contract.annotation.Contract;
 
 /**
  * TODO: Write documentation!
- * 
  */
 @SuppressWarnings({ "static-method", "nls" })
 public final class MethodFactoryTest {
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithoutContract() throws Exception {
+    public void shouldCreateNonNullMethodWithoutContract() {
         // Given
         Method method;
 
@@ -46,11 +44,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithoutContract() throws Exception {
+    public void shouldCreateMethodWithoutContract() {
         // Given
         Method method;
 
@@ -65,11 +62,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithEmptyContract() throws Exception {
+    public void shouldCreateNonNullMethodWithEmptyContract() {
         // Given
         Method method;
 
@@ -81,11 +77,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithEmptyNonNullContract() throws Exception {
+    public void shouldCreateNonNullMethodWithEmptyNonNullContract() {
         // Given
         Method method;
 
@@ -100,11 +95,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithEmptyContractWithoutPreconditions() throws Exception {
+    public void shouldCreateMethodWithEmptyContractWithoutPreconditions() {
         // Given
         Method method;
 
@@ -119,11 +113,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithEmptyContractWithoutPostconditions() throws Exception {
+    public void shouldCreateMethodWithEmptyContractWithoutPostconditions() {
         // Given
         Method method;
 
@@ -138,11 +131,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithPrecondition() throws Exception {
+    public void shouldCreateNonNullMethodWithPrecondition() {
         // Given
         Method method;
 
@@ -154,11 +146,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithNonNullPreconditionContract() throws Exception {
+    public void shouldCreateNonNullMethodWithNonNullPreconditionContract() {
         // Given
         Method method;
 
@@ -173,11 +164,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithNonNullPrecondition() throws Exception {
+    public void shouldCreateNonNullMethodWithNonNullPrecondition() {
         // Given
         Method method;
 
@@ -193,11 +183,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithPrecondition() throws Exception {
+    public void shouldCreateMethodWithPrecondition() {
         // Given
         Method method;
 
@@ -213,11 +202,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithoutPostconditions() throws Exception {
+    public void shouldCreateMethodWithoutPostconditions() {
         // Given
         Method method;
 
@@ -233,11 +221,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithPostcondition() throws Exception {
+    public void shouldCreateNonNullMethodWithPostcondition() {
         // Given
         Method method;
 
@@ -249,11 +236,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithNonNullPostconditionContract() throws Exception {
+    public void shouldCreateNonNullMethodWithNonNullPostconditionContract() {
         // Given
         Method method;
 
@@ -268,11 +254,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateNonNullMethodWithNonNullPostcondition() throws Exception {
+    public void shouldCreateNonNullMethodWithNonNullPostcondition() {
         // Given
         Method method;
 
@@ -288,11 +273,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithPostcondition() throws Exception {
+    public void shouldCreateMethodWithPostcondition() {
         // Given
         Method method;
 
@@ -308,11 +292,10 @@ public final class MethodFactoryTest {
     }
 
     /**
-     * @throws Exception
-     *             TODO: Write documentation!
+     * TODO: Write documentation!
      */
     @Test
-    public void shouldCreateMethodWithoutPreconditions() throws Exception {
+    public void shouldCreateMethodWithoutPreconditions() {
         // Given
         Method method;
 
@@ -345,8 +328,10 @@ public final class MethodFactoryTest {
     }
 
     /**
+     * TODO: Write documentation!
+     * 
      * @throws Exception
-     *             TODO: Write documentation!
+     *             In case <code>constructor.newInstance()</code> fails.
      */
     @Test
     public void shouldBeInvocableViaReflection() throws Exception {
