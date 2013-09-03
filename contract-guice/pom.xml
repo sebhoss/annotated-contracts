@@ -35,11 +35,28 @@
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-paranamer</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-juel</artifactId>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-paranamer</artifactId>
+      <artifactId>contract-ognl</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-mvel</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-javascript</artifactId>
+      <optional>true</optional>
     </dependency>
 
     <dependency>

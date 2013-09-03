@@ -6,19 +6,16 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import javax.el.ExpressionFactory;
-
 import com.google.inject.AbstractModule;
 
 /**
- * Guice module which configures JUEL for contract clause validation.
+ * Guice module which configures OGNL for contract clause validation.
  */
-public class JuelModule extends AbstractModule {
+public class OgnlModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        this.bind(ExpressionFactory.class).toInstance(ExpressionFactory.newInstance());
-        this.bind(ContractContextFactory.class).to(JuelBasedContractContextFactory.class);
+        this.bind(ContractContextFactory.class).to(OgnlBasedContractContextFactory.class);
     }
 
 }
