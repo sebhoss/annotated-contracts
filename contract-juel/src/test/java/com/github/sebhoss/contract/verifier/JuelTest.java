@@ -23,7 +23,7 @@ import de.odysseus.el.util.SimpleContext;
 /**
  * Test cases for JUEL-usage.
  */
-@SuppressWarnings({ "nls", "static-method" })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.STATIC_METHOD })
 public class JuelTest {
 
     /** Catches thrown expected exceptions inside of tests. */

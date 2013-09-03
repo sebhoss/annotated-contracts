@@ -19,7 +19,7 @@ import com.github.sebhoss.contract.annotation.Contract;
 /**
  * Test cases for the {@link MethodFactory}.
  */
-@SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.STATIC_METHOD })
 public final class MethodFactoryTest {
 
     /**

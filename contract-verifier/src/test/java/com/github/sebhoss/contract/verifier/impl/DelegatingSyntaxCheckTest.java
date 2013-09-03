@@ -13,13 +13,14 @@ import org.junit.Test;
 import org.mockito.Matchers;
 import org.mockito.Mockito;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 
 /**
  * Test cases for the {@link DelegatingContractSyntaxCheck}.
  */
-@SuppressWarnings({ "static-method", "null" })
+@SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
 public final class DelegatingSyntaxCheckTest {
 
     /**

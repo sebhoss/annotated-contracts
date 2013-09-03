@@ -16,7 +16,7 @@ import com.github.sebhoss.common.annotation.CompilerWarnings;
 /**
  * Test cases for the {@link ContractFactory}.
  */
-@SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.STATIC_METHOD })
 public final class ContractFactoryTest {
 
     /**

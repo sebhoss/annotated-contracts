@@ -17,7 +17,7 @@ import com.github.sebhoss.contract.utils.ContractFactory;
 /**
  * Test cases for the default syntax checks.
  */
-@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.STATIC_METHOD, CompilerWarnings.NULL })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
 public final class DefaultSyntaxCheckTest {
 
     /** Catches expected exceptions during test execution. */

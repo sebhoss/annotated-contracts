@@ -11,13 +11,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.utils.ContractFactory;
 
 /**
  * Test cases for {@link SomeClauseRequiredContractSyntaxCheck}.
  */
-@SuppressWarnings({ "static-method", "nls", "null" })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
 public final class SomeClauseRequiredContractSyntaxCheckTest {
 
     /** Catches expected exceptions during test execution. */

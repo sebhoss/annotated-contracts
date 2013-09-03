@@ -15,7 +15,7 @@ import com.github.sebhoss.contract.annotation.Clause;
 /**
  * Test cases for the {@link ContractFactory}'s creation of new {@link Clause} instances.
  */
-@SuppressWarnings({ CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.STATIC_METHOD })
 public class ContractFactoryClauseCreationTest {
 
     /**

@@ -20,7 +20,7 @@ import com.github.sebhoss.contract.utils.MethodFactory;
 /**
  * Test cases for the {@link AnnotationBasedContractRetrieval}.
  */
-@SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD, CompilerWarnings.NLS })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
 public final class AnnotationBasedContractRetrievalTest {
 
     /** Catches expected exceptions in a test case. */
