@@ -10,8 +10,8 @@ import com.github.sebhoss.contract.verifier.impl.ContractVerifierModule;
 import com.github.sebhoss.contract.verifier.impl.ContractExceptionModule;
 import com.github.sebhoss.contract.verifier.impl.ContractRetrievalModule;
 import com.github.sebhoss.contract.verifier.impl.ContractSemanticCheckModule;
-import com.github.sebhoss.contract.verifier.impl.InterceptorModule;
-import com.github.sebhoss.contract.verifier.impl.SyntaxCheckModule;
+import com.github.sebhoss.contract.verifier.impl.ContractInterceptorModule;
+import com.github.sebhoss.contract.verifier.impl.ContractSyntaxCheckModule;
 import com.google.inject.AbstractModule;
 
 /**
@@ -24,9 +24,9 @@ public final class ContractModule extends AbstractModule {
         install(new ContractExceptionModule());
         install(new ContractRetrievalModule());
         install(new ContractSemanticCheckModule());
-        install(new SyntaxCheckModule());
+        install(new ContractSyntaxCheckModule());
         install(new ContractVerifierModule());
-        install(new InterceptorModule());
+        install(new ContractInterceptorModule());
     }
 
 }

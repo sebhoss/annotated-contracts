@@ -16,7 +16,7 @@ import com.google.inject.matcher.Matchers;
 /**
  * Guice module which configures the contract interceptor.
  */
-public class InterceptorModule extends AbstractModule {
+public class ContractInterceptorModule extends AbstractModule {
 
     @Override
     protected void configure() {

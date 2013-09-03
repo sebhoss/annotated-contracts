@@ -9,7 +9,6 @@ package com.github.sebhoss.contract.module;
 import com.github.sebhoss.contract.verifier.ContractModule;
 import com.github.sebhoss.contract.verifier.ParanamerModule;
 import com.github.sebhoss.contract.verifier.impl.EnglishErrorMessagesModule;
-import com.github.sebhoss.contract.verifier.impl.SyntaxCheckModule;
 import com.google.inject.AbstractModule;
 
 abstract class AbstractContractModule extends AbstractModule {
@@ -17,7 +16,6 @@ abstract class AbstractContractModule extends AbstractModule {
     @Override
     protected void configure() {
         install(new ParanamerModule());
-        install(new SyntaxCheckModule());
         install(new ContractModule());
         install(new EnglishErrorMessagesModule());
     }

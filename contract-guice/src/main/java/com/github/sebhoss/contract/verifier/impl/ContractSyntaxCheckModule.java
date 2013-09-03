@@ -16,7 +16,7 @@ import com.google.inject.multibindings.Multibinder;
  * 
  * @see <a href="https://code.google.com/p/google-guice/wiki/Multibindings">Guice Multibindings</a>
  */
-public final class SyntaxCheckModule extends AbstractModule {
+public final class ContractSyntaxCheckModule extends AbstractModule {
 
     @Override
     protected void configure() {

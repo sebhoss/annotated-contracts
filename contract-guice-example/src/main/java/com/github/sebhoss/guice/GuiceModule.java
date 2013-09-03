@@ -6,7 +6,7 @@
  */
 package com.github.sebhoss.guice;
 
-import com.github.sebhoss.contract.module.DefaultGuiceModule;
+import com.github.sebhoss.contract.module.DefaultJUELModule;
 import com.google.inject.AbstractModule;
 
 /**
@@ -17,7 +17,7 @@ public class GuiceModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        install(new DefaultGuiceModule());
+        install(new DefaultJUELModule());
 
         bind(InsuranceCompany.class).asEagerSingleton();
     }
