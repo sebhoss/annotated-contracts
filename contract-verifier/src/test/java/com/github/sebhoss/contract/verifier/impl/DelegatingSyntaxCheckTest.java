@@ -17,13 +17,13 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 
 /**
- * TODO: Write documentation!
+ * Test cases for the {@link DelegatingContractSyntaxCheck}.
  */
 @SuppressWarnings({ "static-method", "null" })
 public final class DelegatingSyntaxCheckTest {
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the given syntax check are called.
      */
     @Test
     public void shouldCallGivenSyntaxCheck() {
@@ -41,7 +41,7 @@ public final class DelegatingSyntaxCheckTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that all given syntax checks are called.
      */
     @Test
     public void shouldCallGivenSyntaxChecks() {

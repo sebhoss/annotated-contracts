@@ -15,34 +15,33 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.utils.ContractFactory;
 
 /**
- * TODO: Write documentation!
+ * Test cases for {@link SomeClauseRequiredContractSyntaxCheck}.
  */
 @SuppressWarnings({ "static-method", "nls", "null" })
 public final class SomeClauseRequiredContractSyntaxCheckTest {
 
-    /** TODO: Write documentation! */
+    /** Catches expected exceptions during test execution. */
     @Rule
     public final ExpectedException thrown = ExpectedException.none();
 
     /**
-     * TODO: Write documentation!
+     * Ensures that an empty contract can't be validated.
      */
     @Test
     public void shouldNotAllowEmptyContract() {
         // Given
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
         final Contract contract = ContractFactory.emptyContract();
-        thrown.expect(IllegalStateException.class);
 
         // When
-        syntaxCheck.validate(contract);
+        thrown.expect(IllegalStateException.class);
 
         // Then
-        Assert.fail("Empty contracts should not be valid input!");
+        syntaxCheck.validate(contract);
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that the correct exception message is used for an empty contract.
      */
     @Test
     public void shouldPrintMessageForEmptyContract() {
@@ -59,7 +58,7 @@ public final class SomeClauseRequiredContractSyntaxCheckTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with precondition can be verified.
      */
     @Test
     public void shouldAllowContractWithPrecondition() {
@@ -74,7 +73,7 @@ public final class SomeClauseRequiredContractSyntaxCheckTest {
     }
 
     /**
-     * TODO: Write documentation!
+     * Ensures that a contract with postcondition can be verified.
      */
     @Test
     public void shouldAllowContractWithPostcondition() {
