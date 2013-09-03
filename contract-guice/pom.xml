@@ -55,7 +55,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-javascript</artifactId>
+      <artifactId>contract-scriptengine</artifactId>
       <optional>true</optional>
     </dependency>
 

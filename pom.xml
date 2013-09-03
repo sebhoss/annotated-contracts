@@ -47,7 +47,7 @@
     <module>contract-paranamer</module>
     <module>contract-el</module>
     <module>contract-juel</module>
-    <module>contract-javascript</module>
+    <module>contract-scriptengine</module>
     <module>contract-jexl</module>
     <module>contract-mvel</module>
     <module>contract-ognl</module>
@@ -116,7 +116,7 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
-        <artifactId>contract-javascript</artifactId>
+        <artifactId>contract-scriptengine</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
