@@ -33,6 +33,10 @@
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-guice</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-juel</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>junit</groupId>
