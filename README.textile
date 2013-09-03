@@ -1,5 +1,71 @@
 h1. annotated-contracts
 
-p. Design by Contract based on annotations.
+p. "Design by Contract":http://en.wikipedia.org/wiki/Design_by_contract based on annotations. It allows easy usage of contracts without any need for extra JVM parameters, JVM agents, special classloaders or compilers. Instead it leverages "dependency injection":http://en.wikipedia.org/wiki/Dependency_injection to capture method calls which are annotation with a contract. The project is highly flexible and can be extended to support new contract annotations and other contract clause definitions (see below).
+
+h2. Usage
+
+p. Contracts can only be specified on methods. The following example shows how to do it:
+
+bc.. public class ContractExample {
+
+    @Contract(
+        preconditions = {
+            @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
+            @Clause("damage <= 5000")
+        },
+        postconditions = {
+            @Clause("return >= 0"),
+            @Clause("return <= 2000")
+        })
+    public double calculateCover(double damage) {
+        // .. some calculations
+    }
+
+}
+
+p. The above example shows a method with two pre- and postconditions. The first precondition sets the optional message and exception fields, which are used in case the contract clause was violated. The postconditions use the special string @return@ to reference the returned value of the method. You can reference a class-local field with @this@ just as in standard Java. The following example shows how:
+
+bc.. public class ContractExampleWithFieldAccess {
+
+    private double currentMoney;
+
+    @Contract(
+        preconditions = {
+            @Clause(value = "damage <= this.currentMoney", message = "We don't have enough money to cover damages!")
+        })
+    public double calculateCover(double damage) {
+        // .. some calculations
+    }
+
+}
+
+h2. Integration
+
+p. This library offers several implementations for a variety of other libraries/frameworks. The following configuration matrix shows what is currently supported and planed:
+
+| |_. "Guice":https://code.google.com/p/google-guice/ |_. "Spring":http://www.springsource.org/spring-framework |_. "CDI":http://www.cdi-spec.org/ |
+| "UEL":http://en.wikipedia.org/wiki/Unified_Expression_Language | ✓ | | |
+| "MVEL":http://mvel.codehaus.org/ | ✓ | | |
+| "JEXL":http://commons.apache.org/proper/commons-jexl/ | ✓ | | |
+| "OGNL":http://commons.apache.org/proper/commons-ognl/ | ✓ | | |
+| "SpEL":http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html | | | |
+| "JS":http://download.java.net/jdk8/docs/technotes/guides/scripting/programmer_guide/index.html | ✓ | | |
+| "JBoss EL":https://github.com/jboss/jboss-el-api_spec | | | |
 
 
+h2. Alternatives
+
+p. Not what you are looking for? Try one of the alternatives:
+
+* "https://code.google.com/p/cofoja/":https://code.google.com/p/cofoja/
+* "http://jcontracts.sourceforge.net/":http://jcontracts.sourceforge.net/
+* "http://www.polyglotprogramming.com/contract4j":http://www.polyglotprogramming.com/contract4j
+* "http://jcontractor.sourceforge.net/":http://jcontractor.sourceforge.net/
+* "http://c4j.sourceforge.net/":http://c4j.sourceforge.net/
+* "http://c4j-team.github.io/C4J/":http://c4j-team.github.io/C4J/
+* "http://oval.sourceforge.net/":http://oval.sourceforge.net/
+* "http://springcontracts.sourceforge.net/":http://springcontracts.sourceforge.net/
+* "http://modernjass.sourceforge.net/":http://modernjass.sourceforge.net/
+* "https://code.google.com/p/javadbc/":https://code.google.com/p/javadbc/
+* "http://chex4j.sourceforge.net/":http://chex4j.sourceforge.net/
+* "https://code.google.com/p/java-on-contracts/":https://code.google.com/p/java-on-contracts/
