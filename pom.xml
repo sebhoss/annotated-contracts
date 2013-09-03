@@ -161,7 +161,7 @@
     <dependency>
       <groupId>ch.qos.cal10n</groupId>
       <artifactId>cal10n-api</artifactId>
-      <version>0.7.4</version>
+      <version>0.8.1</version>
     </dependency>
   </dependencies>
   
