@@ -9,25 +9,12 @@ package com.github.sebhoss.contract.verifier;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.inject.Inject;
-
 import com.github.sebhoss.contract.annotation.Clause;
 
 /**
  * MVEL-based implementation of the {@link ContractContextFactory}.
  */
 public final class MVELBasedContractContextFactory implements ContractContextFactory {
-
-    private final Map<String, Object> constants;
-
-    /**
-     * @param constants
-     *            The MVEL constants to use.
-     */
-    @Inject
-    public MVELBasedContractContextFactory(final Map<String, Object> constants) {
-        this.constants = constants;
-    }
 
     @Override
     public ContractContext createContext(final Object instance, final Object[] arguments, final String[] parameterNames) {
@@ -37,7 +24,6 @@ public final class MVELBasedContractContextFactory implements ContractContextFac
             tokens.put(parameterNames[index], arguments[index]);
         }
         tokens.put(Clause.THIS, instance);
-        tokens.putAll(constants);
 
         return new MVELContractContext(tokens);
     }
