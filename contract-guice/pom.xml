@@ -45,6 +45,11 @@
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-jexl</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-ognl</artifactId>
       <optional>true</optional>
     </dependency>
