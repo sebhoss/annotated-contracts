@@ -30,7 +30,7 @@ public class InsuranceCompanyTest {
     @Test
     public void shouldAcceptPositiveDamages() {
         // Given
-        final Injector injector = Guice.createInjector(new GuiceModule());
+        final Injector injector = Guice.createInjector(new CompanyModule());
         final InsuranceCompany instance = injector.getInstance(InsuranceCompany.class);
 
         // When
@@ -46,7 +46,7 @@ public class InsuranceCompanyTest {
     @Test
     public void shouldNotAcceptNegativeDamages() {
         // Given
-        final Injector injector = Guice.createInjector(new GuiceModule());
+        final Injector injector = Guice.createInjector(new CompanyModule());
         final InsuranceCompany instance = injector.getInstance(InsuranceCompany.class);
 
         // When

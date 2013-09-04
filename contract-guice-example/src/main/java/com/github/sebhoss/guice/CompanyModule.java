@@ -13,7 +13,7 @@ import com.google.inject.AbstractModule;
  * Simple guice module which uses the default Guice configuration module to enable annotation-based contracts and
  * creates an instance of the domain model class.
  */
-public class GuiceModule extends AbstractModule {
+public class CompanyModule extends AbstractModule {
 
     @Override
     protected void configure() {
