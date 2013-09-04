@@ -54,6 +54,7 @@
     <module>contract-spring</module>
     <module>contract-guice</module>
     <module>contract-guice-example</module>
+    <module>contract-jboss-el</module>
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -132,6 +133,11 @@
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-ognl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-jboss-el</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
