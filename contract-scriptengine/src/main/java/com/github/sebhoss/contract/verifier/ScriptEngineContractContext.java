@@ -43,7 +43,7 @@ public final class ScriptEngineContractContext implements ContractContext {
             throw new ContractContextException(exception);
         }
 
-        return Boolean.TRUE.equals(contractValidated);
+        return Boolean.FALSE.equals(contractValidated);
     }
 
 }
