@@ -47,6 +47,7 @@
     <module>contract-paranamer</module>
     <module>contract-el</module>
     <module>contract-juel</module>
+    <module>contract-jboss-el</module>
     <module>contract-scriptengine</module>
     <module>contract-jexl</module>
     <module>contract-mvel</module>
@@ -54,7 +55,6 @@
     <module>contract-spring</module>
     <module>contract-guice</module>
     <module>contract-guice-example</module>
-    <module>contract-jboss-el</module>
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
