@@ -52,7 +52,7 @@ p. This library offers several implementations for a variety of other libraries/
 | "MVEL":http://mvel.codehaus.org/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithMVEL | | |
 | "JEXL":http://commons.apache.org/proper/commons-jexl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJEXL | | |
 | "OGNL":http://commons.apache.org/proper/commons-ognl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithOGNL | | |
-| "SpEL":http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html | | | |
+| "SpEL":http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithSpringEL | | |
 | "JS":http://download.java.net/jdk8/docs/technotes/guides/scripting/programmer_guide/index.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJavaScript | | |
 | "JBoss EL":https://github.com/jboss/jboss-el-api_spec | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJBossEL | | |
 

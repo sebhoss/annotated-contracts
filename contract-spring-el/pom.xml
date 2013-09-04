@@ -23,7 +23,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-guice</artifactId>
+  <artifactId>contract-spring-el</artifactId>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -31,57 +31,12 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-aop</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-paranamer</artifactId>
+      <artifactId>contract-verifier</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-juel</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-jexl</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-ognl</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-mvel</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-scriptengine</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-spring-el</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-jboss-el</artifactId>
-      <optional>true</optional>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.inject</groupId>
-      <artifactId>guice</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.inject.extensions</groupId>
-      <artifactId>guice-multibindings</artifactId>
-      <version>3.0</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
     </dependency>
   </dependencies>
 </project>
