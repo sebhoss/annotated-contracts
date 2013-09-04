@@ -36,6 +36,10 @@ bc.. public class ContractExampleWithFieldAccess {
     public double calculateCover(double damage) {
         // .. some calculations
     }
+    
+    public double getCurrentMoney() {
+        return currentMoney;
+    }
 
 }
 
