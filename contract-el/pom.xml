@@ -25,6 +25,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <artifactId>contract-el</artifactId>
   <!-- TODO: Mention JSR 245 -->
+  <!-- TODO: Mention JSR 341 -->
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
