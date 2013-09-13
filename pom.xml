@@ -46,6 +46,7 @@
     <module>contract-verifier</module>
     <module>contract-paranamer</module>
     <module>contract-el</module>
+    <module>contract-uel</module>
     <module>contract-juel</module>
     <module>contract-jboss-el</module>
     <module>contract-scriptengine</module>
@@ -139,6 +140,11 @@
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-jboss-el</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-uel</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

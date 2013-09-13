@@ -48,6 +48,7 @@ h2. Integration
 p. This library offers several implementations for a variety of other libraries/frameworks. The following configuration matrix shows what is currently supported and planed:
 
 | |_. "Guice":https://code.google.com/p/google-guice/ |_. "Spring":http://www.springsource.org/spring-framework |_. "CDI":http://www.cdi-spec.org/ |
+| "UEL":http://uel.java.net/ | | | |
 | "JUEL":http://juel.sourceforge.net/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJUEL | | |
 | "MVEL":http://mvel.codehaus.org/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithMVEL | | |
 | "JEXL":http://commons.apache.org/proper/commons-jexl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJEXL | | |
