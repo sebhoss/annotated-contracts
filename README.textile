@@ -10,12 +10,12 @@ bc.. public class ContractExample {
 
     @Contract(
         preconditions = {
-            @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause("damage <= 5000")
+            @Clause(value = "${damage > 0}", message = "Reported damage must be positive!", exception = IllegalStateException.class),
+            @Clause("damage <= 5000}")
         },
         postconditions = {
-            @Clause("return >= 0"),
-            @Clause("return <= 2000")
+            @Clause("${return >= 0}"),
+            @Clause("${return <= 2000}")
         })
     public double calculateCover(double damage) {
         // .. some calculations
@@ -31,7 +31,7 @@ bc.. public class ContractExampleWithFieldAccess {
 
     @Contract(
         preconditions = {
-            @Clause(value = "damage <= this.currentMoney", message = "We don't have enough money to cover damages!")
+            @Clause(value = "${damage <= this.currentMoney}", message = "We don't have enough money to cover damages!")
         })
     public double calculateCover(double damage) {
         // .. some calculations

@@ -39,8 +39,7 @@ public final class ELContractContext implements ContractContext {
 
     @Override
     public boolean isInViolationWith(final Clause clause) {
-        final String contractExpression = String.format("${%s}", clause.value()); //$NON-NLS-1$
-        final ValueExpression valueExpression = expressionFactory.createValueExpression(elContext, contractExpression,
+        final ValueExpression valueExpression = expressionFactory.createValueExpression(elContext, clause.value(),
                 Boolean.class);
         final Object clauseValid = valueExpression.getValue(elContext);
 

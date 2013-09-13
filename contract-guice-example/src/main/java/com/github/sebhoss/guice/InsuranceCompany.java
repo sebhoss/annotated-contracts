@@ -22,8 +22,8 @@ public class InsuranceCompany {
      * @return The payout of this insurance company.
      */
     @Contract(preconditions = {
-            @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause("damage <= 5000") }, postconditions = { @Clause("return >= 0"), @Clause("return <= 2000") })
+            @Clause(value = "${damage > 0}", message = "Reported damage must be positive!", exception = IllegalStateException.class),
+            @Clause("${damage <= 5000}") }, postconditions = { @Clause("${return >= 0}"), @Clause("${return <= 2000}") })
     public double calculateCover(final double damage) {
         return coverRate * damage;
     }
