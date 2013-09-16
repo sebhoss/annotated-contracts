@@ -26,10 +26,6 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-verifier</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-lifecycle</artifactId>
     </dependency>
 
