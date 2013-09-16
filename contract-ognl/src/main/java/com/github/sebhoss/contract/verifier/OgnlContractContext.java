@@ -40,12 +40,13 @@ public final class OgnlContractContext implements ContractContext {
         Object contractValidated;
 
         try {
-            contractValidated = Ognl.getValue(clause.value(), ognlContext, ognlContext.getRoot());
+            final Object expression = Ognl.parseExpression(clause.value());
+            contractValidated = Ognl.getValue(expression, ognlContext, ognlContext.getCurrentObject());
         } catch (final OgnlException exception) {
             throw new ContractContextException(exception);
         }
 
-        return Boolean.TRUE.equals(contractValidated);
+        return Boolean.FALSE.equals(contractValidated);
     }
 
 }
