@@ -39,7 +39,7 @@ public final class MVELContractContext implements ContractContext {
     public boolean isInViolationWith(final Clause clause) {
         final Boolean clauseValid = MVEL.evalToBoolean(clause.value(), tokens);
 
-        return Boolean.TRUE.equals(clauseValid);
+        return Boolean.FALSE.equals(clauseValid);
     }
 
 }
