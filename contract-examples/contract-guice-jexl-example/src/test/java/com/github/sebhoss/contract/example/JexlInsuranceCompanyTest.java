@@ -19,7 +19,7 @@ import com.google.inject.Injector;
  * Test cases for the {@link InsuranceCompany}.
  */
 @SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
-public class UelInsuranceCompanyTest {
+public class JexlInsuranceCompanyTest {
 
     /** Catches expected exceptions */
     @Rule

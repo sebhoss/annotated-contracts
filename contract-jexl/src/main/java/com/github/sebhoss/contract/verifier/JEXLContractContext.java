@@ -44,7 +44,7 @@ public final class JEXLContractContext implements ContractContext {
         final Expression expression = jexlEngine.createExpression(clause.value());
         final Object contractValidated = expression.evaluate(jexlContext);
 
-        return Boolean.TRUE.equals(contractValidated);
+        return Boolean.FALSE.equals(contractValidated);
     }
 
 }
