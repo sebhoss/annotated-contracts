@@ -8,6 +8,7 @@ package com.github.sebhoss.contract.verifier.impl;
 
 import java.lang.reflect.Method;
 
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import com.github.sebhoss.contract.annotation.Contract;
@@ -61,14 +62,205 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
     }
 
     @Override
-    public ContractVerifier createContractVerifier(final Object instance, final Method method, final Object[] arguments) {
-        final Contract contract = contractRetrieval.retrieveContract(method);
-        contractSyntaxCheck.validate(contract);
-        final String[] parameterNames = parameterNamesLookup.lookupParameterNames(method);
-        contractSemanticCheck.validate(contract, parameterNames);
-        final ContractContext context = contractContextFactory.createContext(instance, arguments, parameterNames);
+    public ContractVerifierBuilder createContractVerifier() {
+        return new ContextBasedContractVerifierBuilder();
+    }
 
-        return new ContextBasedContractVerifier(contract, context, contractExceptionFactory);
+    /**
+     * @return the contractRetrieval
+     */
+    ContractRetrieval getContractRetrieval() {
+        return contractRetrieval;
+    }
+
+    /**
+     * @return the contractSyntaxCheck
+     */
+    ContractSyntaxCheck getContractSyntaxCheck() {
+        return contractSyntaxCheck;
+    }
+
+    /**
+     * @return the parameterNamesLookup
+     */
+    ParameterNamesLookup getParameterNamesLookup() {
+        return parameterNamesLookup;
+    }
+
+    /**
+     * @return the contractSemanticCheck
+     */
+    ContractSemanticCheck getContractSemanticCheck() {
+        return contractSemanticCheck;
+    }
+
+    /**
+     * @return the contractContextFactory
+     */
+    ContractContextFactory getContractContextFactory() {
+        return contractContextFactory;
+    }
+
+    /**
+     * @return the contractExceptionFactory
+     */
+    ContractExceptionFactory getContractExceptionFactory() {
+        return contractExceptionFactory;
+    }
+
+    /**
+     * Builds {@link ContractVerifier}
+     */
+    @Nullable
+    public class ContextBasedContractVerifierBuilder implements ContractVerifierBuilder {
+
+        @Nullable
+        private Method          method;
+
+        @Nullable
+        private Object          instance;
+
+        @Nullable
+        private Object[]        arguments;
+
+        @Nullable
+        private Contract        contract;
+
+        @Nullable
+        private String[]        parameterNames;
+
+        @Nullable
+        private ContractContext context;
+
+        @Override
+        public ContractVerifierBuilder method(final Method newMethod) {
+            method = newMethod;
+
+            return this;
+        }
+
+        @Override
+        public ContractVerifierBuilder instance(final Object newInstance) {
+            instance = newInstance;
+
+            return this;
+        }
+
+        @Override
+        public ContractVerifierBuilder arguments(final Object[] newArguments) {
+            arguments = newArguments;
+
+            return this;
+        }
+
+        @Override
+        public ContractVerifierBuilder contract(final Contract newContract) {
+            contract = newContract;
+
+            return this;
+        }
+
+        @Override
+        public ContractVerifierBuilder parameterNames(final String[] newParameterNames) {
+            parameterNames = newParameterNames;
+
+            return this;
+        }
+
+        @Override
+        public ContractVerifierBuilder context(final ContractContext newContext) {
+            context = newContext;
+
+            return this;
+        }
+
+        @Override
+        public ContractVerifier get() {
+            if (needsContractRetrieval()) {
+                retrieveContract();
+            }
+
+            checkContractSyntax();
+
+            if (needsParameterNamesLookup()) {
+                lookupParameterNames();
+            }
+
+            checkContractSemantic();
+
+            if (missesContractContext()) {
+                createContractContext();
+            }
+
+            return new ContextBasedContractVerifier(getContract(), getContext(), getContractExceptionFactory());
+        }
+
+        private boolean needsContractRetrieval() {
+            return contract == null;
+        }
+
+        private void retrieveContract() {
+            contract = getContractRetrieval().retrieveContract(getMethod());
+        }
+
+        private void checkContractSyntax() {
+            getContractSyntaxCheck().validate(getContract());
+        }
+
+        private boolean needsParameterNamesLookup() {
+            return parameterNames == null;
+        }
+
+        private void lookupParameterNames() {
+            parameterNames = getParameterNamesLookup().lookupParameterNames(getMethod());
+        }
+
+        private void checkContractSemantic() {
+            getContractSemanticCheck().validate(getContract(), getParameterNames());
+        }
+
+        private boolean missesContractContext() {
+            return context == null;
+        }
+
+        private void createContractContext() {
+            context = getContractContextFactory().createContext(getInstance(), getArguments(), getParameterNames());
+        }
+
+        private Contract getContract() {
+            return nullsafe(contract);
+        }
+
+        private Method getMethod() {
+            return nullsafe(method);
+        }
+
+        private String[] getParameterNames() {
+            return nullsafe(parameterNames);
+        }
+
+        private Object[] getArguments() {
+            return nullsafe(arguments);
+        }
+
+        private Object getInstance() {
+            return nullsafe(instance);
+        }
+
+        private ContractContext getContext() {
+            return nullsafe(context);
+        }
+
+        private <T> T nullsafe(@Nullable final T object) {
+            final T nullsafeInstance = object;
+
+            if (nullsafeInstance != null) {
+                return nullsafeInstance;
+            }
+
+            throw new IllegalStateException();
+        }
+
     }
 
 }

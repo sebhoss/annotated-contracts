@@ -13,7 +13,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.verifier.ContractVerifier;
+import com.github.sebhoss.contract.lifecycle.ContractLifecycle;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 
 /**
@@ -26,23 +26,12 @@ public final class ContractInterceptor implements MethodInterceptor {
     @Nullable
     private ContractVerifierFactory contractVerifierFactory;
 
-    @SuppressWarnings(CompilerWarnings.NULL)
     @Override
+    @SuppressWarnings(CompilerWarnings.NULL)
     public Object invoke(final MethodInvocation invocation) throws Throwable {
-        final ContractVerifier contractVerifier = contractVerifierFactory.createContractVerifier(invocation.getThis(),
-                invocation.getMethod(), invocation.getArguments());
+        final ContractLifecycle lifecycle = new AopLifecycle(invocation, contractVerifierFactory);
 
-        if (contractVerifier.hasPreconditions()) {
-            contractVerifier.verifyPreconditions();
-        }
-
-        final Object result = invocation.proceed();
-
-        if (contractVerifier.hasPostconditions()) {
-            contractVerifier.verifyPostconditions(result);
-        }
-
-        return result;
+        return lifecycle.performLifecycle();
     }
 
 }

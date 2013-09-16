@@ -8,20 +8,70 @@ package com.github.sebhoss.contract.verifier;
 
 import java.lang.reflect.Method;
 
+import com.github.sebhoss.contract.annotation.Contract;
+
 /**
- * Creates {@link ContractVerifier}s.
+ * Creates {@link ContractVerifierBuilder}s.
  */
 public interface ContractVerifierFactory {
 
     /**
-     * @param targetObject
-     *            The calling instance.
-     * @param calledMethod
-     *            The called method on the instance.
-     * @param givenArguments
-     *            The given method arguments
-     * @return A suitable contract verifier for the method invocation.
+     * @return A new {@link ContractVerifierBuilder}.
      */
-    ContractVerifier createContractVerifier(Object targetObject, Method calledMethod, Object[] givenArguments);
+    ContractVerifierBuilder createContractVerifier();
+
+    /**
+     * Builds {@link ContractVerifier}.
+     */
+    public interface ContractVerifierBuilder {
+
+        /**
+         * @param newMethod
+         *            The method to use.
+         * @return The current builder.
+         */
+        public ContractVerifierBuilder method(final Method newMethod);
+
+        /**
+         * @param newInstance
+         *            The instance to use.
+         * @return The current builder.
+         */
+        public ContractVerifierBuilder instance(final Object newInstance);
+
+        /**
+         * @param newArguments
+         *            The arguments to use.
+         * @return The current builder.
+         */
+        public ContractVerifierBuilder arguments(final Object[] newArguments);
+
+        /**
+         * @param newContract
+         *            The contract to use.
+         * @return The current builder.
+         */
+        public ContractVerifierBuilder contract(final Contract newContract);
+
+        /**
+         * @param newParameterNames
+         *            The parameter names to use.
+         * @return The current builder.
+         */
+        public ContractVerifierBuilder parameterNames(final String[] newParameterNames);
+
+        /**
+         * @param newContext
+         *            The context to use.
+         * @return The current builder.
+         */
+        public ContractVerifierBuilder context(final ContractContext newContext);
+
+        /**
+         * @return A new contract verifier
+         */
+        ContractVerifier get();
+
+    }
 
 }

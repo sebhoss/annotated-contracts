@@ -39,6 +39,7 @@
     <module>contract-testutils</module>
     <module>contract-aop</module>
     <module>contract-verifier</module>
+    <module>contract-lifecycle</module>
     <module>contract-paranamer</module>
     <module>contract-el</module>
     <module>contract-uel</module>
@@ -101,6 +102,11 @@
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-verifier</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-lifecycle</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

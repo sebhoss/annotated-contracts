@@ -24,4 +24,24 @@
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <artifactId>contract-spring</artifactId>
+  <dependencies>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-verifier</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-lifecycle</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>3.2.4.RELEASE</version>
+    </dependency>
+  </dependencies>
 </project>
