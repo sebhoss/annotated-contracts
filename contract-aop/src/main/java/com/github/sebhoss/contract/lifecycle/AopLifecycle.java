@@ -4,21 +4,29 @@
  * terms of the Do What The Fuck You Want To Public License, Version 2,
  * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
-package com.github.sebhoss.contract.interceptor;
+package com.github.sebhoss.contract.lifecycle;
 
 import org.aopalliance.intercept.MethodInvocation;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.lifecycle.ContractLifecycle;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory.ContractVerifierBuilder;
 
-final class AopLifecycle extends ContractLifecycle {
+/**
+ * AOP {@link MethodInvocation}-based implementation of the {@link ContractLifecycle}.
+ */
+public final class AopLifecycle extends ContractLifecycle {
 
     private final MethodInvocation invocation;
 
-    AopLifecycle(final MethodInvocation invocation, final ContractVerifierFactory contractVerifierFactory) {
+    /**
+     * @param invocation
+     *            The method invocation to use.
+     * @param contractVerifierFactory
+     *            The contract-verifier factory to use.
+     */
+    public AopLifecycle(final MethodInvocation invocation, final ContractVerifierFactory contractVerifierFactory) {
         super(contractVerifierFactory);
         this.invocation = invocation;
     }

@@ -13,6 +13,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.contract.lifecycle.AopLifecycle;
 import com.github.sebhoss.contract.lifecycle.ContractLifecycle;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 
