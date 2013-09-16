@@ -74,4 +74,20 @@ public class JuelInsuranceCompanyTest {
         instance.calculateCover(5001);
     }
 
+    /**
+     * Ensures that the insurance company cannot pay a high amount of money.
+     */
+    @Test
+    public void shouldNotPerformHighPayout() {
+        // Given
+        final Injector injector = Guice.createInjector(new CompanyModule());
+        final InsuranceCompany instance = injector.getInstance(InsuranceCompany.class);
+
+        // When
+        thrown.expect(IllegalArgumentException.class);
+
+        // Then
+        instance.calculateCover(5000);
+    }
+
 }
