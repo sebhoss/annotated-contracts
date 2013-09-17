@@ -7,6 +7,7 @@
 package com.github.sebhoss.contract.verifier.impl;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 import javax.annotation.Nullable;
 import javax.inject.Inject;
@@ -148,7 +149,7 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
 
         @Override
         public ContractVerifierBuilder arguments(final Object[] newArguments) {
-            arguments = newArguments;
+            arguments = Arrays.copyOf(newArguments, newArguments.length);
 
             return this;
         }
@@ -162,7 +163,7 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
 
         @Override
         public ContractVerifierBuilder parameterNames(final String[] newParameterNames) {
-            parameterNames = newParameterNames;
+            parameterNames = Arrays.copyOf(newParameterNames, newParameterNames.length);
 
             return this;
         }
