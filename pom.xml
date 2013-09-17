@@ -52,12 +52,6 @@
     <module>contract-spring-el</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
-    <module>contract-guice-jexl-example</module>
-    <module>contract-guice-mvel-example</module>
-    <module>contract-guice-ognl-example</module>
-    <module>contract-guice-spel-example</module>
-    <module>contract-guice-js-example</module>
-    <module>contract-guice-uel-example</module>
     <module>contract-examples</module>
   </modules>
 
