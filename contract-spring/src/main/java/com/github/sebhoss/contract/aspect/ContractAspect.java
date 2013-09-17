@@ -23,7 +23,11 @@ public class ContractAspect {
 
     private final ContractVerifierFactory contractVerifierFactory;
 
-    ContractAspect(final ContractVerifierFactory contractVerifierFactory) {
+    /**
+     * @param contractVerifierFactory
+     *            The factory to use.
+     */
+    public ContractAspect(final ContractVerifierFactory contractVerifierFactory) {
         this.contractVerifierFactory = contractVerifierFactory;
     }
 
@@ -36,7 +40,7 @@ public class ContractAspect {
      * @throws Throwable
      *             In case the join point could not proceed.
      */
-    @Around("@annotation(com.github.sebhoss.contract.annotation.Contract)")
+    @Around("@annotation(contract)")
     public Object verifyContract(final ProceedingJoinPoint pjp, final Contract contract) throws Throwable {
         final ContractLifecycle lifecycle = new SpringContractLifecycle(pjp, contract, contractVerifierFactory);
 

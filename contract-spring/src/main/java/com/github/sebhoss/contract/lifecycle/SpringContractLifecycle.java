@@ -6,14 +6,14 @@
  */
 package com.github.sebhoss.contract.lifecycle;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.reflect.MethodSignature;
-
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory.ContractVerifierBuilder;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.reflect.MethodSignature;
 
 /**
  * Spring AspectJ-based implementation of the {@link ContractLifecycle}.
@@ -41,11 +41,14 @@ public final class SpringContractLifecycle extends ContractLifecycle {
     @Override
     @SuppressWarnings(CompilerWarnings.NULL)
     protected ContractVerifier createVerifier() {
-        final ContractVerifierBuilder builder = contractVerifierFactory.createContractVerifier();
+        final ContractVerifierBuilder builder = getContractVerifierFactory().createContractVerifier();
         final MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
 
         builder.method(methodSignature.getMethod());
-        builder.parameterNames(methodSignature.getParameterNames());
+        final String[] parameterNames = methodSignature.getParameterNames();
+        if (parameterNames != null) {
+            builder.parameterNames(parameterNames);
+        }
         builder.instance(pjp.getThis());
         builder.arguments(pjp.getArgs());
         builder.contract(contract);
