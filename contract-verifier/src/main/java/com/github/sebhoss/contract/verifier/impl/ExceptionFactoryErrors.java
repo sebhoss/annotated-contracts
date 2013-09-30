@@ -17,7 +17,7 @@ import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
  * Enumeration of errors of a {@link ContractExceptionFactory}
  */
 @BaseName("errors")
-@LocaleData({ @Locale("en") })
+@LocaleData(defaultCharset = "UTF8", value = { @Locale("en") })
 @SuppressWarnings(CompilerWarnings.JAVADOC)
 public enum ExceptionFactoryErrors {
 
