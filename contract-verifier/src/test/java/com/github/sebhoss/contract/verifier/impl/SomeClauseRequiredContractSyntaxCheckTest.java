@@ -6,14 +6,14 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.contract.utils.ContractFactory;
+
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.annotation.Contract;
-import com.github.sebhoss.contract.utils.ContractFactory;
 
 /**
  * Test cases for {@link SomeClauseRequiredContractSyntaxCheck}.
