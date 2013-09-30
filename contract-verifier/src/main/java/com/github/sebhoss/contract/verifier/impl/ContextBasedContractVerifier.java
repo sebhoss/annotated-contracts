@@ -6,7 +6,7 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractContext;
@@ -61,11 +61,11 @@ public final class ContextBasedContractVerifier implements ContractVerifier {
         checkClauses(contract.postconditions());
     }
 
-    @SuppressWarnings(CompilerWarnings.NULL)
     private void checkClauses(final Clause[] clauses) {
         for (final Clause clause : clauses) {
-            if (context.isInViolationWith(clause)) {
-                throw exceptionFactory.breachOfContract(clause);
+            final Clause nullsafeClause = Nullsafe.nullsafe(clause);
+            if (context.isInViolationWith(nullsafeClause)) {
+                throw exceptionFactory.breachOfContract(nullsafeClause);
             }
         }
     }
