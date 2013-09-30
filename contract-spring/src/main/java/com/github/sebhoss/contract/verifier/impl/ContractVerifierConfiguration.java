@@ -56,8 +56,8 @@ public class ContractVerifierConfiguration {
     /**
      * @return A context-based {@link ContractVerifierFactory}.
      */
-    @SuppressWarnings(CompilerWarnings.NULL)
     @Bean
+    @SuppressWarnings(CompilerWarnings.NULL)
     public ContractVerifierFactory contextBasedFactory() {
         return new ContextBasedContractVerifierFactory(retrieval.annotationBasedRetrieval(),
                 syntaxCheck.noSyntaxChecks(), namesLookup.localVariableTableLookup(), semanticCheck.noSemanticChecks(),

@@ -23,8 +23,8 @@ public class ContractSyntaxCheckConfiguration {
     /**
      * @return A simple no-op syntax check.
      */
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     @Bean
+    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public ContractSyntaxCheck noSyntaxChecks() {
         return new DelegatingContractSyntaxCheck(new HashSet<ContractSyntaxCheck>());
     }
