@@ -29,6 +29,8 @@ public enum ExceptionFactoryErrors {
 
     NO_STRING_CONSTRUCTOR,
 
-    NO_DEFAULT_CONSTRUCTOR;
+    NO_DEFAULT_CONSTRUCTOR,
+
+    NO_MATCHING_CONSTRUCTOR;
 
 }

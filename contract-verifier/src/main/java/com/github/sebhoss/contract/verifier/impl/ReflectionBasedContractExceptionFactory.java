@@ -13,7 +13,6 @@ import javax.inject.Inject;
 
 import ch.qos.cal10n.IMessageConveyor;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 
@@ -33,7 +32,6 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
         this.messages = messages;
     }
 
-    @SuppressWarnings(CompilerWarnings.NLS)
     @Override
     public RuntimeException breachOfContract(final Clause clause) {
         final boolean needsStringConstructor = !clause.message().isEmpty();
@@ -51,7 +49,7 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
             }
 
             if (contractException == null) {
-                throw new NullPointerException("No suitable constructor found!");
+                throw new NullPointerException(messages.getMessage(ExceptionFactoryErrors.NO_MATCHING_CONSTRUCTOR));
             }
 
             return contractException;
