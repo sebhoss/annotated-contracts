@@ -29,14 +29,11 @@ public final class DefaultSyntaxCheckTest {
      */
     @Test
     public void shouldThrowIllegalStateExceptionWithoutPreAndPostconditions() {
-        // Given
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
         final Contract contract = ContractFactory.emptyContract();
 
-        // When
         thrown.expect(IllegalStateException.class);
 
-        // Then
         syntaxCheck.validate(contract);
     }
 
@@ -45,15 +42,12 @@ public final class DefaultSyntaxCheckTest {
      */
     @Test
     public void shouldThrowCorrectMessageForMissingClauses() {
-        // Given
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
         final Contract contract = ContractFactory.emptyContract();
 
-        // When
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage("Don't use @Contract without any Pre- or Postconditions!");
 
-        // Then
         syntaxCheck.validate(contract);
     }
 
@@ -62,13 +56,10 @@ public final class DefaultSyntaxCheckTest {
      */
     @Test
     public void shouldAllowContractWithPrecondition() {
-        // Given
         final Contract contract = ContractFactory.contractWithPrecondition();
 
-        // When
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
 
-        // Then
         syntaxCheck.validate(contract);
     }
 
@@ -77,13 +68,10 @@ public final class DefaultSyntaxCheckTest {
      */
     @Test
     public void shouldAllowContractWithPostcondition() {
-        // Given
         final Contract contract = ContractFactory.contractWithPostcondition();
 
-        // When
         final SomeClauseRequiredContractSyntaxCheck syntaxCheck = new SomeClauseRequiredContractSyntaxCheck();
 
-        // Then
         syntaxCheck.validate(contract);
     }
 

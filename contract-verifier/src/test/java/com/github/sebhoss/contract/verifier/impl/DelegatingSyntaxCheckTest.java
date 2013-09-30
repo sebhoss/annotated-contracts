@@ -28,16 +28,13 @@ public final class DelegatingSyntaxCheckTest {
      */
     @Test
     public void shouldCallGivenSyntaxCheck() {
-        // Given
         final ContractSyntaxCheck mockedCheck = Mockito.mock(ContractSyntaxCheck.class);
         final Set<ContractSyntaxCheck> checks = new HashSet<>();
         checks.add(mockedCheck);
         final DelegatingContractSyntaxCheck syntaxCheck = new DelegatingContractSyntaxCheck(checks);
 
-        // When
         syntaxCheck.validate(null);
 
-        // Then
         Mockito.verify(mockedCheck).validate(Matchers.<Contract> any());
     }
 
@@ -46,7 +43,6 @@ public final class DelegatingSyntaxCheckTest {
      */
     @Test
     public void shouldCallGivenSyntaxChecks() {
-        // Given
         final ContractSyntaxCheck firstCheck = Mockito.mock(ContractSyntaxCheck.class);
         final ContractSyntaxCheck secondCheck = Mockito.mock(ContractSyntaxCheck.class);
         final Set<ContractSyntaxCheck> checks = new HashSet<>();
@@ -54,10 +50,8 @@ public final class DelegatingSyntaxCheckTest {
         checks.add(secondCheck);
         final DelegatingContractSyntaxCheck syntaxCheck = new DelegatingContractSyntaxCheck(checks);
 
-        // When
         syntaxCheck.validate(null);
 
-        // Then
         Mockito.verify(firstCheck).validate(Matchers.<Contract> any());
         Mockito.verify(secondCheck).validate(Matchers.<Contract> any());
     }

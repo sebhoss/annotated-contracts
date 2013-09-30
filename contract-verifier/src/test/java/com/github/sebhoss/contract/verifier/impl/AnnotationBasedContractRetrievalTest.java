@@ -32,13 +32,10 @@ public final class AnnotationBasedContractRetrievalTest {
      */
     @Test
     public void shouldThrowNPEForNullMethod() {
-        // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
 
-        // When
         thrown.expect(NullPointerException.class);
 
-        // Then
         retrieval.retrieveContract(null);
     }
 
@@ -47,14 +44,11 @@ public final class AnnotationBasedContractRetrievalTest {
      */
     @Test
     public void shouldThrowISEForMethodWithoutContract() {
-        // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
         final Method method = MethodFactory.createMethodWithoutContract();
 
-        // When
         thrown.expect(IllegalStateException.class);
 
-        // Then
         retrieval.retrieveContract(method);
     }
 
@@ -63,14 +57,11 @@ public final class AnnotationBasedContractRetrievalTest {
      */
     @Test
     public void shouldFindContract() {
-        // Given
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
         final Method method = MethodFactory.createMethodWithEmptyContract();
 
-        // When
         final Contract contract = retrieval.retrieveContract(method);
 
-        // Then
         Assert.assertNotNull("The retrieved contract should never be NULL!", contract);
     }
 

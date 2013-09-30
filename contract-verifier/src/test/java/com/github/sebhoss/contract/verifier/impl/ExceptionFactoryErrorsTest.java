@@ -29,13 +29,10 @@ public class ExceptionFactoryErrorsTest {
      */
     @Test
     public void shouldHaveEnglishTranslations() {
-        // Given
         final IMessageKeyVerifier mkv = new MessageKeyVerifier(ExceptionFactoryErrors.class);
 
-        // When
         final List<Cal10nError> errorList = mkv.verify(Locale.ENGLISH);
 
-        // Then
         for (final Cal10nError error : errorList) {
             System.out.println(error);
         }
