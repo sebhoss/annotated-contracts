@@ -9,6 +9,7 @@ package com.github.sebhoss.contract.verifier.impl;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
+import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.aspect.ContractAspect;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 
@@ -31,13 +32,7 @@ public class ContractAspectConfiguration {
      */
     @Bean
     public ContractAspect contractAspect() {
-        final ContractVerifierFactory nullsafeVerifierFactory = verifierFactory;
-
-        if (nullsafeVerifierFactory != null) {
-            return new ContractAspect(nullsafeVerifierFactory);
-        }
-
-        throw new IllegalStateException();
+        return new ContractAspect(Nullsafe.nullsafe(verifierFactory));
     }
 
 }

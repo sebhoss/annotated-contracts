@@ -12,6 +12,7 @@ import java.util.Arrays;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
+import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractContext;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
@@ -229,37 +230,27 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
         }
 
         private Contract getContract() {
-            return nullsafe(contract);
+            return Nullsafe.nullsafe(contract);
         }
 
         private Method getMethod() {
-            return nullsafe(method);
+            return Nullsafe.nullsafe(method);
         }
 
         private String[] getParameterNames() {
-            return nullsafe(parameterNames);
+            return Nullsafe.nullsafe(parameterNames);
         }
 
         private Object[] getArguments() {
-            return nullsafe(arguments);
+            return Nullsafe.nullsafe(arguments);
         }
 
         private Object getInstance() {
-            return nullsafe(instance);
+            return Nullsafe.nullsafe(instance);
         }
 
         private ContractContext getContext() {
-            return nullsafe(context);
-        }
-
-        private <T> T nullsafe(@Nullable final T object) {
-            final T nullsafeInstance = object;
-
-            if (nullsafeInstance != null) {
-                return nullsafeInstance;
-            }
-
-            throw new IllegalStateException();
+            return Nullsafe.nullsafe(context);
         }
 
     }

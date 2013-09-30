@@ -8,6 +8,7 @@ package com.github.sebhoss.contract.verifier.impl;
 
 import java.lang.reflect.Method;
 
+import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
 
@@ -18,13 +19,7 @@ public final class AnnotationBasedContractRetrieval implements ContractRetrieval
 
     @Override
     public Contract retrieveContract(final Method method) {
-        final Contract contract = method.getAnnotation(Contract.class);
-
-        if (contract == null) {
-            throw new IllegalStateException();
-        }
-
-        return contract;
+        return Nullsafe.nullsafe(method.getAnnotation(Contract.class));
     }
 
 }

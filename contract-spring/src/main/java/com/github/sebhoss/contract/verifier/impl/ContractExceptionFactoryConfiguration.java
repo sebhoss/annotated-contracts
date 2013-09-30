@@ -11,6 +11,7 @@ import javax.inject.Inject;
 
 import ch.qos.cal10n.IMessageConveyor;
 
+import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 
 import org.springframework.context.annotation.Bean;
@@ -32,7 +33,7 @@ public class ContractExceptionFactoryConfiguration {
      */
     @Bean
     public ContractExceptionFactory reflectionBasedExceptionFactory() {
-        return new ReflectionBasedContractExceptionFactory(messages);
+        return new ReflectionBasedContractExceptionFactory(Nullsafe.nullsafe(messages));
     }
 
 }
