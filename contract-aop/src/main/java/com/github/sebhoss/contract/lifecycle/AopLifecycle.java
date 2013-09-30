@@ -6,12 +6,12 @@
  */
 package com.github.sebhoss.contract.lifecycle;
 
-import org.aopalliance.intercept.MethodInvocation;
-
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory.ContractVerifierBuilder;
+
+import org.aopalliance.intercept.MethodInvocation;
 
 /**
  * AOP {@link MethodInvocation}-based implementation of the {@link ContractLifecycle}.
@@ -34,7 +34,7 @@ public final class AopLifecycle extends ContractLifecycle {
     @Override
     @SuppressWarnings(CompilerWarnings.NULL)
     protected ContractVerifier createVerifier() {
-        final ContractVerifierBuilder builder = getContractVerifierFactory().createContractVerifier();
+        final ContractVerifierBuilder builder = contractVerifierFactory.createContractVerifier();
 
         builder.method(invocation.getMethod());
         builder.instance(invocation.getThis());

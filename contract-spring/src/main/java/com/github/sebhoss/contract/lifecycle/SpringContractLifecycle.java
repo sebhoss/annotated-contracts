@@ -41,7 +41,7 @@ public final class SpringContractLifecycle extends ContractLifecycle {
     @Override
     @SuppressWarnings(CompilerWarnings.NULL)
     protected ContractVerifier createVerifier() {
-        final ContractVerifierBuilder builder = getContractVerifierFactory().createContractVerifier();
+        final ContractVerifierBuilder builder = contractVerifierFactory.createContractVerifier();
         final MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
 
         builder.method(methodSignature.getMethod());
