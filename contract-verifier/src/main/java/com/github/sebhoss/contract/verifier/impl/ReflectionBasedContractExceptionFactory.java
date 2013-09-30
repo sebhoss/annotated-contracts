@@ -62,20 +62,18 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
         } catch (final NoSuchMethodException exception) {
             if (needsStringConstructor) {
                 throw new IllegalArgumentException(
-                        "The specified exception type has no String-constructor but a message was provided! Either create an appropriate constructor or delete the message from the contract clause. Clause: "
-                                + clause.toString());
+                        messages.getMessage(ExceptionFactoryErrors.NO_STRING_CONSTRUCTOR, clause.toString()));
             }
 
             throw new IllegalArgumentException(
-                    "The specified exception type has no default constructor! Either create an appropriate constructor or try adding a message. Clase: "
-                            + clause.toString());
+                    messages.getMessage(ExceptionFactoryErrors.NO_DEFAULT_CONSTRUCTOR, clause.toString()));
         } catch (final SecurityException exception) {
             throw exception;
         } catch (final IllegalArgumentException exception) {
             throw exception;
         } catch (final InvocationTargetException exception) {
-            throw new IllegalArgumentException("Exception while creating contract-exception: "
-                    + exception.getLocalizedMessage());
+            throw new IllegalArgumentException(messages.getMessage(ExceptionFactoryErrors.CONSTRUCTOR_EXCEPTION,
+                    exception.getLocalizedMessage()));
         }
     }
 
