@@ -6,15 +6,15 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-
 import com.github.sebhoss.contract.verifier.impl.ContractAspectConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ContractExceptionFactoryConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ContractRetrievalConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ContractSemanticCheckConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ContractSyntaxCheckConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ContractVerifierConfiguration;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * Meta-configuration for several contract interfaces.

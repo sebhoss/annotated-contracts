@@ -8,13 +8,13 @@ package com.github.sebhoss.contract.verifier.impl;
 
 import java.util.Locale;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import ch.qos.cal10n.IMessageConveyor;
 import ch.qos.cal10n.MessageConveyor;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Configuration for the {@link IMessageConveyor}.

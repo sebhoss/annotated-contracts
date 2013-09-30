@@ -6,13 +6,13 @@
  */
 package com.github.sebhoss.contract.configuration;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.Import;
-
 import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
 import com.github.sebhoss.contract.verifier.SpringElConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 
 /**
  * Default configuration for Spring-based projects.

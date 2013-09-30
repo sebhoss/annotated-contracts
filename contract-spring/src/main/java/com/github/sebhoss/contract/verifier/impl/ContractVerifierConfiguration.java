@@ -9,13 +9,13 @@ package com.github.sebhoss.contract.verifier.impl;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Configuration for the {@link ContractVerifierFactory}.

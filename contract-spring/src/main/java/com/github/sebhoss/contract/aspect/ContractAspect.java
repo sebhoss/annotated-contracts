@@ -6,14 +6,14 @@
  */
 package com.github.sebhoss.contract.aspect;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.lifecycle.ContractLifecycle;
 import com.github.sebhoss.contract.lifecycle.SpringContractLifecycle;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 
 /**
  * AspectJ aspect which verifies a method contract.

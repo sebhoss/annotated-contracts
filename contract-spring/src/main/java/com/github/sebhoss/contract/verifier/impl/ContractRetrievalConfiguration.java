@@ -6,11 +6,11 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Configuration for the {@link ContractRetrieval}.

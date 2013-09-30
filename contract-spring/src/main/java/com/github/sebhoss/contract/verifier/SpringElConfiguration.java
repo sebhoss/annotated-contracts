@@ -6,11 +6,11 @@
  */
 package com.github.sebhoss.contract.verifier;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 
 /**
  * Configuration for a Spring-EL based {@link ContractContextFactory}.

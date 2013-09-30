@@ -9,12 +9,12 @@ package com.github.sebhoss.contract.verifier.impl;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import ch.qos.cal10n.IMessageConveyor;
 
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Configures the {@link ContractExceptionFactory}.
