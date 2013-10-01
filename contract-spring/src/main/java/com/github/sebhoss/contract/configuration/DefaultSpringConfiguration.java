@@ -6,6 +6,7 @@
  */
 package com.github.sebhoss.contract.configuration;
 
+import com.github.sebhoss.contract.verifier.ContractConfiguration;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
 import com.github.sebhoss.contract.verifier.SpringElConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
@@ -18,7 +19,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import({ AspectConfiguration.class, ParameterNamesLookupConfiguration.class, SpringElConfiguration.class,
-        ErrorMessageConfiguration.class })
+        ContractConfiguration.class, ErrorMessageConfiguration.class })
 public class DefaultSpringConfiguration {
 
     // Meta-configuration
