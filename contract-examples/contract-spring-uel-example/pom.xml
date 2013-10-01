@@ -15,14 +15,14 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
     <groupId>com.github.sebhoss.contract</groupId>
-    <artifactId>annotated-contracts</artifactId>
+    <artifactId>contract-examples</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-spring</artifactId>
+  <artifactId>contract-spring-uel-example</artifactId>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -30,53 +30,15 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-lifecycle</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-juel</artifactId>
-      <optional>true</optional>
+      <artifactId>contract-example-model</artifactId>
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-jexl</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-ognl</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-mvel</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-scriptengine</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-spel</artifactId>
-      <optional>true</optional>
+      <artifactId>contract-spring</artifactId>
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-uel</artifactId>
-      <optional>true</optional>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-      <version>3.2.4.RELEASE</version>
     </dependency>
   </dependencies>
 </project>
