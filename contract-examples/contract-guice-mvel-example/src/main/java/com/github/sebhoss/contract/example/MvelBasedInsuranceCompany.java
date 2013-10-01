@@ -13,8 +13,9 @@ class MvelBasedInsuranceCompany implements InsuranceCompany {
 
     @Contract(preconditions = {
             @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause("damage <= 5000") }, postconditions = { @Clause("returned >= 0"),
-            @Clause("returned <= 2000") })
+            @Clause(value = "damage <= 5000", message = "We won't pay that!") }, postconditions = {
+            @Clause(value = "returned >= 0", message = "We won't take any more!"),
+            @Clause(value = "returned <= 2000", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;

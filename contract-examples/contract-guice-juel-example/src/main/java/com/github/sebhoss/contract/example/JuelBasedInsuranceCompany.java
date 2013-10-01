@@ -13,8 +13,9 @@ class JuelBasedInsuranceCompany implements InsuranceCompany {
 
     @Contract(preconditions = {
             @Clause(value = "${damage > 0}", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause("${return <= 5000}") }, postconditions = { @Clause("${return >= 0}"),
-            @Clause("${return <= 2000}") })
+            @Clause(value = "${return <= 5000}", message = "We won't pay that!") }, postconditions = {
+            @Clause(value = "${return >= 0}", message = "We won't take any more!"),
+            @Clause(value = "${return <= 2000}", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;
