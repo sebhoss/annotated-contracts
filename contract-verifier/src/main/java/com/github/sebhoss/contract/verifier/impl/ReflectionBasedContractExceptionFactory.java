@@ -34,12 +34,12 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
 
     @Override
     public RuntimeException breachOfContract(final Clause clause) {
-        final boolean needsStringConstructor = !clause.message().isEmpty();
+        final boolean hasMessage = !clause.message().isEmpty();
 
         try {
             RuntimeException contractException;
 
-            if (needsStringConstructor) {
+            if (hasMessage) {
                 final Constructor<? extends RuntimeException> constructors = clause.exception().getConstructor(
                         String.class);
                 contractException = constructors.newInstance(clause.message());
@@ -58,7 +58,7 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
         } catch (final IllegalAccessException exception) {
             throw new IllegalArgumentException(messages.getMessage(ExceptionFactoryErrors.NO_ACCESSIBLE_CONSTRUCTOR));
         } catch (final NoSuchMethodException exception) {
-            if (needsStringConstructor) {
+            if (hasMessage) {
                 throw new IllegalArgumentException(
                         messages.getMessage(ExceptionFactoryErrors.NO_STRING_CONSTRUCTOR, clause.toString()));
             }
