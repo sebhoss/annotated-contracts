@@ -38,7 +38,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-spring-el</artifactId>
+      <artifactId>contract-spel</artifactId>
     </dependency>
   </dependencies>
 </project>

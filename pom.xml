@@ -48,7 +48,7 @@
     <module>contract-jexl</module>
     <module>contract-mvel</module>
     <module>contract-ognl</module>
-    <module>contract-spring-el</module>
+    <module>contract-spel</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
     <module>contract-examples</module>
@@ -158,7 +158,7 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
-        <artifactId>contract-spring-el</artifactId>
+        <artifactId>contract-spel</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
