@@ -40,12 +40,12 @@ public final class ReflectionBasedContractExceptionFactory implements ContractEx
             RuntimeException contractException;
 
             if (hasMessage) {
-                final Constructor<? extends RuntimeException> constructors = clause.exception().getConstructor(
+                final Constructor<? extends RuntimeException> constructor = clause.exception().getConstructor(
                         String.class);
-                contractException = constructors.newInstance(clause.message());
+                contractException = constructor.newInstance(clause.message());
             } else {
-                final Constructor<? extends RuntimeException> constructors = clause.exception().getConstructor();
-                contractException = constructors.newInstance();
+                final Constructor<? extends RuntimeException> constructor = clause.exception().getConstructor();
+                contractException = constructor.newInstance();
             }
 
             if (contractException == null) {
