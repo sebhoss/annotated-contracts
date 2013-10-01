@@ -27,7 +27,7 @@ public class CompanySpringConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new SpringBasedInsuranceCompany();
+        return new SpringSpELBasedInsuranceCompany();
     }
 
 }
