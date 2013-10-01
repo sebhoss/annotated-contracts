@@ -14,7 +14,7 @@ import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.configuration.DefaultJEXLConfiguration;
 
 /**
- * Simple guice module which uses the default Guice configuration module to enable annotation-based contracts and
+ * Simple Spring configuration which imports the default JEXL configuration to enable annotation-based contracts and
  * creates an instance of the domain model class.
  */
 @Configuration
