@@ -18,7 +18,7 @@ public @interface Clause {
     public static final String THIS   = "this";
 
     /** Identifier for the returned value of the method call (if any). */
-    public static final String RETURN = "invocationResult";
+    public static final String RETURN = "return";
 
     /**
      * @return The boolean expression to check.
