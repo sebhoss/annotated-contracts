@@ -10,14 +10,16 @@ import com.github.sebhoss.common.annotation.CompilerWarnings;
 
 import org.apache.commons.jexl2.JexlEngine;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
- * JEXLBasedContractContextFactory
+ * Configuration for a JEXL based {@link ContractContextFactory}.
  */
+@Configuration
 public class JexlConfiguration {
 
     /**
-     * @return A Spring-EL based {@link ContractContextFactory}.
+     * @return A JEXL based {@link ContractContextFactory}.
      */
     @Bean
     public ContractContextFactory contractContextFactory() {
