@@ -9,7 +9,7 @@ package com.github.sebhoss.contract.example;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 
-class SpringBasedInsuranceCompany implements InsuranceCompany {
+class SpELBasedInsuranceCompany implements InsuranceCompany {
 
     @Contract(preconditions = {
             @Clause(value = "#damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),

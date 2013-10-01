@@ -19,7 +19,7 @@ public class CompanyModule extends AbstractModule {
     protected void configure() {
         install(new DefaultSpringModule());
 
-        bind(InsuranceCompany.class).to(SpringBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(SpELBasedInsuranceCompany.class).asEagerSingleton();
     }
 
 }
