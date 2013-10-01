@@ -87,7 +87,7 @@ public final class ContractFactory {
      * @return A clause which always validates as <code>true</code>.
      */
     public static Clause alwaysTrueDefaultClause() {
-        return ContractFactory.clause("true", ""); //$NON-NLS-1$ //$NON-NLS-2$
+        return ContractFactory.clause("true"); //$NON-NLS-1$
     }
 
     /**
