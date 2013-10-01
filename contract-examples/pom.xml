@@ -33,7 +33,7 @@
     <module>contract-guice-ognl-example</module>
     <module>contract-guice-spel-example</module>
     <module>contract-guice-uel-example</module>
-    <module>contract-spring-spring-el-example</module>
+    <module>contract-spring-spel-example</module>
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
