@@ -11,15 +11,14 @@ import com.github.sebhoss.contract.verifier.SpringElConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 
 /**
  * Default configuration for Spring-based projects.
  */
 @Configuration
-@EnableAspectJAutoProxy(proxyTargetClass = true)
-@Import({ ParameterNamesLookupConfiguration.class, SpringElConfiguration.class, ErrorMessageConfiguration.class })
+@Import({ AspectConfiguration.class, ParameterNamesLookupConfiguration.class, SpringElConfiguration.class,
+        ErrorMessageConfiguration.class })
 public class DefaultSpringConfiguration {
 
     // Meta-configuration
