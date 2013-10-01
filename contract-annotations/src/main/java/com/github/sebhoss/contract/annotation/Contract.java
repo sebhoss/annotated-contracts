@@ -14,12 +14,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import javax.annotation.Nonnull;
+import javax.interceptor.InterceptorBinding;
 
 /**
  * Defines a method-level contract between a caller and a called instance.
  */
 @Documented
 @Inherited
+@InterceptorBinding
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Contract {
