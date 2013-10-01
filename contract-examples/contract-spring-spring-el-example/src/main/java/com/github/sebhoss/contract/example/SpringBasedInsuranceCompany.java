@@ -12,10 +12,10 @@ import com.github.sebhoss.contract.annotation.Contract;
 class SpringBasedInsuranceCompany implements InsuranceCompany {
 
     @Contract(preconditions = {
-            @Clause(value = "${damage > 0}", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause(value = "${damage <= 5000}", message = "We won't pay that!") }, postconditions = {
-            @Clause(value = "${invocationResult >= 0}", message = "We won't take any more!"),
-            @Clause(value = "${invocationResult <= 2000}", message = "We can't pay that much!") })
+            @Clause(value = "#damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
+            @Clause(value = "#damage <= 5000", message = "We won't pay that!") }, postconditions = {
+            @Clause(value = "#invocationResult >= 0", message = "We won't take any more!"),
+            @Clause(value = "#invocationResult <= 2000", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;
