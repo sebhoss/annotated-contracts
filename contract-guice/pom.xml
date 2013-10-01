@@ -67,16 +67,6 @@
       <artifactId>contract-spring-el</artifactId>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-jboss-el</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-uel</artifactId>
-      <optional>true</optional>
-    </dependency>
 
     <dependency>
       <groupId>com.google.inject</groupId>
