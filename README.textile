@@ -10,12 +10,12 @@ bc.. public class ContractExample {
 
     @Contract(
         preconditions = {
-            @Clause(value = "${damage > 0}", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause("damage <= 5000}")
+            @Clause(value = "damage > 0", message = "Reported damage must be positive!", exception = IllegalStateException.class),
+            @Clause("damage <= 5000")
         },
         postconditions = {
-            @Clause("${return >= 0}"),
-            @Clause("${return <= 2000}")
+            @Clause("return >= 0"),
+            @Clause("return <= 2000")
         })
     public double calculateCover(double damage) {
         // .. some calculations
@@ -31,7 +31,7 @@ bc.. public class ContractExampleWithFieldAccess {
 
     @Contract(
         preconditions = {
-            @Clause(value = "${damage <= this.currentMoney}", message = "We don't have enough money to cover damages!")
+            @Clause(value = "damage <= this.currentMoney", message = "We don't have enough money to cover damages!")
         })
     public double calculateCover(double damage) {
         // .. some calculations
@@ -53,7 +53,7 @@ p. This library offers several implementations for a variety of other libraries/
 | "MVEL":http://mvel.codehaus.org/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithMVEL | | |
 | "JEXL":http://commons.apache.org/proper/commons-jexl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJEXL | | |
 | "OGNL":http://commons.apache.org/proper/commons-ognl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithOGNL | | |
-| "SpEL":http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithSpringEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithSpringEL | |
+| "SpEL":http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithSpEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithSpEL | |
 | "JS":http://download.java.net/jdk8/docs/technotes/guides/scripting/programmer_guide/index.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJavaScript | | |
 
 h2. Alternatives
