@@ -6,15 +6,15 @@
  */
 package com.github.sebhoss.contract.example;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.contract.configuration.DefaultSpringConfiguration;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.configuration.DefaultSpringConfiguration;
-
 /**
- * Simple guice module which uses the default Guice configuration module to enable annotation-based contracts and
+ * Simple Spring configuration which imports the default Spring configuration to enable annotation-based contracts and
  * creates an instance of the domain model class.
  */
 @Configuration
