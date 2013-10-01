@@ -44,7 +44,6 @@
     <module>contract-el</module>
     <module>contract-uel</module>
     <module>contract-juel</module>
-    <module>contract-jboss-el</module>
     <module>contract-scriptengine</module>
     <module>contract-jexl</module>
     <module>contract-mvel</module>

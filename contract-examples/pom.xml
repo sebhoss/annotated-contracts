@@ -26,7 +26,6 @@
   <packaging>pom</packaging>
   <modules>
     <module>contract-example-model</module>
-    <module>contract-guice-jboss-el-example</module>
     <module>contract-guice-jexl-example</module>
     <module>contract-guice-js-example</module>
     <module>contract-guice-juel-example</module>
