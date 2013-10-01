@@ -21,7 +21,7 @@ import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
  */
 public abstract class ContractLifecycle {
 
-    protected final ContractVerifierFactory contractVerifierFactory;
+    private final ContractVerifierFactory contractVerifierFactory;
 
     protected ContractLifecycle(final ContractVerifierFactory contractVerifierFactory) {
         this.contractVerifierFactory = contractVerifierFactory;
@@ -51,5 +51,9 @@ public abstract class ContractLifecycle {
     protected abstract ContractVerifier createVerifier();
 
     protected abstract Object executeMethod() throws Throwable;
+
+    protected ContractVerifierFactory getContractVerifierFactory() {
+        return contractVerifierFactory;
+    }
 
 }

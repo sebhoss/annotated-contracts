@@ -34,7 +34,7 @@ public final class AopLifecycle extends ContractLifecycle {
     @Override
     @SuppressWarnings(CompilerWarnings.NULL)
     protected ContractVerifier createVerifier() {
-        final ContractVerifierBuilder builder = contractVerifierFactory.createContractVerifier();
+        final ContractVerifierBuilder builder = getContractVerifierFactory().createContractVerifier();
 
         builder.method(invocation.getMethod());
         builder.instance(invocation.getThis());
