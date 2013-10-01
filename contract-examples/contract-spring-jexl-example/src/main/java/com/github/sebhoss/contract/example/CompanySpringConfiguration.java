@@ -6,12 +6,12 @@
  */
 package com.github.sebhoss.contract.example;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.contract.configuration.DefaultJEXLConfiguration;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.configuration.DefaultJEXLConfiguration;
 
 /**
  * Simple Spring configuration which imports the default JEXL configuration to enable annotation-based contracts and
@@ -27,7 +27,7 @@ public class CompanySpringConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new SpringJEXLBasedInsuranceCompany();
+        return new JexlBasedInsuranceCompany();
     }
 
 }

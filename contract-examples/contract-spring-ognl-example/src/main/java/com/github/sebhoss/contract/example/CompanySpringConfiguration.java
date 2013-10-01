@@ -6,12 +6,12 @@
  */
 package com.github.sebhoss.contract.example;
 
+import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.contract.configuration.DefaultOGNLConfiguration;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.configuration.DefaultOGNLConfiguration;
 
 /**
  * Simple Spring configuration which imports the default OGNL configuration to enable annotation-based contracts and
@@ -27,7 +27,7 @@ public class CompanySpringConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new SpringOGNLBasedInsuranceCompany();
+        return new OgnlBasedInsuranceCompany();
     }
 
 }

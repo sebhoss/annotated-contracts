@@ -31,7 +31,10 @@
     <dependency>
       <groupId>com.github.sebhoss</groupId>
       <artifactId>common-annotations</artifactId>
-      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-annotations</artifactId>
     </dependency>
   </dependencies>
 </project>
