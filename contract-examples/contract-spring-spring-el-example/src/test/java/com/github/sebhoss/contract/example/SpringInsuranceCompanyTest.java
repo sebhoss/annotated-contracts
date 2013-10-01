@@ -12,7 +12,6 @@ import com.github.sebhoss.common.annotation.CompilerWarnings;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -23,8 +22,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * Test cases for the {@link InsuranceCompany}.
  */
 @SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.RESOURCE })
-// TODO: Ignored until parameter names can be resolved
-@Ignore
 public class SpringInsuranceCompanyTest {
 
     /** Catches expected exceptions */
