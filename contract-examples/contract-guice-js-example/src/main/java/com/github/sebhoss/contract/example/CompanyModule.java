@@ -19,7 +19,7 @@ public class CompanyModule extends AbstractModule {
     protected void configure() {
         install(new DefaultJavaScriptModule());
 
-        bind(InsuranceCompany.class).to(JavaScriptBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(VariousELBasedInsuranceCompany.class).asEagerSingleton();
     }
 
 }

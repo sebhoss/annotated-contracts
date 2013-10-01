@@ -19,7 +19,7 @@ public class CompanyModule extends AbstractModule {
     protected void configure() {
         install(new DefaultMVELModule());
 
-        bind(InsuranceCompany.class).to(MvelBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(VariousELBasedInsuranceCompany.class).asEagerSingleton();
     }
 
 }

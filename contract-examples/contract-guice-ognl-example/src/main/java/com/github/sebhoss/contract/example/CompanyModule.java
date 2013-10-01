@@ -19,7 +19,7 @@ public class CompanyModule extends AbstractModule {
     protected void configure() {
         install(new DefaultOGNLModule());
 
-        bind(InsuranceCompany.class).to(OgnlBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(OgnlSpELBasedInsuranceCompany.class).asEagerSingleton();
     }
 
 }

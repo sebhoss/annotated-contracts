@@ -19,7 +19,7 @@ public class CompanyModule extends AbstractModule {
     protected void configure() {
         install(new DefaultJUELModule());
 
-        bind(InsuranceCompany.class).to(JuelBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(UelBasedInsuranceCompany.class).asEagerSingleton();
     }
 
 }
