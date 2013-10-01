@@ -6,6 +6,8 @@
  */
 package com.github.sebhoss.contract.example;
 
+import javax.annotation.Nullable;
+
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -26,6 +28,7 @@ public class SpringInsuranceCompanyTest {
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
+    @Nullable
     private InsuranceCompany insurance;
 
     /**
