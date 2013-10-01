@@ -87,7 +87,7 @@ public final class ContractFactory {
      * @return A clause which always validates as <code>true</code>.
      */
     public static Clause alwaysTrueDefaultClause() {
-        return ContractFactory.clause("true", "", IllegalArgumentException.class); //$NON-NLS-1$ //$NON-NLS-2$
+        return ContractFactory.clause("true", ""); //$NON-NLS-1$ //$NON-NLS-2$
     }
 
     /**
@@ -96,7 +96,7 @@ public final class ContractFactory {
      * @return A clause with the given condition.
      */
     public static Clause clause(final String condition) {
-        return ContractFactory.clause(condition, "", IllegalArgumentException.class); //$NON-NLS-1$
+        return ContractFactory.clause(condition, ""); //$NON-NLS-1$
     }
 
     /**
