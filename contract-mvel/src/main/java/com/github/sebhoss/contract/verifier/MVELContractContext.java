@@ -10,9 +10,9 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import org.mvel2.MVEL;
-
 import com.github.sebhoss.contract.annotation.Clause;
+
+import org.mvel2.MVEL;
 
 /**
  * MVEL-based implementation of the {@link ContractContext}.
@@ -32,7 +32,7 @@ public final class MVELContractContext implements ContractContext {
 
     @Override
     public void setInvocationResult(final Object invocationResult) {
-        tokens.put(Clause.RETURN, invocationResult);
+        tokens.put(Clause.RETURN + "ed", invocationResult); //$NON-NLS-1$
     }
 
     @Override
