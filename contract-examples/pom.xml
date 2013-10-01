@@ -33,7 +33,13 @@
     <module>contract-guice-ognl-example</module>
     <module>contract-guice-spel-example</module>
     <module>contract-guice-uel-example</module>
+    <module>contract-spring-jexl-example</module>
+    <module>contract-spring-js-example</module>
+    <module>contract-spring-juel-example</module>
+    <module>contract-spring-mvel-example</module>
+    <module>contract-spring-ognl-example</module>
     <module>contract-spring-spel-example</module>
+    <module>contract-spring-uel-example</module>
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
