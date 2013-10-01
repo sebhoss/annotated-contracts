@@ -40,14 +40,14 @@ public final class AnnotationBasedContractRetrievalTest {
     }
 
     /**
-     * Ensures that a {@link IllegalStateException} is thrown for a method without contract.
+     * Ensures that a {@link NullPointerException} is thrown for a method without contract.
      */
     @Test
-    public void shouldThrowISEForMethodWithoutContract() {
+    public void shouldThrowNPEForMethodWithoutContract() {
         final AnnotationBasedContractRetrieval retrieval = new AnnotationBasedContractRetrieval();
         final Method method = MethodFactory.createMethodWithoutContract();
 
-        thrown.expect(IllegalStateException.class);
+        thrown.expect(NullPointerException.class);
 
         retrieval.retrieveContract(method);
     }
