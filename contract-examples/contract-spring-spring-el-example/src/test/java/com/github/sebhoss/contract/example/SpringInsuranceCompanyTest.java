@@ -29,7 +29,7 @@ public class SpringInsuranceCompanyTest {
     public ExpectedException thrown = ExpectedException.none();
 
     @Nullable
-    private InsuranceCompany company;
+    private InsuranceCompany insurance;
 
     /**
      * Creates a new insurance company for each test.
@@ -37,7 +37,7 @@ public class SpringInsuranceCompanyTest {
     @Before
     public void createCompany() {
         final ApplicationContext context = new AnnotationConfigApplicationContext(CompanySpringConfiguration.class);
-        company = context.getBean(InsuranceCompany.class);
+        insurance = context.getBean(InsuranceCompany.class);
     }
 
     /**
@@ -45,7 +45,7 @@ public class SpringInsuranceCompanyTest {
      */
     @Test
     public void shouldAcceptPositiveDamages() {
-        final double result = company.calculateCover(10);
+        final double result = insurance.calculateCover(10);
 
         Assert.assertEquals(5.0, result, 0d);
     }
@@ -58,7 +58,7 @@ public class SpringInsuranceCompanyTest {
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage("Reported damage must be positive!");
 
-        company.calculateCover(-10);
+        insurance.calculateCover(-10);
     }
 
     /**
@@ -69,7 +69,7 @@ public class SpringInsuranceCompanyTest {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("We won't pay that!");
 
-        company.calculateCover(5001);
+        insurance.calculateCover(5001);
     }
 
     /**
@@ -80,7 +80,7 @@ public class SpringInsuranceCompanyTest {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("We can't pay that much!");
 
-        company.calculateCover(5000);
+        insurance.calculateCover(5000);
     }
 
 }
