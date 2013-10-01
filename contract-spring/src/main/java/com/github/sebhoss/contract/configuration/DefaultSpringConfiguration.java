@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Import;
  * Default configuration for Spring-based projects.
  */
 @Configuration
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 @Import({ ParameterNamesLookupConfiguration.class, SpringElConfiguration.class, ErrorMessageConfiguration.class })
 public class DefaultSpringConfiguration {
 
