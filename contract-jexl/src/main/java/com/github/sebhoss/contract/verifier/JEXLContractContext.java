@@ -8,11 +8,11 @@ package com.github.sebhoss.contract.verifier;
 
 import javax.inject.Inject;
 
+import com.github.sebhoss.contract.annotation.Clause;
+
 import org.apache.commons.jexl2.Expression;
 import org.apache.commons.jexl2.JexlContext;
 import org.apache.commons.jexl2.JexlEngine;
-
-import com.github.sebhoss.contract.annotation.Clause;
 
 /**
  * JEXL-based implementation of the {@link ContractContext}.
@@ -36,7 +36,7 @@ public final class JEXLContractContext implements ContractContext {
 
     @Override
     public void setInvocationResult(final Object invocationResult) {
-        jexlContext.set(Clause.RETURN, invocationResult);
+        jexlContext.set(Clause.RETURN + "ed", invocationResult); //$NON-NLS-1$
     }
 
     @Override
