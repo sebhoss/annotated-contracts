@@ -30,7 +30,7 @@ public final class ScriptEngineContractContext implements ContractContext {
 
     @Override
     public void setInvocationResult(final Object invocationResult) {
-        engine.put(Clause.RETURN, invocationResult);
+        engine.put(Clause.RETURN + "ed", invocationResult); //$NON-NLS-1$
     }
 
     @Override
