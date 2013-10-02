@@ -23,7 +23,7 @@ public interface ContractVerifierFactory {
     /**
      * Builds {@link ContractVerifier}.
      */
-    public interface ContractVerifierBuilder {
+    interface ContractVerifierBuilder {
 
         /**
          * @param newMethod
