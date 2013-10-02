@@ -22,7 +22,7 @@ import org.junit.rules.ExpectedException;
  * Test cases for the {@link InsuranceCompany}.
  */
 @SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL })
-public class UelInsuranceCompanyTest {
+public class GuiceUelInsuranceCompanyTest {
 
     /** Catches expected exceptions */
     @Rule
