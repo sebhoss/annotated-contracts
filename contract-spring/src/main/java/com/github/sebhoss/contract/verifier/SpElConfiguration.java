@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * Configuration for a Spring-EL based {@link ContractContextFactory}.
  */
 @Configuration
-public class SpringElConfiguration {
+public class SpElConfiguration {
 
     /**
      * @return A Spring-EL based {@link ContractContextFactory}.
