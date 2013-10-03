@@ -6,18 +6,18 @@
  */
 package com.github.sebhoss.contract.example;
 
-import com.github.sebhoss.contract.module.DefaultSpringModule;
+import com.github.sebhoss.contract.module.DefaultSpELModule;
 import com.google.inject.AbstractModule;
 
 /**
- * Simple guice module which uses the default Guice configuration module to enable annotation-based contracts and
- * creates an instance of the domain model class.
+ * Simple guice module which uses the default SpEL module to enable annotation-based contracts and creates an instance
+ * of the domain model class.
  */
 public class CompanyModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        install(new DefaultSpringModule());
+        install(new DefaultSpELModule());
 
         bind(InsuranceCompany.class).to(OgnlSpELBasedInsuranceCompany.class).asEagerSingleton();
     }
