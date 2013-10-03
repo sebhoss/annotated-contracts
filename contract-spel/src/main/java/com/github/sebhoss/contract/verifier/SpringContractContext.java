@@ -6,15 +6,17 @@
  */
 package com.github.sebhoss.contract.verifier;
 
+import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.SpEL;
+
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
 
-import com.github.sebhoss.contract.annotation.Clause;
-
 /**
  * Spring-based implementation of the {@link ContractContext}.
  */
+@SpEL
 public class SpringContractContext implements ContractContext {
 
     private final ExpressionParser  parser;

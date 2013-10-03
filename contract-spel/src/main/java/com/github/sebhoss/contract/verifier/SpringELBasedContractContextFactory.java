@@ -6,16 +6,18 @@
  */
 package com.github.sebhoss.contract.verifier;
 
+import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.SpEL;
+
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
-import com.github.sebhoss.contract.annotation.Clause;
-
 /**
  * Spring-based implementation of the {@link ContractContextFactory}.
  */
+@SpEL
 public class SpringELBasedContractContextFactory implements ContractContextFactory {
 
     @Override
