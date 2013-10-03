@@ -15,7 +15,7 @@ public class SpringElModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        this.bind(ContractContextFactory.class).to(SpringELBasedContractContextFactory.class);
+        this.bind(ContractContextFactory.class).to(SpELBasedContractContextFactory.class);
     }
 
 }
