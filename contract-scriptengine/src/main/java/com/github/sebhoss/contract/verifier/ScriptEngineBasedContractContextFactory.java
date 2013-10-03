@@ -10,10 +10,12 @@ import javax.inject.Inject;
 import javax.script.ScriptEngine;
 
 import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.JavaScript;
 
 /**
  * {@link ScriptEngine}-based implementation of the {@link ContractContextFactory}.
  */
+@JavaScript
 public final class ScriptEngineBasedContractContextFactory implements ContractContextFactory {
 
     private final ScriptEngine engine;

@@ -6,7 +6,6 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import javax.inject.Inject;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
 
@@ -19,12 +18,7 @@ public final class ScriptEngineContractContext implements ContractContext {
 
     private final ScriptEngine engine;
 
-    /**
-     * @param engine
-     *            The ScriptEngine to use.
-     */
-    @Inject
-    public ScriptEngineContractContext(final ScriptEngine engine) {
+    ScriptEngineContractContext(final ScriptEngine engine) {
         this.engine = engine;
     }
 
