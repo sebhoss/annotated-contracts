@@ -9,9 +9,9 @@ package com.github.sebhoss.contract.verifier;
 import com.google.inject.AbstractModule;
 
 /**
- * Guice module which configures Spring-EL for contract clause validation.
+ * Guice module which configures SpEL for contract clause validation.
  */
-public class SpringElModule extends AbstractModule {
+public class SpElModule extends AbstractModule {
 
     @Override
     protected void configure() {

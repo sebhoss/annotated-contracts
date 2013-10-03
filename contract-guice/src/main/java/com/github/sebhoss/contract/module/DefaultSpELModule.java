@@ -6,18 +6,18 @@
  */
 package com.github.sebhoss.contract.module;
 
-import com.github.sebhoss.contract.verifier.SpringElModule;
+import com.github.sebhoss.contract.verifier.SpElModule;
 
 /**
- * Guice module for the default behavior for annotated contracts. Uses Spring-EL and Paranamer for contract checking.
+ * Guice module for the default behavior for annotated contracts. Uses SpEL and Paranamer for contract checking.
  */
-public class DefaultSpringModule extends AbstractContractModule {
+public class DefaultSpELModule extends AbstractContractModule {
 
     @Override
     protected void configure() {
         super.configure();
 
-        install(new SpringElModule());
+        install(new SpElModule());
     }
 
 }
