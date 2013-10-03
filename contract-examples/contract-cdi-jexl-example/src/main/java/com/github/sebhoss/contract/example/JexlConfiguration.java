@@ -13,27 +13,31 @@ import javax.enterprise.inject.Produces;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.common.annotation.Nullsafe;
-import com.github.sebhoss.contract.annotation.JUEL;
+import com.github.sebhoss.contract.annotation.JEXL;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
-/**
- * Configures a JUEL ContractContextFactory.
- */
-public class CompanyConfiguration {
+import org.apache.commons.jexl2.JexlEngine;
+
+@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
+class JexlConfiguration {
 
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    ContractContextFactory contextFactory(final @JUEL ContractContextFactory juelFactory) {
-        return juelFactory;
+    JexlEngine jexlEngine() {
+        return new JexlEngine();
+    }
+
+    @Produces
+    @Default
+    ContractContextFactory contextFactory(final @JEXL ContractContextFactory jexlFactory) {
+        return jexlFactory;
     }
 
     // TODO: We only need this for pax-exam
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }

@@ -13,27 +13,23 @@ import javax.enterprise.inject.Produces;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.common.annotation.Nullsafe;
-import com.github.sebhoss.contract.annotation.SpEL;
+import com.github.sebhoss.contract.annotation.UEL;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
-/**
- * Configures a SpEL ContractContextFactory.
- */
-public class CompanyConfiguration {
+@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
+class UelConfiguration {
 
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    ContractContextFactory contextFactory(final @SpEL ContractContextFactory spelFactory) {
-        return spelFactory;
+    ContractContextFactory contextFactory(final @UEL ContractContextFactory uelFactory) {
+        return uelFactory;
     }
 
     // TODO: We only need this for pax-exam
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }

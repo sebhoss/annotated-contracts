@@ -10,30 +10,35 @@ import java.util.Set;
 
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.common.annotation.Nullsafe;
-import com.github.sebhoss.contract.annotation.UEL;
+import com.github.sebhoss.contract.annotation.Script;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
-/**
- * Configures a UEL ContractContextFactory.
- */
-public class CompanyConfiguration {
+@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
+class JavaScriptConfiguration {
 
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    ContractContextFactory contextFactory(final @UEL ContractContextFactory uelFactory) {
-        return uelFactory;
+    @SuppressWarnings(CompilerWarnings.NULL)
+    ScriptEngine javaScriptEngine() {
+        return new ScriptEngineManager().getEngineByName("JavaScript"); //$NON-NLS-1$
+    }
+
+    @Produces
+    @Default
+    ContractContextFactory contextFactory(final @Script ContractContextFactory scriptFactory) {
+        return scriptFactory;
     }
 
     // TODO: We only need this for pax-exam
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }

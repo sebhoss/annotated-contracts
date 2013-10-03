@@ -18,14 +18,11 @@ import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
-/**
- * Configures a OGNL ContractContextFactory.
- */
-public class CompanyConfiguration {
+@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
+class OgnlConfiguration {
 
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     ContractContextFactory contextFactory(final @OGNL ContractContextFactory ognlFactory) {
         return ognlFactory;
     }
@@ -33,7 +30,6 @@ public class CompanyConfiguration {
     // TODO: We only need this for pax-exam
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }
