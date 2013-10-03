@@ -6,8 +6,6 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import javax.inject.Inject;
-
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.OGNL;
 
@@ -23,12 +21,7 @@ public final class OgnlContractContext implements ContractContext {
 
     private final OgnlContext ognlContext;
 
-    /**
-     * @param ognlContext
-     *            The backing OGNL context to use.
-     */
-    @Inject
-    public OgnlContractContext(final OgnlContext ognlContext) {
+    OgnlContractContext(final OgnlContext ognlContext) {
         this.ognlContext = ognlContext;
     }
 
