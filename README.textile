@@ -45,7 +45,8 @@ bc.. public class ContractExampleWithFieldAccess {
 
 h2. Integration
 
-p. This library offers several implementations for a variety of other libraries/frameworks. The following configuration matrix shows what is currently supported and planed:
+p. This library offers several implementations for a variety of other libraries/frameworks. The following configuration matrix shows what is currently supported. Anything missing? "Create an issue!":https://github.com/sebhoss/annotated-contracts/issues/new:
+
 
 | |_. "Guice":https://code.google.com/p/google-guice/ |_. "Spring":http://www.springsource.org/spring-framework |_. "CDI":http://www.cdi-spec.org/ |
 | "UEL":http://uel.java.net/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithUEL |
