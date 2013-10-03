@@ -51,6 +51,7 @@
     <module>contract-spel</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
+    <module>contract-cdi</module>
     <module>contract-examples</module>
   </modules>
 
@@ -190,6 +191,11 @@
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-guice</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
