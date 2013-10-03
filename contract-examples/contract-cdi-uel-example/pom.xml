@@ -40,10 +40,6 @@
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-uel</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-annotations</artifactId>
-    </dependency>
 
     <!-- Pax Exam -->
     <dependency>
