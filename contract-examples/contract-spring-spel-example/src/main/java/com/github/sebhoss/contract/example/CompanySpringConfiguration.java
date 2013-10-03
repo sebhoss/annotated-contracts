@@ -7,7 +7,7 @@
 package com.github.sebhoss.contract.example;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.configuration.DefaultSpringConfiguration;
+import com.github.sebhoss.contract.configuration.DefaultSpELConfiguration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Import;
  * creates an instance of the domain model class.
  */
 @Configuration
-@Import(DefaultSpringConfiguration.class)
+@Import(DefaultSpELConfiguration.class)
 public class CompanySpringConfiguration {
 
     /**
