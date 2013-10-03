@@ -23,25 +23,18 @@ import com.google.common.util.concurrent.Service;
  */
 public class CompanyConfiguration {
 
-    /**
-     * @param juelFactory
-     *            The JUEL context factory.
-     * @return A new context factory.
-     */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public ContractContextFactory contextFactory(final @JUEL ContractContextFactory juelFactory) {
+    ContractContextFactory contextFactory(final @JUEL ContractContextFactory juelFactory) {
         return juelFactory;
     }
 
-    /**
-     * @return A set of services to manage. TODO: We only need this for pax-exam
-     */
+    // TODO: We only need this for pax-exam
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public Set<Service> services() {
+    Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }
 

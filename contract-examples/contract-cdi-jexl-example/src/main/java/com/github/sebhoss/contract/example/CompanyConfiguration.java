@@ -25,35 +25,25 @@ import org.apache.commons.jexl2.JexlEngine;
  */
 public class CompanyConfiguration {
 
-    /**
-     * @return A new JEXL engine.
-     */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public JexlEngine jexlEngine() {
+    JexlEngine jexlEngine() {
         return new JexlEngine();
     }
 
-    /**
-     * @param jexlFactory
-     *            The JEXL context factory.
-     * @return A new context factory.
-     */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public ContractContextFactory contextFactory(final @JEXL ContractContextFactory jexlFactory) {
+    ContractContextFactory contextFactory(final @JEXL ContractContextFactory jexlFactory) {
         return jexlFactory;
     }
 
-    /**
-     * @return A set of services to manage. TODO: We only need this for pax-exam
-     */
+    // TODO: We only need this for pax-exam
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public Set<Service> services() {
+    Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }
 

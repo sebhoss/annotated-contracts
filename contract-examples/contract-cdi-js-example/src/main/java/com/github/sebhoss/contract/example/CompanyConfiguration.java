@@ -25,35 +25,25 @@ import com.google.common.util.concurrent.Service;
  */
 public class CompanyConfiguration {
 
-    /**
-     * @return A new JavaScript based script engine.
-     */
     @Produces
     @Default
     @SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
-    public ScriptEngine javaScriptEngine() {
+    ScriptEngine javaScriptEngine() {
         return new ScriptEngineManager().getEngineByName("JavaScript"); //$NON-NLS-1$
     }
 
-    /**
-     * @param scriptFactory
-     *            The ScriptEngine context factory.
-     * @return A new context factory.
-     */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public ContractContextFactory contextFactory(final @Script ContractContextFactory scriptFactory) {
+    ContractContextFactory contextFactory(final @Script ContractContextFactory scriptFactory) {
         return scriptFactory;
     }
 
-    /**
-     * @return A set of services to manage. TODO: We only need this for pax-exam
-     */
+    // TODO: We only need this for pax-exam
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public Set<Service> services() {
+    Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }
 
