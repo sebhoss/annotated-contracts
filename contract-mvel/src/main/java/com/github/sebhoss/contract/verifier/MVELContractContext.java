@@ -8,8 +8,6 @@ package com.github.sebhoss.contract.verifier;
 
 import java.util.Map;
 
-import javax.inject.Inject;
-
 import com.github.sebhoss.contract.annotation.Clause;
 
 import org.mvel2.MVEL;
@@ -22,12 +20,7 @@ public final class MVELContractContext implements ContractContext {
 
     private final Map<String, Object> tokens;
 
-    /**
-     * @param tokens
-     *            The MVEL tokens to check agains.
-     */
-    @Inject
-    public MVELContractContext(final Map<String, Object> tokens) {
+    MVELContractContext(final Map<String, Object> tokens) {
         this.tokens = tokens;
     }
 
