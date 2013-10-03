@@ -8,15 +8,17 @@ package com.github.sebhoss.contract.verifier;
 
 import javax.inject.Inject;
 
+import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.JEXL;
+
 import org.apache.commons.jexl2.JexlContext;
 import org.apache.commons.jexl2.JexlEngine;
 import org.apache.commons.jexl2.MapContext;
 
-import com.github.sebhoss.contract.annotation.Clause;
-
 /**
  * JEXL-based implementation of the {@link ContractContextFactory}.
  */
+@JEXL
 public final class JEXLBasedContractContextFactory implements ContractContextFactory {
 
     private final JexlEngine jexlEngine;

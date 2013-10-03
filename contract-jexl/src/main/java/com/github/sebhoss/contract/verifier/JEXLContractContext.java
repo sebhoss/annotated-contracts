@@ -9,6 +9,7 @@ package com.github.sebhoss.contract.verifier;
 import javax.inject.Inject;
 
 import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.JEXL;
 
 import org.apache.commons.jexl2.Expression;
 import org.apache.commons.jexl2.JexlContext;
@@ -17,6 +18,7 @@ import org.apache.commons.jexl2.JexlEngine;
 /**
  * JEXL-based implementation of the {@link ContractContext}.
  */
+@JEXL
 public final class JEXLContractContext implements ContractContext {
 
     private final JexlContext jexlContext;
