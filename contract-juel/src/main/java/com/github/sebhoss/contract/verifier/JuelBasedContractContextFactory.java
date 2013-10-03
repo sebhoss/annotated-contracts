@@ -11,12 +11,14 @@ import javax.el.ExpressionFactory;
 import javax.inject.Inject;
 
 import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.JUEL;
 
 import de.odysseus.el.util.SimpleContext;
 
 /**
  * JUEL-based implementation of the {@link ContractContextFactory}.
  */
+@JUEL
 public final class JuelBasedContractContextFactory implements ContractContextFactory {
 
     final ExpressionFactory expressionFactory;
