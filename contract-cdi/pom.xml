@@ -37,10 +37,6 @@
       <artifactId>contract-paranamer</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-el</artifactId>
-    </dependency>
-    <dependency>
       <groupId>javax.enterprise</groupId>
       <artifactId>cdi-api</artifactId>
       <version>1.1</version>
