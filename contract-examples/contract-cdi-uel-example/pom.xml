@@ -44,6 +44,7 @@
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-annotations</artifactId>
     </dependency>
+
     <!-- Pax Exam -->
     <dependency>
       <groupId>org.ops4j.pax.exam</groupId>
