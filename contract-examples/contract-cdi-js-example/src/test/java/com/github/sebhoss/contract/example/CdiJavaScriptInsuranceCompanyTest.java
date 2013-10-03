@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.annotation.JavaScript;
+import com.github.sebhoss.contract.annotation.Script;
 
 import org.junit.Assert;
 import org.junit.Rule;
@@ -31,7 +31,7 @@ public class CdiJavaScriptInsuranceCompanyTest {
     public ExpectedException thrown = ExpectedException.none();
 
     @Inject
-    @JavaScript
+    @Script
     @Nullable
     private InsuranceCompany insurance;
 

@@ -16,13 +16,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Configuration for a ScriptEngine based {@link ContractContextFactory}.
+ * Configuration for a JavaScript based {@link ContractContextFactory}.
  */
 @Configuration
-public class ScriptEngineConfiguration {
+public class JavaScriptConfiguration {
 
     /**
-     * @return A JEXL based {@link ContractContextFactory}.
+     * @return A JavaScript based {@link ContractContextFactory}.
      */
     @Bean
     public ContractContextFactory contractContextFactory() {

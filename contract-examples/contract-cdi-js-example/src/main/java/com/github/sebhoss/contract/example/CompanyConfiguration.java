@@ -15,7 +15,7 @@ import javax.script.ScriptEngineManager;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.common.annotation.Nullsafe;
-import com.github.sebhoss.contract.annotation.JavaScript;
+import com.github.sebhoss.contract.annotation.Script;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
@@ -26,7 +26,7 @@ import com.google.common.util.concurrent.Service;
 public class CompanyConfiguration {
 
     /**
-     * @return A new script engine.
+     * @return A new JavaScript based script engine.
      */
     @Produces
     @Default
@@ -36,15 +36,15 @@ public class CompanyConfiguration {
     }
 
     /**
-     * @param javaScriptFactory
-     *            The JavaScript context factory.
+     * @param scriptFactory
+     *            The ScriptEngine context factory.
      * @return A new context factory.
      */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public ContractContextFactory contextFactory(final @JavaScript ContractContextFactory javaScriptFactory) {
-        return javaScriptFactory;
+    public ContractContextFactory contextFactory(final @Script ContractContextFactory scriptFactory) {
+        return scriptFactory;
     }
 
     /**
