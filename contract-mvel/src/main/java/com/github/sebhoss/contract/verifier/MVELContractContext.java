@@ -17,6 +17,7 @@ import org.mvel2.MVEL;
 /**
  * MVEL-based implementation of the {@link ContractContext}.
  */
+@com.github.sebhoss.contract.annotation.MVEL
 public final class MVELContractContext implements ContractContext {
 
     private final Map<String, Object> tokens;

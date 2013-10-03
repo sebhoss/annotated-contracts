@@ -10,10 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.MVEL;
 
 /**
  * MVEL-based implementation of the {@link ContractContextFactory}.
  */
+@MVEL
 public final class MVELBasedContractContextFactory implements ContractContextFactory {
 
     @Override
