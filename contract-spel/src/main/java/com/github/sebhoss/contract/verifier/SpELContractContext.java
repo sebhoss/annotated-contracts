@@ -14,15 +14,15 @@ import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
 
 /**
- * Spring-based implementation of the {@link ContractContext}.
+ * SpEL-based implementation of the {@link ContractContext}.
  */
 @SpEL
-public class SpringContractContext implements ContractContext {
+public class SpELContractContext implements ContractContext {
 
     private final ExpressionParser  parser;
     private final EvaluationContext context;
 
-    SpringContractContext(final ExpressionParser parser, final EvaluationContext context) {
+    SpELContractContext(final ExpressionParser parser, final EvaluationContext context) {
         this.parser = parser;
         this.context = context;
     }

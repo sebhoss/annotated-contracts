@@ -15,10 +15,10 @@ import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
 /**
- * Spring-based implementation of the {@link ContractContextFactory}.
+ * SpEL-based implementation of the {@link ContractContextFactory}.
  */
 @SpEL
-public class SpringELBasedContractContextFactory implements ContractContextFactory {
+public class SpELBasedContractContextFactory implements ContractContextFactory {
 
     @Override
     public ContractContext createContext(final Object instance, final Object[] arguments, final String[] parameterNames) {
@@ -30,7 +30,7 @@ public class SpringELBasedContractContextFactory implements ContractContextFacto
         }
         context.setVariable(Clause.THIS, instance);
 
-        return new SpringContractContext(parser, context);
+        return new SpELContractContext(parser, context);
     }
 
 }
