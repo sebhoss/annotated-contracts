@@ -23,7 +23,7 @@ public class SpringElConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public ContractContextFactory contractContextFactory() {
-        return new SpringELBasedContractContextFactory();
+        return new SpELBasedContractContextFactory();
     }
 
 }
