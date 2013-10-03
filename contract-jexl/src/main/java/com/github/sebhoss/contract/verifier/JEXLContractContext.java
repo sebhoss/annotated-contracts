@@ -6,8 +6,6 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import javax.inject.Inject;
-
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.JEXL;
 
@@ -24,14 +22,7 @@ public final class JEXLContractContext implements ContractContext {
     private final JexlContext jexlContext;
     private final JexlEngine  jexlEngine;
 
-    /**
-     * @param jexlContext
-     *            The JEXL context to use.
-     * @param jexlEngine
-     *            The JEXL engine to use.
-     */
-    @Inject
-    public JEXLContractContext(final JexlContext jexlContext, final JexlEngine jexlEngine) {
+    JEXLContractContext(final JexlContext jexlContext, final JexlEngine jexlEngine) {
         this.jexlContext = jexlContext;
         this.jexlEngine = jexlEngine;
     }
