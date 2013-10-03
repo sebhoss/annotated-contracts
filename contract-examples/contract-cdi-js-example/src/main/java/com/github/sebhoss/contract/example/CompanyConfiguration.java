@@ -31,7 +31,7 @@ public class CompanyConfiguration {
     @Produces
     @Default
     @SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
-    public ScriptEngine scriptEngine() {
+    public ScriptEngine javaScriptEngine() {
         return new ScriptEngineManager().getEngineByName("JavaScript"); //$NON-NLS-1$
     }
 
