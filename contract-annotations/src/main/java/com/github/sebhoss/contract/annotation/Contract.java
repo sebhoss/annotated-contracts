@@ -14,6 +14,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import javax.annotation.Nonnull;
+import javax.enterprise.util.Nonbinding;
 import javax.interceptor.InterceptorBinding;
 
 /**
@@ -29,12 +30,14 @@ public @interface Contract {
     /**
      * @return Set of preconditions which must be fulfilled before the method can be run.
      */
+    @Nonbinding
     @Nonnull
     Clause[] preconditions() default {};
 
     /**
      * @return Set of postconditions which must be fulfilled before the method can return.
      */
+    @Nonbinding
     @Nonnull
     Clause[] postconditions() default {};
 
