@@ -12,10 +12,12 @@ import javax.el.StandardELContext;
 import javax.inject.Inject;
 
 import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.UEL;
 
 /**
  * UEL-based implementation of the {@link ContractContextFactory}.
  */
+@UEL
 public class UelBasedContractContextFactory implements ContractContextFactory {
 
     final ExpressionFactory expressionFactory;
@@ -42,5 +44,5 @@ public class UelBasedContractContextFactory implements ContractContextFactory {
 
         return new ELContractContext(elContext, expressionFactory);
     }
-    
+
 }
