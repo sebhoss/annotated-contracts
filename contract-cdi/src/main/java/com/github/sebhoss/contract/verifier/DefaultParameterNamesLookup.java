@@ -10,6 +10,7 @@ import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.thoughtworks.paranamer.AdaptiveParanamer;
 import com.thoughtworks.paranamer.Paranamer;
 
 /**
@@ -27,6 +28,16 @@ public class DefaultParameterNamesLookup {
     @SuppressWarnings({ CompilerWarnings.STATIC_METHOD })
     public ParameterNamesLookup paranamerBased(final Paranamer namer) {
         return new ParanamerBasedParameterNamesLookup(namer);
+    }
+
+    /**
+     * @return Builds an adaptive paranamer.
+     */
+    @Produces
+    @Default
+    @SuppressWarnings({ CompilerWarnings.STATIC_METHOD })
+    public Paranamer adaptiveParanamer() {
+        return new AdaptiveParanamer();
     }
 
 }
