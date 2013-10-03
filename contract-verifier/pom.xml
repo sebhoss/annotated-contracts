@@ -40,6 +40,7 @@
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-testutils</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
