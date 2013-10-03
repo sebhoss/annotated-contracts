@@ -6,13 +6,15 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import ognl.OgnlContext;
-
 import com.github.sebhoss.contract.annotation.Clause;
+import com.github.sebhoss.contract.annotation.OGNL;
+
+import ognl.OgnlContext;
 
 /**
  * OGNL-based implementation of the {@link ContractContextFactory}.
  */
+@OGNL
 public final class OgnlBasedContractContextFactory implements ContractContextFactory {
 
     @Override
