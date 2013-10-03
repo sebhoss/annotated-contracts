@@ -36,7 +36,7 @@ public class DefaultContractVerifierFactory {
      *            The contract context factory to use.
      * @param contractExceptionFactory
      *            The contract exception factory to use.
-     * @return Builds a context based contract verifier.
+     * @return Builds a context based contract verifier factory.
      */
     @Produces
     @Default
