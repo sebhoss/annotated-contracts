@@ -22,7 +22,7 @@ import org.junit.rules.ExpectedException;
  * Test cases for the {@link InsuranceCompany}.
  */
 @SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL })
-public class SpringInsuranceCompanyTest {
+public class GuiceSpELInsuranceCompanyTest {
 
     /** Catches expected exceptions */
     @Rule
