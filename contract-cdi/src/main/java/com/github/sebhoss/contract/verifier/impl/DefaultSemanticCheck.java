@@ -6,9 +6,6 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
@@ -21,15 +18,13 @@ import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
 public class DefaultSemanticCheck {
 
     /**
-     * @return The default syntax checks.
+     * @return The default syntax check.
      */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public Set<ContractSemanticCheck> syntaxChecks() {
-        final Set<ContractSemanticCheck> checks = new HashSet<>();
-        checks.add(new NoOpSemanticCheck());
-        return checks;
+    public ContractSemanticCheck syntaxCheck() {
+        return new NoOpSemanticCheck();
     }
 
 }

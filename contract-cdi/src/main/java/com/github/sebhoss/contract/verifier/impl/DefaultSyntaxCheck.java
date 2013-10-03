@@ -6,9 +6,6 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
@@ -21,15 +18,13 @@ import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 public class DefaultSyntaxCheck {
 
     /**
-     * @return The default syntax checks.
+     * @return The default syntax check.
      */
     @Produces
     @Default
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-    public Set<ContractSyntaxCheck> syntaxChecks() {
-        final Set<ContractSyntaxCheck> checks = new HashSet<>();
-        checks.add(new SomeClauseRequiredContractSyntaxCheck());
-        return checks;
+    public ContractSyntaxCheck syntaxCheck() {
+        return new SomeClauseRequiredContractSyntaxCheck();
     }
 
 }
