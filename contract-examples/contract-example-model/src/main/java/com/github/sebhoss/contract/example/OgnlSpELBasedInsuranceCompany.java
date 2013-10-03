@@ -8,7 +8,11 @@ package com.github.sebhoss.contract.example;
 
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.contract.annotation.OGNL;
+import com.github.sebhoss.contract.annotation.SpEL;
 
+@OGNL
+@SpEL
 class OgnlSpELBasedInsuranceCompany extends AbstractInsuranceCompany {
 
     @Contract(preconditions = {
