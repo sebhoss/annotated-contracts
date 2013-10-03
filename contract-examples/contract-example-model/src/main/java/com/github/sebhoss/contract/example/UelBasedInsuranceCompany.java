@@ -8,9 +8,11 @@ package com.github.sebhoss.contract.example;
 
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.contract.annotation.JUEL;
 import com.github.sebhoss.contract.annotation.UEL;
 
 @UEL
+@JUEL
 class UelBasedInsuranceCompany extends AbstractInsuranceCompany {
 
     @Contract(preconditions = {
