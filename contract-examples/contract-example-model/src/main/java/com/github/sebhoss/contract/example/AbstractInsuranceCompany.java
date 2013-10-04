@@ -12,13 +12,13 @@ package com.github.sebhoss.contract.example;
 public abstract class AbstractInsuranceCompany implements InsuranceCompany {
 
     @Override
-    public final double getRemainingMoney() {
-        return 2000;
+    public final double getMaximumReportableDamage() {
+        return 5000;
     }
 
     @Override
-    public final double getMaximumReportableDamage() {
-        return 5000;
+    public final double getRemainingMoney() {
+        return 2000;
     }
 
 }
