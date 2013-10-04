@@ -10,7 +10,7 @@ import com.github.sebhoss.contract.module.DefaultSpELModule;
 import com.google.inject.AbstractModule;
 
 /**
- * Simple guice module which uses the default SpEL module to enable annotation-based contracts and creates an instance
+ * Simple Guice module which uses the default SpEL module to enable annotation-based contracts and creates an instance
  * of the domain model class.
  */
 public class CompanyModule extends AbstractModule {
