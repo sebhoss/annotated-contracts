@@ -6,7 +6,6 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.SpEL;
 
 import org.springframework.expression.EvaluationContext;
@@ -23,12 +22,11 @@ public class SpELBasedContractContextFactory implements ContractContextFactory {
     @Override
     public ContractContext createContext(final Object instance, final Object[] arguments, final String[] parameterNames) {
         final ExpressionParser parser = new SpelExpressionParser();
-        final EvaluationContext context = new StandardEvaluationContext();
+        final EvaluationContext context = new StandardEvaluationContext(instance);
 
         for (int index = 0; index < arguments.length; index++) {
             context.setVariable(parameterNames[index], arguments[index]);
         }
-        context.setVariable(Clause.THIS, instance);
 
         return new SpELContractContext(parser, context);
     }
