@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(DefaultOGNLConfiguration.class)
-public class CompanySpringConfiguration {
+public class SpringOgnlConfiguration {
 
     /**
      * @return A new insurance company, protected by contracts.
