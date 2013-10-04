@@ -15,7 +15,7 @@ bc.. public class ContractExample {
         },
         postconditions = {
             @Clause("return >= 0"),
-            @Clause("return <= 2000")
+            @Clause(value = "return <= 2000", exception = NotEnoughMoneyException.class)
         })
     public double calculateCover(double damage) {
         // .. some calculations
