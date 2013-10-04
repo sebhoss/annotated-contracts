@@ -7,7 +7,7 @@
 package com.github.sebhoss.contract.verifier;
 
 /**
- * An instance of this class will be thrown whenever a contract was violated.
+ * Generic runtime exception to capture checked exceptions.
  */
 public final class ContractContextException extends RuntimeException {
 
