@@ -138,6 +138,11 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-aspect</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-verifier</artifactId>
         <version>${project.version}</version>
       </dependency>
