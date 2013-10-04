@@ -49,13 +49,13 @@ p. This library offers several implementations for a variety of other libraries/
 
 
 | |_. "Guice":https://code.google.com/p/google-guice/ |_. "Spring":http://www.springsource.org/spring-framework |_. "CDI":http://www.cdi-spec.org/ |
-| "UEL":http://uel.java.net/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithUEL |
+| "JavaScript":http://download.java.net/jdk8/docs/technotes/guides/scripting/programmer_guide/index.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJavaScript | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJavaScript | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJavaScript |
+| "JEXL":http://commons.apache.org/proper/commons-jexl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJEXL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJEXL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJEXL |
 | "JUEL":http://juel.sourceforge.net/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJUEL |
 | "MVEL":http://mvel.codehaus.org/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithMVEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithMVEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithMVEL |
-| "JEXL":http://commons.apache.org/proper/commons-jexl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJEXL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJEXL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJEXL |
 | "OGNL":http://commons.apache.org/proper/commons-ognl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithOGNL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithOGNL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithOGNL |
 | "SpEL":http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithSpEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithSpEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithSpEL |
-| "JS":http://download.java.net/jdk8/docs/technotes/guides/scripting/programmer_guide/index.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJavaScript | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJavaScript | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJavaScript |
+| "UEL":http://uel.java.net/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithUEL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithUEL |
 
 h2. Alternatives
 
