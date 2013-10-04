@@ -8,22 +8,20 @@ package com.github.sebhoss.contract.example;
 
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
-import com.github.sebhoss.contract.annotation.MVEL;
-import com.github.sebhoss.contract.annotation.Script;
+import com.github.sebhoss.contract.annotation.JEXL;
 
-@MVEL
-@Script
-class VariousELBasedInsuranceCompany extends AbstractInsuranceCompany {
+@JEXL
+class JexlBasedInsuranceCompany extends AbstractInsuranceCompany {
 
     @Contract(
             preconditions = {
                     @Clause(value = "damage > 0", message = "Reported damage must be positive!",
                             exception = IllegalStateException.class),
-                    @Clause(value = "damage <= 5000", message = "We won't pay that!",
+                    @Clause(value = "damage <= this.maximumReportableDamage", message = "We won't pay that!",
                             exception = IllegalStateException.class) },
             postconditions = {
                     @Clause(value = "returned >= 0", message = "We won't take any more!"),
-                    @Clause(value = "returned <= 2000", message = "We can't pay that much!") })
+                    @Clause(value = "returned <= this.remainingMoney", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;
