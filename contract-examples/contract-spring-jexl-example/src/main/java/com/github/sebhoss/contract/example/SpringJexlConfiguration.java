@@ -27,7 +27,7 @@ public class SpringJexlConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new JexlBasedInsuranceCompany();
+        return new JexlInsuranceCompany();
     }
 
 }

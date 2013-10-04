@@ -27,7 +27,7 @@ public class SpringUelConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new UelBasedInsuranceCompany();
+        return new UelInsuranceCompany();
     }
 
 }

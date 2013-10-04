@@ -19,7 +19,7 @@ public class GuiceOgnlModule extends AbstractModule {
     protected void configure() {
         install(new DefaultOGNLModule());
 
-        bind(InsuranceCompany.class).to(OgnlSpELBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(OgnlSpELInsuranceCompany.class).asEagerSingleton();
     }
 
 }

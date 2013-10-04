@@ -19,7 +19,7 @@ public class GuiceJuelModule extends AbstractModule {
     protected void configure() {
         install(new DefaultJUELModule());
 
-        bind(InsuranceCompany.class).to(UelBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(UelInsuranceCompany.class).asEagerSingleton();
     }
 
 }

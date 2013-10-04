@@ -19,7 +19,7 @@ public class GuiceJexlModule extends AbstractModule {
     protected void configure() {
         install(new DefaultJEXLModule());
 
-        bind(InsuranceCompany.class).to(JexlBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(JexlInsuranceCompany.class).asEagerSingleton();
     }
 
 }

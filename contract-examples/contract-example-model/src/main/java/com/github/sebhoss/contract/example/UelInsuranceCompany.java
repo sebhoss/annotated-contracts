@@ -8,22 +8,22 @@ package com.github.sebhoss.contract.example;
 
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
-import com.github.sebhoss.contract.annotation.OGNL;
-import com.github.sebhoss.contract.annotation.SpEL;
+import com.github.sebhoss.contract.annotation.JUEL;
+import com.github.sebhoss.contract.annotation.UEL;
 
-@OGNL
-@SpEL
-class OgnlSpELBasedInsuranceCompany extends AbstractInsuranceCompany {
+@UEL
+@JUEL
+class UelInsuranceCompany extends AbstractInsuranceCompany {
 
     @Contract(
             preconditions = {
-                    @Clause(value = "#damage > 0", message = "Reported damage must be positive!",
+                    @Clause(value = "${damage > 0}", message = "Reported damage must be positive!",
                             exception = IllegalStateException.class),
-                    @Clause(value = "#damage <= maximumReportableDamage", message = "We won't pay that!",
+                    @Clause(value = "${damage <= this.maximumReportableDamage}", message = "We won't pay that!",
                             exception = IllegalStateException.class) },
             postconditions = {
-                    @Clause(value = "#return >= 0", message = "We won't take any more!"),
-                    @Clause(value = "#return <= remainingMoney", message = "We can't pay that much!") })
+                    @Clause(value = "${return >= 0}", message = "We won't take any more!"),
+                    @Clause(value = "${return <= this.remainingMoney}", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;

@@ -27,7 +27,7 @@ public class SpringOgnlConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new OgnlSpELBasedInsuranceCompany();
+        return new OgnlSpELInsuranceCompany();
     }
 
 }

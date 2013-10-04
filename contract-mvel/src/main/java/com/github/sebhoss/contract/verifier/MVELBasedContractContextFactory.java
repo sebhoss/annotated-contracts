@@ -25,7 +25,7 @@ public final class MVELBasedContractContextFactory implements ContractContextFac
         for (int index = 0; index < arguments.length; index++) {
             tokens.put(parameterNames[index], arguments[index]);
         }
-        tokens.put(Clause.THIS, instance);
+        tokens.put("_" + Clause.THIS, instance); //$NON-NLS-1$
 
         return new MVELContractContext(tokens);
     }

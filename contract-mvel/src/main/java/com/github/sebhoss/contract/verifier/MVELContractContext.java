@@ -26,7 +26,7 @@ public final class MVELContractContext implements ContractContext {
 
     @Override
     public void setInvocationResult(final Object invocationResult) {
-        tokens.put(Clause.RETURN + "ed", invocationResult); //$NON-NLS-1$
+        tokens.put("_" + Clause.RETURN, invocationResult); //$NON-NLS-1$
     }
 
     @Override

@@ -19,7 +19,7 @@ public class GuiceUelModule extends AbstractModule {
     protected void configure() {
         install(new DefaultUELModule());
 
-        bind(InsuranceCompany.class).to(UelBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(UelInsuranceCompany.class).asEagerSingleton();
     }
 
 }
