@@ -36,7 +36,7 @@ public class OgnlInsuranceCompanyTest {
      */
     @Before
     public void createCompany() {
-        final Injector injector = Guice.createInjector(new CompanyModule());
+        final Injector injector = Guice.createInjector(new GuiceOgnlModule());
         insurance = injector.getInstance(InsuranceCompany.class);
     }
 
