@@ -47,7 +47,6 @@ h2. Integration
 
 p. This library offers several implementations for a variety of other libraries/frameworks. The following configuration matrix shows what is currently supported. Anything missing? "Create an issue!":https://github.com/sebhoss/annotated-contracts/issues/new:
 
-
 | |_. "Guice":https://code.google.com/p/google-guice/ |_. "Spring":http://www.springsource.org/spring-framework |_. "CDI":http://www.cdi-spec.org/ |
 | "JavaScript":http://download.java.net/jdk8/docs/technotes/guides/scripting/programmer_guide/index.html | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJavaScript | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJavaScript | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJavaScript |
 | "JEXL":http://commons.apache.org/proper/commons-jexl/ | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingGuiceWithJEXL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingSpringWithJEXL | "✓":https://github.com/sebhoss/annotated-contracts/wiki/UsingCDIWithJEXL |
