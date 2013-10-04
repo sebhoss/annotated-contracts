@@ -36,7 +36,7 @@ public class JexlInsuranceCompanyTest {
      */
     @Before
     public void createCompany() {
-        final Injector injector = Guice.createInjector(new CompanyModule());
+        final Injector injector = Guice.createInjector(new GuiceJexlModule());
         insurance = injector.getInstance(InsuranceCompany.class);
     }
 
