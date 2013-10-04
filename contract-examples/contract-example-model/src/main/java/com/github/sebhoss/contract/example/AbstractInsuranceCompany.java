@@ -6,7 +6,10 @@
  */
 package com.github.sebhoss.contract.example;
 
-abstract class AbstractInsuranceCompany implements InsuranceCompany {
+/**
+ * Abstract insurance company, used as the base for all language implementations.
+ */
+public abstract class AbstractInsuranceCompany implements InsuranceCompany {
 
     @Override
     public final double getRemainingMoney() {

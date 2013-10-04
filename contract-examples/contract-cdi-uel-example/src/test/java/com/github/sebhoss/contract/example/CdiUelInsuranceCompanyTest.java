@@ -61,7 +61,7 @@ public class CdiUelInsuranceCompanyTest {
      */
     @Test
     public void shouldNotAcceptHighDamages() {
-        thrown.expect(IllegalArgumentException.class);
+        thrown.expect(IllegalStateException.class);
         thrown.expectMessage("We won't pay that!");
 
         insurance.calculateCover(5001);

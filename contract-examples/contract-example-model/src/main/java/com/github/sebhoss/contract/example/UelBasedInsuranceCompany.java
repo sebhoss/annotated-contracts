@@ -15,11 +15,15 @@ import com.github.sebhoss.contract.annotation.UEL;
 @JUEL
 class UelBasedInsuranceCompany extends AbstractInsuranceCompany {
 
-    @Contract(preconditions = {
-            @Clause(value = "${damage > 0}", message = "Reported damage must be positive!", exception = IllegalStateException.class),
-            @Clause(value = "${damage <= this.maximumReportableDamage}", message = "We won't pay that!") }, postconditions = {
-            @Clause(value = "${return >= 0}", message = "We won't take any more!"),
-            @Clause(value = "${return <= this.remainingMoney}", message = "We can't pay that much!") })
+    @Contract(
+            preconditions = {
+                    @Clause(value = "${damage > 0}", message = "Reported damage must be positive!",
+                            exception = IllegalStateException.class),
+                    @Clause(value = "${damage <= this.maximumReportableDamage}", message = "We won't pay that!",
+                            exception = IllegalStateException.class) },
+            postconditions = {
+                    @Clause(value = "${return >= 0}", message = "We won't take any more!"),
+                    @Clause(value = "${return <= this.remainingMoney}", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;
