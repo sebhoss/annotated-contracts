@@ -9,7 +9,6 @@ package com.github.sebhoss.contract.verifier;
 import javax.inject.Inject;
 import javax.script.ScriptEngine;
 
-import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Script;
 
 /**
@@ -34,7 +33,7 @@ public final class ScriptEngineBasedContractContextFactory implements ContractCo
         for (int index = 0; index < arguments.length; index++) {
             engine.put(parameterNames[index], arguments[index]);
         }
-        engine.put(Clause.THIS, instance);
+        engine.put("_this", instance); //$NON-NLS-1$
 
         return new ScriptEngineContractContext(engine);
     }
