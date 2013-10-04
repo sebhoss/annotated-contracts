@@ -36,7 +36,7 @@ public class SpringJavaScriptInsuranceCompanyTest {
      */
     @Before
     public void createCompany() {
-        final ApplicationContext context = new AnnotationConfigApplicationContext(CompanySpringConfiguration.class);
+        final ApplicationContext context = new AnnotationConfigApplicationContext(SpringJavaScriptConfiguration.class);
         insurance = context.getBean(InsuranceCompany.class);
     }
 

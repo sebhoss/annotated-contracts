@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(DefaultJavaScriptConfiguration.class)
-public class CompanySpringConfiguration {
+public class SpringJavaScriptConfiguration {
 
     /**
      * @return A new insurance company, protected by contracts.
