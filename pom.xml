@@ -37,18 +37,19 @@
   <modules>
     <module>contract-annotations</module>
     <module>contract-testutils</module>
-    <module>contract-aop</module>
-    <module>contract-verifier</module>
     <module>contract-lifecycle</module>
     <module>contract-paranamer</module>
+    <module>contract-verifier</module>
+    <module>contract-aop</module>
+    <module>contract-aspect</module>
     <module>contract-el</module>
-    <module>contract-uel</module>
-    <module>contract-juel</module>
-    <module>contract-scriptengine</module>
     <module>contract-jexl</module>
+    <module>contract-juel</module>
     <module>contract-mvel</module>
     <module>contract-ognl</module>
+    <module>contract-scriptengine</module>
     <module>contract-spel</module>
+    <module>contract-uel</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
     <module>contract-cdi</module>
