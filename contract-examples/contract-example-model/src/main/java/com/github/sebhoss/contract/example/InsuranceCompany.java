@@ -21,6 +21,11 @@ public interface InsuranceCompany {
     double calculateCover(double damage);
 
     /**
+     * @return The maximum damage that can be reported.
+     */
+    double getMaximumReportableDamage();
+
+    /**
      * @return The remaining money of this insurance company.
      */
     double getRemainingMoney();

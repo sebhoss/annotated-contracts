@@ -13,4 +13,9 @@ abstract class AbstractInsuranceCompany implements InsuranceCompany {
         return 2000;
     }
 
+    @Override
+    public final double getMaximumReportableDamage() {
+        return 5000;
+    }
+
 }
