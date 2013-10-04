@@ -23,7 +23,7 @@ bc.. public class ContractExample {
 
 }
 
-p. The above example shows a method with two pre- and postconditions. The first precondition sets the optional message and exception fields, which are used in case the contract clause was violated. See the integration matrix below for a framework/language usage guide.
+p. The above example shows a method with two pre- and postconditions. The first precondition sets the optional message and exception fields, which are used in case the contract clause was violated. In case the exception message isn't set, a default no-arg constructor is used, otherwise a constructor with a single @String@ parameter is searched. See the integration matrix below for a framework/language usage guide.
 
 h2. Integration
 
