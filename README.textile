@@ -23,7 +23,7 @@ bc.. public class ContractExample {
 
 }
 
-p. The above example shows a method with two pre- and postconditions. The first precondition sets the optional message and exception fields, which are used in case the contract clause was violated. The postconditions use the special string @return@ to reference the returned value of the method. You can reference a class-local field with @this@ just as in standard Java. The following example shows how:
+p. The above example shows a method with two pre- and postconditions. The first precondition sets the optional message and exception fields, which are used in case the contract clause was violated. See the integration matrix below for a framework/language usage guide.
 
 bc.. public class ContractExampleWithFieldAccess {
 
@@ -31,7 +31,7 @@ bc.. public class ContractExampleWithFieldAccess {
 
     @Contract(
         preconditions = {
-            @Clause(value = "damage <= this.currentMoney", message = "We don't have enough money to cover damages!")
+            @Clause(value = "damage <= currentMoney", message = "We don't have enough money to cover damages!")
         })
     public double calculateCover(double damage) {
         // .. some calculations
