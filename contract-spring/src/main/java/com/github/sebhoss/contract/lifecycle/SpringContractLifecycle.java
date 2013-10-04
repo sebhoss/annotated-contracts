@@ -45,10 +45,7 @@ public final class SpringContractLifecycle extends ContractLifecycle {
         final MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
 
         builder.method(methodSignature.getMethod());
-        final String[] parameterNames = methodSignature.getParameterNames();
-        if (parameterNames != null) {
-            builder.parameterNames(parameterNames);
-        }
+        builder.parameterNames(methodSignature.getParameterNames());
         builder.instance(pjp.getThis());
         builder.arguments(pjp.getArgs());
         builder.contract(contract);
