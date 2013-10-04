@@ -25,24 +25,6 @@ bc.. public class ContractExample {
 
 p. The above example shows a method with two pre- and postconditions. The first precondition sets the optional message and exception fields, which are used in case the contract clause was violated. See the integration matrix below for a framework/language usage guide.
 
-bc.. public class ContractExampleWithFieldAccess {
-
-    private double currentMoney;
-
-    @Contract(
-        preconditions = {
-            @Clause(value = "damage <= currentMoney", message = "We don't have enough money to cover damages!")
-        })
-    public double calculateCover(double damage) {
-        // .. some calculations
-    }
-    
-    public double getCurrentMoney() {
-        return currentMoney;
-    }
-
-}
-
 h2. Integration
 
 p. This library offers several implementations for a variety of other libraries/frameworks. The following configuration matrix shows what is currently supported. Anything missing? "Create an issue!":https://github.com/sebhoss/annotated-contracts/issues/new:
