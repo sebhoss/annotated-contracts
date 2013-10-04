@@ -52,7 +52,7 @@ public abstract class ContractLifecycle {
 
     protected abstract Object executeMethod() throws Throwable;
 
-    protected ContractVerifierFactory getContractVerifierFactory() {
+    protected final ContractVerifierFactory getContractVerifierFactory() {
         return contractVerifierFactory;
     }
 
