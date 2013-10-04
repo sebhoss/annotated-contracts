@@ -46,13 +46,11 @@
       <groupId>org.ops4j.pax.exam</groupId>
       <artifactId>pax-exam-container-openwebbeans</artifactId>
       <version>3.3.0</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.ops4j.pax.exam</groupId>
       <artifactId>pax-exam-junit4</artifactId>
       <version>3.3.0</version>
-      <scope>test</scope>
     </dependency>
     <!-- Logging -->
     <dependency>
