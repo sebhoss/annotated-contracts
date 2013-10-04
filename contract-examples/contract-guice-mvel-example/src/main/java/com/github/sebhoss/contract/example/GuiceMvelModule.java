@@ -19,7 +19,7 @@ public class GuiceMvelModule extends AbstractModule {
     protected void configure() {
         install(new DefaultMVELModule());
 
-        bind(InsuranceCompany.class).to(VariousELBasedInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(MvelInsuranceCompany.class).asEagerSingleton();
     }
 
 }
