@@ -14,12 +14,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * Simple Spring configuration which imports the default Spring configuration to enable annotation-based contracts and
+ * Simple Spring configuration which imports the default SpEL configuration to enable annotation-based contracts and
  * creates an instance of the domain model class.
  */
 @Configuration
 @Import(DefaultSpELConfiguration.class)
-public class CompanySpringConfiguration {
+public class SpringSpELConfiguration {
 
     /**
      * @return A new insurance company, protected by contracts.
