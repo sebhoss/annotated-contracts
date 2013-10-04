@@ -11,8 +11,8 @@ import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.annotation.JUEL;
 import com.github.sebhoss.contract.annotation.UEL;
 
-@UEL
 @JUEL
+@UEL
 class UelInsuranceCompany extends AbstractInsuranceCompany {
 
     @Contract(
