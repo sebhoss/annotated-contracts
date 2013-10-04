@@ -24,6 +24,10 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <artifactId>contract-examples</artifactId>
   <packaging>pom</packaging>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                 MODULES                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
     <module>contract-example-model</module>
     <module>contract-guice-jexl-example</module>
