@@ -16,9 +16,9 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
 
 /**
- * Spring AspectJ-based implementation of the {@link ContractLifecycle}.
+ * AspectJ-based implementation of the {@link ContractLifecycle}.
  */
-public final class SpringContractLifecycle extends ContractLifecycle {
+public final class AspectContractLifecycle extends ContractLifecycle {
 
     private final ProceedingJoinPoint pjp;
     private final Contract            contract;
@@ -31,7 +31,7 @@ public final class SpringContractLifecycle extends ContractLifecycle {
      * @param contractVerifierFactory
      *            The contract verifier factory to use.
      */
-    public SpringContractLifecycle(final ProceedingJoinPoint pjp, final Contract contract,
+    public AspectContractLifecycle(final ProceedingJoinPoint pjp, final Contract contract,
             final ContractVerifierFactory contractVerifierFactory) {
         super(contractVerifierFactory);
         this.pjp = pjp;

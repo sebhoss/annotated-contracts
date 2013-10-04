@@ -8,7 +8,7 @@ package com.github.sebhoss.contract.aspect;
 
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.lifecycle.ContractLifecycle;
-import com.github.sebhoss.contract.lifecycle.SpringContractLifecycle;
+import com.github.sebhoss.contract.lifecycle.AspectContractLifecycle;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -42,7 +42,7 @@ public class ContractAspect {
      */
     @Around("@annotation(contract)")
     public Object verifyContract(final ProceedingJoinPoint pjp, final Contract contract) throws Throwable {
-        final ContractLifecycle lifecycle = new SpringContractLifecycle(pjp, contract, contractVerifierFactory);
+        final ContractLifecycle lifecycle = new AspectContractLifecycle(pjp, contract, contractVerifierFactory);
 
         return lifecycle.performLifecycle();
     }
