@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(DefaultUELConfiguration.class)
-public class CompanySpringConfiguration {
+public class SpringUelConfiguration {
 
     /**
      * @return A new insurance company, protected by contracts.
