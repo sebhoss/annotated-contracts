@@ -20,8 +20,8 @@ class JexlInsuranceCompany extends AbstractInsuranceCompany {
                     @Clause(value = "damage <= this.maximumReportableDamage", message = "We won't pay that!",
                             exception = IllegalStateException.class) },
             postconditions = {
-                    @Clause(value = "returned >= 0", message = "We won't take any more!"),
-                    @Clause(value = "returned <= this.remainingMoney", message = "We can't pay that much!") })
+                    @Clause(value = "_return >= 0", message = "We won't take any more!"),
+                    @Clause(value = "_return <= this.remainingMoney", message = "We can't pay that much!") })
     @Override
     public double calculateCover(final double damage) {
         return damage * 0.5;

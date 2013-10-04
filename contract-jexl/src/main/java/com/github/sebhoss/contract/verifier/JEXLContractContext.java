@@ -29,7 +29,7 @@ public final class JEXLContractContext implements ContractContext {
 
     @Override
     public void setInvocationResult(final Object invocationResult) {
-        jexlContext.set(Clause.RETURN + "ed", invocationResult); //$NON-NLS-1$
+        jexlContext.set("_" + Clause.RETURN, invocationResult); //$NON-NLS-1$
     }
 
     @Override
