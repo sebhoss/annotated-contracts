@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(DefaultMVELConfiguration.class)
-public class CompanySpringConfiguration {
+public class SpringMvelConfiguration {
 
     /**
      * @return A new insurance company, protected by contracts.
