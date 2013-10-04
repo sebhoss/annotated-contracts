@@ -27,7 +27,7 @@ public class SpringMvelConfiguration {
     @Bean
     @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public InsuranceCompany company() {
-        return new MvelInsuranceCompany();
+        return new JavaScriptMvelInsuranceCompany();
     }
 
 }

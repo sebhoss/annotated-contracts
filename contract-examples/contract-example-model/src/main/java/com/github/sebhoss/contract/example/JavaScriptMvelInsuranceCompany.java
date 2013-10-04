@@ -8,10 +8,12 @@ package com.github.sebhoss.contract.example;
 
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.contract.annotation.MVEL;
 import com.github.sebhoss.contract.annotation.Script;
 
 @Script
-class JavaScriptInsuranceCompany extends AbstractInsuranceCompany {
+@MVEL
+class JavaScriptMvelInsuranceCompany extends AbstractInsuranceCompany {
 
     @Contract(
             preconditions = {

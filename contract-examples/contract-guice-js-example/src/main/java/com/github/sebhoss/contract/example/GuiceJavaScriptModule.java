@@ -19,7 +19,7 @@ public class GuiceJavaScriptModule extends AbstractModule {
     protected void configure() {
         install(new DefaultJavaScriptModule());
 
-        bind(InsuranceCompany.class).to(JavaScriptInsuranceCompany.class).asEagerSingleton();
+        bind(InsuranceCompany.class).to(JavaScriptMvelInsuranceCompany.class).asEagerSingleton();
     }
 
 }
