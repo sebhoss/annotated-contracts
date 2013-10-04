@@ -22,7 +22,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * Test cases for the {@link InsuranceCompany}.
  */
 @SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.RESOURCE })
-public class SpringMVELInsuranceCompanyTest {
+public class SpringOgnlInsuranceCompanyTest {
 
     /** Catches expected exceptions */
     @Rule
