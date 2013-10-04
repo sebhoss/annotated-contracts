@@ -13,7 +13,7 @@ import com.google.inject.AbstractModule;
  * Simple Guice module which uses the default JUEL module to enable annotation-based contracts and creates an instance
  * of the domain model class.
  */
-public class CompanyModule extends AbstractModule {
+public class GuiceJuelModule extends AbstractModule {
 
     @Override
     protected void configure() {
