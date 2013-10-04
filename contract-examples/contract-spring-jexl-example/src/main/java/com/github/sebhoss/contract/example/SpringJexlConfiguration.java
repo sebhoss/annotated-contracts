@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(DefaultJEXLConfiguration.class)
-public class CompanySpringConfiguration {
+public class SpringJexlConfiguration {
 
     /**
      * @return A new insurance company, protected by contracts.
