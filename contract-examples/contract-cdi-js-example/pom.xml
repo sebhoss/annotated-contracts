@@ -34,11 +34,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-cdi</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-scriptengine</artifactId>
+      <artifactId>contract-cdi-javascript</artifactId>
     </dependency>
 
     <!-- Pax Exam -->

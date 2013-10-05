@@ -13,21 +13,13 @@ import javax.enterprise.inject.Produces;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.common.annotation.Nullsafe;
-import com.github.sebhoss.contract.annotation.MVEL;
-import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
+// TODO: We only need this for pax-exam
 @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-class MvelConfiguration {
+class PaxExamConfiguration {
 
-    @Produces
-    @Default
-    ContractContextFactory contextFactory(final @MVEL ContractContextFactory mvelFactory) {
-        return mvelFactory;
-    }
-
-    // TODO: We only need this for pax-exam
     @Produces
     @Default
     Set<Service> services() {
