@@ -42,6 +42,7 @@
     <module>contract-verifier</module>
     <module>contract-aop</module>
     <module>contract-aspect</module>
+    <module>contract-interceptor</module>
     <module>contract-el</module>
     <module>contract-jexl</module>
     <module>contract-juel</module>
@@ -52,7 +53,7 @@
     <module>contract-uel</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
-    <module>contract-cdi</module>
+    <module>contract-cdi-defaults</module>
     <module>contract-examples</module>
   </modules>
 
@@ -143,6 +144,11 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-interceptor</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-verifier</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -208,7 +214,7 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
-        <artifactId>contract-cdi</artifactId>
+        <artifactId>contract-cdi-defaults</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
