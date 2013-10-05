@@ -11,9 +11,11 @@ import javax.enterprise.inject.Produces;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.SpEL;
-import com.github.sebhoss.contract.verifier.ContractContextFactory;
 
-class SpELConfiguration {
+/**
+ * Configures a SpEL-based contract validation.
+ */
+public class SpELConfiguration {
 
     @Produces
     @Default

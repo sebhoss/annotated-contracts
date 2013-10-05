@@ -14,8 +14,11 @@ import org.apache.commons.jexl2.JexlEngine;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.JEXL;
 
+/**
+ * Configures a JEXL-based contract validation.
+ */
 @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-class JexlConfiguration {
+public class JexlConfiguration {
 
     @Produces
     @Default

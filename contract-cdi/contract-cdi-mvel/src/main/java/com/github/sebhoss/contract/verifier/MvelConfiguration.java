@@ -12,7 +12,10 @@ import javax.enterprise.inject.Produces;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.MVEL;
 
-class MvelConfiguration {
+/**
+ * Configures a MVEL-based contract validation.
+ */
+public class MvelConfiguration {
 
     @Produces
     @Default

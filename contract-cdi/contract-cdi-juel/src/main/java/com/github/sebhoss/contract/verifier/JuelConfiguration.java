@@ -12,7 +12,10 @@ import javax.enterprise.inject.Produces;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.JUEL;
 
-class JuelConfiguration {
+/**
+ * Configures a JUEL-based contract validation.
+ */
+public class JuelConfiguration {
 
     @Produces
     @Default

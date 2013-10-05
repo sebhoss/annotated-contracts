@@ -12,7 +12,10 @@ import javax.enterprise.inject.Produces;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.UEL;
 
-class UelConfiguration {
+/**
+ * Configures a UEL-based contract validation.
+ */
+public class UelConfiguration {
 
     @Produces
     @Default

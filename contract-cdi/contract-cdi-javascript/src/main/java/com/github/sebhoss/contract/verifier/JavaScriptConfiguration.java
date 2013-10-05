@@ -14,8 +14,11 @@ import javax.script.ScriptEngineManager;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Script;
 
+/**
+ * Configures a JavaScript-based contract validation.
+ */
 @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
-class JavaScriptConfiguration {
+public class JavaScriptConfiguration {
 
     @Produces
     @Default

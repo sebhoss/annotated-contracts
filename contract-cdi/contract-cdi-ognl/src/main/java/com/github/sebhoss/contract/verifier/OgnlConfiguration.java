@@ -12,7 +12,10 @@ import javax.enterprise.inject.Produces;
 import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.OGNL;
 
-class OgnlConfiguration {
+/**
+ * Configures a OGNL-based contract validation.
+ */
+public class OgnlConfiguration {
 
     @Produces
     @Default
