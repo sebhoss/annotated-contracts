@@ -15,29 +15,14 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
     <groupId>com.github.sebhoss.contract</groupId>
-    <artifactId>contract-frameworks</artifactId>
+    <artifactId>contract-guice</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-guice</artifactId>
-  <packaging>pom</packaging>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                 MODULES                                 -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <modules>
-    <module>contract-guice-defaults</module>
-    <module>contract-guice-javascript</module>
-    <module>contract-guice-jexl</module>
-    <module>contract-guice-juel</module>
-    <module>contract-guice-mvel</module>
-    <module>contract-guice-ognl</module>
-    <module>contract-guice-spel</module>
-    <module>contract-guice-uel</module>
-  </modules>
+  <artifactId>contract-guice-uel</artifactId>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -45,19 +30,11 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-aop</artifactId>
+      <artifactId>contract-guice-defaults</artifactId>
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-paranamer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.inject</groupId>
-      <artifactId>guice</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.inject.extensions</groupId>
-      <artifactId>guice-multibindings</artifactId>
+      <artifactId>contract-uel</artifactId>
     </dependency>
   </dependencies>
 </project>
