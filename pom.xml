@@ -194,7 +194,42 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
-        <artifactId>contract-guice</artifactId>
+        <artifactId>contract-guice-defaults</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-javascript</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-jexl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-juel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-mvel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-ognl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-spel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-guice-uel</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
