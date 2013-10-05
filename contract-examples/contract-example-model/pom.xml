@@ -36,5 +36,9 @@
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-annotations</artifactId>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
   </dependencies>
 </project>
