@@ -30,7 +30,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-jexl</artifactId>
+      <artifactId>contract-guice-jexl</artifactId>
     </dependency>
   </dependencies>
 </project>
