@@ -46,9 +46,5 @@
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-example-model</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-spring</artifactId>
-    </dependency>
   </dependencies>
 </project>

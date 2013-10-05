@@ -30,7 +30,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-juel</artifactId>
+      <artifactId>contract-spring-juel</artifactId>
     </dependency>
   </dependencies>
 </project>

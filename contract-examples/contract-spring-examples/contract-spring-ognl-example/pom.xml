@@ -30,7 +30,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-ognl</artifactId>
+      <artifactId>contract-spring-ognl</artifactId>
     </dependency>
   </dependencies>
 </project>

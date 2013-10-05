@@ -30,7 +30,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-scriptengine</artifactId>
+      <artifactId>contract-spring-javascript</artifactId>
     </dependency>
   </dependencies>
 </project>
