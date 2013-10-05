@@ -29,6 +29,7 @@
   <!--                                 MODULES                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
+    <module>contract-cdi-defaults</module>
     <module>contract-cdi-javascript</module>
     <module>contract-cdi-jexl</module>
     <module>contract-cdi-juel</module>
