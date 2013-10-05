@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
 
 /**
- * Test cases for the {@link InsuranceCompany}.
+ * Test cases for a JavaScript {@link InsuranceCompany}.
  */
 @RunWith(PaxExam.class)
 public class CdiJavaScriptInsuranceCompanyTest extends InsuranceCompanyTest {
