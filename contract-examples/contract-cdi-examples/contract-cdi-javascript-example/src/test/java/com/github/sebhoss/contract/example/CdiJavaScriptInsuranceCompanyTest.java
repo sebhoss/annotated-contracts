@@ -9,7 +9,7 @@ package com.github.sebhoss.contract.example;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import com.github.sebhoss.contract.annotation.Script;
+import com.github.sebhoss.contract.annotation.JavaScript;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import org.ops4j.pax.exam.junit.PaxExam;
 public class CdiJavaScriptInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject
-    @Script
+    @JavaScript
     @Nullable
     private InsuranceCompany injectedCompany;
 

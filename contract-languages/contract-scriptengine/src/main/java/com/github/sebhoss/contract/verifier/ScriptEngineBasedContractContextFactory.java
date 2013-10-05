@@ -9,19 +9,19 @@ package com.github.sebhoss.contract.verifier;
 import javax.inject.Inject;
 import javax.script.ScriptEngine;
 
-import com.github.sebhoss.contract.annotation.Script;
+import com.github.sebhoss.contract.annotation.JavaScript;
 
 /**
  * {@link ScriptEngine}-based implementation of the {@link ContractContextFactory}.
  */
-@Script
+@JavaScript
 public final class ScriptEngineBasedContractContextFactory implements ContractContextFactory {
 
     private final ScriptEngine engine;
 
     /**
      * @param engine
-     *            The Script to use.
+     *            The script engine to use.
      */
     @Inject
     public ScriptEngineBasedContractContextFactory(final ScriptEngine engine) {

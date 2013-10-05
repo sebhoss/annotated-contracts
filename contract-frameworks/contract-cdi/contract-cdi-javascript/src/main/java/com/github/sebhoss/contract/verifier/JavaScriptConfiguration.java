@@ -12,7 +12,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.annotation.Script;
+import com.github.sebhoss.contract.annotation.JavaScript;
 
 /**
  * Configures a JavaScript-based contract validation.
@@ -29,7 +29,7 @@ public class JavaScriptConfiguration {
 
     @Produces
     @Default
-    ContractContextFactory contextFactory(final @Script ContractContextFactory scriptFactory) {
+    ContractContextFactory contextFactory(final @JavaScript ContractContextFactory scriptFactory) {
         return scriptFactory;
     }
 

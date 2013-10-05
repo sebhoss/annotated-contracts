@@ -14,12 +14,12 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 /**
- * Marks a class as relevant to Script implementations.
+ * Marks a class as relevant to JavaScript implementations.
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.FIELD, ElementType.PARAMETER })
-public @interface Script {
+public @interface JavaScript {
 
     // marker annotation
 

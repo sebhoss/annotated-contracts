@@ -9,9 +9,9 @@ package com.github.sebhoss.contract.example;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.annotation.MVEL;
-import com.github.sebhoss.contract.annotation.Script;
+import com.github.sebhoss.contract.annotation.JavaScript;
 
-@Script
+@JavaScript
 @MVEL
 class JavaScriptMvelInsuranceCompany extends AbstractInsuranceCompany {
 
