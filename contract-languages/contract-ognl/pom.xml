@@ -15,22 +15,23 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
     <groupId>com.github.sebhoss.contract</groupId>
-    <artifactId>annotated-contracts</artifactId>
+    <artifactId>contract-languages</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-scriptengine</artifactId>
+  <artifactId>contract-ognl</artifactId>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <dependencies>
     <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-verifier</artifactId>
+      <groupId>ognl</groupId>
+      <artifactId>ognl</artifactId>
+      <version>3.0.6</version>
     </dependency>
   </dependencies>
 </project>

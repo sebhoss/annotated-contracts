@@ -43,14 +43,7 @@
     <module>contract-aop</module>
     <module>contract-aspect</module>
     <module>contract-interceptor</module>
-    <module>contract-el</module>
-    <module>contract-jexl</module>
-    <module>contract-juel</module>
-    <module>contract-mvel</module>
-    <module>contract-ognl</module>
-    <module>contract-scriptengine</module>
-    <module>contract-spel</module>
-    <module>contract-uel</module>
+    <module>contract-languages</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
     <module>contract-cdi</module>

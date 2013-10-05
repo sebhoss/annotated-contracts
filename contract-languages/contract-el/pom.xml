@@ -15,27 +15,24 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
     <groupId>com.github.sebhoss.contract</groupId>
-    <artifactId>annotated-contracts</artifactId>
+    <artifactId>contract-languages</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-spel</artifactId>
+  <artifactId>contract-el</artifactId>
+  <!-- TODO: Mention JSR 245 -->
+  <!-- TODO: Mention JSR 341 -->
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <dependencies>
     <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-verifier</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-expression</artifactId>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
     </dependency>
   </dependencies>
 </project>

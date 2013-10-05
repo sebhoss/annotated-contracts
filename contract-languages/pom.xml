@@ -22,9 +22,22 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-el</artifactId>
-  <!-- TODO: Mention JSR 245 -->
-  <!-- TODO: Mention JSR 341 -->
+  <artifactId>contract-languages</artifactId>
+  <packaging>pom</packaging>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                 MODULES                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <modules>
+    <module>contract-el</module>
+    <module>contract-jexl</module>
+    <module>contract-juel</module>
+    <module>contract-mvel</module>
+    <module>contract-ognl</module>
+    <module>contract-scriptengine</module>
+    <module>contract-spel</module>
+    <module>contract-uel</module>
+  </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -33,11 +46,6 @@
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-verifier</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.el</groupId>
-      <artifactId>javax.el-api</artifactId>
     </dependency>
   </dependencies>
 </project>
