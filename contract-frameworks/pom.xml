@@ -22,31 +22,15 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-cdi</artifactId>
+  <artifactId>contract-frameworks</artifactId>
   <packaging>pom</packaging>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                                 MODULES                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
-    <module>contract-cdi-defaults</module>
-    <module>contract-cdi-javascript</module>
-    <module>contract-cdi-jexl</module>
-    <module>contract-cdi-juel</module>
-    <module>contract-cdi-mvel</module>
-    <module>contract-cdi-ognl</module>
-    <module>contract-cdi-spel</module>
-    <module>contract-cdi-uel</module>
+    <module>contract-cdi</module>
+    <module>contract-guice</module>
+    <module>contract-spring</module>
   </modules>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                               DEPENDENCIES                              -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <dependencies>
-    <dependency>
-      <groupId>javax.enterprise</groupId>
-      <artifactId>cdi-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>
