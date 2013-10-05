@@ -6,21 +6,17 @@
  */
 package com.github.sebhoss.contract.configuration;
 
-import com.github.sebhoss.contract.verifier.ContractConfiguration;
-import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
 import com.github.sebhoss.contract.verifier.SpElConfiguration;
-import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * Default configuration for Spring-based projects.
+ * Default configuration for SpEL-based contracts.
  */
 @Configuration
-@Import({ AspectConfiguration.class, ParameterNamesLookupConfiguration.class, SpElConfiguration.class,
-        ContractConfiguration.class, ErrorMessageConfiguration.class })
-public class DefaultSpELConfiguration {
+@Import(SpElConfiguration.class)
+public class DefaultSpELConfiguration extends BaseConfiguration {
 
     // Meta-configuration
 

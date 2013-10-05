@@ -6,10 +6,7 @@
  */
 package com.github.sebhoss.contract.configuration;
 
-import com.github.sebhoss.contract.verifier.ContractConfiguration;
-import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
 import com.github.sebhoss.contract.verifier.UelConfiguration;
-import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -18,9 +15,8 @@ import org.springframework.context.annotation.Import;
  * Default configuration for UEL-based contracts.
  */
 @Configuration
-@Import({ AspectConfiguration.class, ParameterNamesLookupConfiguration.class, UelConfiguration.class,
-        ContractConfiguration.class, ErrorMessageConfiguration.class })
-public class DefaultUELConfiguration {
+@Import(UelConfiguration.class)
+public class DefaultUELConfiguration extends BaseConfiguration {
 
     // Meta-configuration
 

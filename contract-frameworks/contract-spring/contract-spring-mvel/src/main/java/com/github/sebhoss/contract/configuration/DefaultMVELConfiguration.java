@@ -6,10 +6,7 @@
  */
 package com.github.sebhoss.contract.configuration;
 
-import com.github.sebhoss.contract.verifier.ContractConfiguration;
 import com.github.sebhoss.contract.verifier.MvelConfiguration;
-import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
-import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -18,9 +15,8 @@ import org.springframework.context.annotation.Import;
  * Default configuration for MEVL-based contracts.
  */
 @Configuration
-@Import({ AspectConfiguration.class, ParameterNamesLookupConfiguration.class, MvelConfiguration.class,
-        ContractConfiguration.class, ErrorMessageConfiguration.class })
-public class DefaultMVELConfiguration {
+@Import(MvelConfiguration.class)
+public class DefaultMVELConfiguration extends BaseConfiguration {
 
     // Meta-configuration
 

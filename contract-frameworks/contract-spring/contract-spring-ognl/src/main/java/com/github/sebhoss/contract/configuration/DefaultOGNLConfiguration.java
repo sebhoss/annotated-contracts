@@ -6,10 +6,7 @@
  */
 package com.github.sebhoss.contract.configuration;
 
-import com.github.sebhoss.contract.verifier.ContractConfiguration;
 import com.github.sebhoss.contract.verifier.OgnlConfiguration;
-import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
-import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -18,9 +15,8 @@ import org.springframework.context.annotation.Import;
  * Default configuration for OGNL-based contracts.
  */
 @Configuration
-@Import({ AspectConfiguration.class, ParameterNamesLookupConfiguration.class, OgnlConfiguration.class,
-        ContractConfiguration.class, ErrorMessageConfiguration.class })
-public class DefaultOGNLConfiguration {
+@Import(OgnlConfiguration.class)
+public class DefaultOGNLConfiguration extends BaseConfiguration {
 
     // Meta-configuration
 
