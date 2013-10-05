@@ -44,7 +44,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-example-model</artifactId>
+      <artifactId>contract-example-test</artifactId>
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
