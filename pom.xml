@@ -250,11 +250,6 @@
         <artifactId>contract-example-model</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.github.sebhoss.contract</groupId>
-        <artifactId>contract-example-test</artifactId>
-        <version>${project.version}</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>

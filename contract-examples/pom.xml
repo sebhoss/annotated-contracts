@@ -30,7 +30,6 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
     <module>contract-example-model</module>
-    <module>contract-example-test</module>
     <module>contract-cdi-examples</module>
     <module>contract-guice-examples</module>
     <module>contract-spring-examples</module>
