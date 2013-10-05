@@ -35,18 +35,10 @@
   <!--                                 MODULES                                 -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
-    <module>contract-annotations</module>
-    <module>contract-testutils</module>
-    <module>contract-lifecycle</module>
-    <module>contract-paranamer</module>
-    <module>contract-verifier</module>
-    <module>contract-aop</module>
-    <module>contract-aspect</module>
-    <module>contract-interceptor</module>
+    <module>contract-core</module>
+    <module>contract-integrations</module>
     <module>contract-languages</module>
-    <module>contract-spring</module>
-    <module>contract-guice</module>
-    <module>contract-cdi</module>
+    <module>contract-frameworks</module>
     <module>contract-examples</module>
   </modules>
 
