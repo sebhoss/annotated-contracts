@@ -15,29 +15,14 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
     <groupId>com.github.sebhoss.contract</groupId>
-    <artifactId>contract-frameworks</artifactId>
+    <artifactId>contract-spring</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-spring</artifactId>
-  <packaging>pom</packaging>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                 MODULES                                 -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <modules>
-    <module>contract-spring-defaults</module>
-    <module>contract-spring-javascript</module>
-    <module>contract-spring-jexl</module>
-    <module>contract-spring-juel</module>
-    <module>contract-spring-mvel</module>
-    <module>contract-spring-ognl</module>
-    <module>contract-spring-spel</module>
-    <module>contract-spring-uel</module>
-  </modules>
+  <artifactId>contract-spring-jexl</artifactId>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -45,16 +30,11 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-aspect</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
+      <artifactId>contract-spring-defaults</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
+      <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-jexl</artifactId>
     </dependency>
   </dependencies>
 </project>
