@@ -22,7 +22,21 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-guice-mvel-example</artifactId>
+  <artifactId>contract-guice-examples</artifactId>
+  <packaging>pom</packaging>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                 MODULES                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <modules>
+    <module>contract-guice-javascript-example</module>
+    <module>contract-guice-jexl-example</module>
+    <module>contract-guice-juel-example</module>
+    <module>contract-guice-mvel-example</module>
+    <module>contract-guice-ognl-example</module>
+    <module>contract-guice-spel-example</module>
+    <module>contract-guice-uel-example</module>
+  </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -35,10 +49,6 @@
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-guice</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-mvel</artifactId>
     </dependency>
   </dependencies>
 </project>
