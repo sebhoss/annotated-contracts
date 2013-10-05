@@ -15,14 +15,14 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <parent>
     <groupId>com.github.sebhoss.contract</groupId>
-    <artifactId>contract-examples</artifactId>
+    <artifactId>contract-spring-examples</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-spring-spel-example</artifactId>
+  <artifactId>contract-spring-jexl-example</artifactId>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -30,15 +30,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-example-model</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-spring</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-spel</artifactId>
+      <artifactId>contract-jexl</artifactId>
     </dependency>
   </dependencies>
 </project>

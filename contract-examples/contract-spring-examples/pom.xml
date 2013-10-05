@@ -22,7 +22,21 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-spring-uel-example</artifactId>
+  <artifactId>contract-spring-examples</artifactId>
+  <packaging>pom</packaging>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                 MODULES                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <modules>
+    <module>contract-spring-javascript-example</module>
+    <module>contract-spring-jexl-example</module>
+    <module>contract-spring-juel-example</module>
+    <module>contract-spring-mvel-example</module>
+    <module>contract-spring-ognl-example</module>
+    <module>contract-spring-spel-example</module>
+    <module>contract-spring-uel-example</module>
+  </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -35,10 +49,6 @@
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-spring</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-uel</artifactId>
     </dependency>
   </dependencies>
 </project>

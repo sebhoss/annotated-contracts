@@ -30,13 +30,6 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <modules>
     <module>contract-example-model</module>
-    <module>contract-spring-javascript-example</module>
-    <module>contract-spring-jexl-example</module>
-    <module>contract-spring-juel-example</module>
-    <module>contract-spring-mvel-example</module>
-    <module>contract-spring-ognl-example</module>
-    <module>contract-spring-spel-example</module>
-    <module>contract-spring-uel-example</module>
     <module>contract-cdi-examples</module>
     <module>contract-guice-examples</module>
     <module>contract-spring-examples</module>
