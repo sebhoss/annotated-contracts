@@ -54,7 +54,6 @@
     <module>contract-spring</module>
     <module>contract-guice</module>
     <module>contract-cdi</module>
-    <module>contract-cdi-defaults</module>
     <module>contract-examples</module>
   </modules>
 
