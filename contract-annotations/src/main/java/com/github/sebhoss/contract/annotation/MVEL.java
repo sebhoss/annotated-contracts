@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 /**
- * Marks a class as relevant to MVEL examples.
+ * Marks a class as relevant to MVEL implementations.
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)

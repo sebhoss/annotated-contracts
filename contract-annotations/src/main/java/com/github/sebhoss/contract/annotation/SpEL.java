@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 /**
- * Marks a class as relevant to SpEL examples.
+ * Marks a class as relevant to SpEL implementations.
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)

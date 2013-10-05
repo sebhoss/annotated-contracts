@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 /**
- * Marks a class as relevant to OGNL examples.
+ * Marks a class as relevant to OGNL implementations.
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)

@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 /**
- * Marks a class as relevant to Script examples.
+ * Marks a class as relevant to Script implementations.
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
