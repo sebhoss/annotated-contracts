@@ -53,6 +53,7 @@
     <module>contract-uel</module>
     <module>contract-spring</module>
     <module>contract-guice</module>
+    <module>contract-cdi</module>
     <module>contract-cdi-defaults</module>
     <module>contract-examples</module>
   </modules>
@@ -215,6 +216,41 @@
       <dependency>
         <groupId>com.github.sebhoss.contract</groupId>
         <artifactId>contract-cdi-defaults</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-javascript</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-jexl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-juel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-mvel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-ognl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-spel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.contract</groupId>
+        <artifactId>contract-cdi-uel</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
