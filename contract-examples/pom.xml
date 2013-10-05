@@ -44,13 +44,7 @@
     <module>contract-spring-ognl-example</module>
     <module>contract-spring-spel-example</module>
     <module>contract-spring-uel-example</module>
-    <module>contract-cdi-javascript-example</module>
-    <module>contract-cdi-jexl-example</module>
-    <module>contract-cdi-juel-example</module>
-    <module>contract-cdi-mvel-example</module>
-    <module>contract-cdi-ognl-example</module>
-    <module>contract-cdi-spel-example</module>
-    <module>contract-cdi-uel-example</module>
+    <module>contract-cdi-examples</module>
   </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

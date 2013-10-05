@@ -22,7 +22,21 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <artifactId>contract-cdi-uel-example</artifactId>
+  <artifactId>contract-cdi-examples</artifactId>
+  <packaging>pom</packaging>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                 MODULES                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <modules>
+    <module>contract-cdi-javascript-example</module>
+    <module>contract-cdi-jexl-example</module>
+    <module>contract-cdi-juel-example</module>
+    <module>contract-cdi-mvel-example</module>
+    <module>contract-cdi-ognl-example</module>
+    <module>contract-cdi-spel-example</module>
+    <module>contract-cdi-uel-example</module>
+  </modules>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -31,10 +45,6 @@
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-example-model</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.sebhoss.contract</groupId>
-      <artifactId>contract-cdi-uel</artifactId>
     </dependency>
 
     <!-- Pax Exam -->
@@ -52,12 +62,10 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -66,7 +74,6 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jul-to-slf4j</artifactId>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>
