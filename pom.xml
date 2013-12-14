@@ -51,6 +51,13 @@
     <tag>master</tag>
     <url>${project.url}</url>
   </scm>
+  
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                PROPERTIES                               -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <properties>
+    <version.bom>2.0.6-SNAPSHOT</version.bom>
+  </properties>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               DEPENDENCIES                              -->
@@ -60,49 +67,49 @@
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>java-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>javax-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>spring-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>guice-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>testing-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>logging-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss</groupId>
         <artifactId>sebhoss-bom</artifactId>
-        <version>2.0.5</version>
+        <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
