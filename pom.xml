@@ -56,7 +56,7 @@
   <!--                                PROPERTIES                               -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <properties>
-    <version.bom>2.0.6</version.bom>
+    <version.bom>3.0.1</version.bom>
   </properties>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -65,22 +65,15 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.github.sebhoss</groupId>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>java-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>com.github.sebhoss</groupId>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>javax-bom</artifactId>
-        <version>${version.bom}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.github.sebhoss</groupId>
-        <artifactId>spring-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
@@ -93,21 +86,21 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>com.github.sebhoss</groupId>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>testing-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>com.github.sebhoss</groupId>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>logging-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>com.github.sebhoss</groupId>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>sebhoss-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
