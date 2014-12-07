@@ -115,6 +115,13 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.bom</groupId>
+        <artifactId>aspect-bom</artifactId>
+        <version>${version.bom}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>sebhoss-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
