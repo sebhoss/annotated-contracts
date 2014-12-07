@@ -6,14 +6,13 @@
  */
 package com.github.sebhoss.contract.example;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
-
-import com.github.sebhoss.contract.annotation.SpEL;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
+
+import com.github.sebhoss.contract.annotation.SpEL;
 
 /**
  * Test cases for a SpEL {@link InsuranceCompany}.
@@ -23,7 +22,6 @@ public class CdiSpElInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject
     @SpEL
-    @Nullable
     private InsuranceCompany injectedCompany;
 
     /**

@@ -6,14 +6,13 @@
  */
 package com.github.sebhoss.contract.example;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
-
-import com.github.sebhoss.contract.annotation.MVEL;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
+
+import com.github.sebhoss.contract.annotation.MVEL;
 
 /**
  * Test cases for a MVEL {@link InsuranceCompany}.
@@ -23,7 +22,6 @@ public class CdiMvelInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject
     @MVEL
-    @Nullable
     private InsuranceCompany injectedCompany;
 
     /**

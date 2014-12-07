@@ -7,8 +7,4 @@
 /**
  * Contract validation lifecycle.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.lifecycle;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

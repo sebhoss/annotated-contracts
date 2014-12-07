@@ -6,14 +6,13 @@
  */
 package com.github.sebhoss.contract.example;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
-
-import com.github.sebhoss.contract.annotation.UEL;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
+
+import com.github.sebhoss.contract.annotation.UEL;
 
 /**
  * Test cases for a UEL {@link InsuranceCompany}.
@@ -23,7 +22,6 @@ public class CdiUelInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject
     @UEL
-    @Nullable
     private InsuranceCompany injectedCompany;
 
     /**

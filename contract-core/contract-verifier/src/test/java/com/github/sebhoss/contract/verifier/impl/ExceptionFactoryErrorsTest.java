@@ -9,14 +9,14 @@ package com.github.sebhoss.contract.verifier.impl;
 import java.util.List;
 import java.util.Locale;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 import ch.qos.cal10n.verifier.Cal10nError;
 import ch.qos.cal10n.verifier.IMessageKeyVerifier;
 import ch.qos.cal10n.verifier.MessageKeyVerifier;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-
-import org.junit.Assert;
-import org.junit.Test;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Checks the properties behind {@link ExceptionFactoryErrors}.

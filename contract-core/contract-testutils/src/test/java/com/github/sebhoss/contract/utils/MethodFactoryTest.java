@@ -12,9 +12,9 @@ import java.lang.reflect.Method;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Test cases for the {@link MethodFactory}.

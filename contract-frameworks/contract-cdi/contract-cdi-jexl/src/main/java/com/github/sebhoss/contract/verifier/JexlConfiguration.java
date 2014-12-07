@@ -11,8 +11,8 @@ import javax.enterprise.inject.Produces;
 
 import org.apache.commons.jexl2.JexlEngine;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.JEXL;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures a JEXL-based contract validation.

@@ -6,14 +6,13 @@
  */
 package com.github.sebhoss.contract.lifecycle;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.reflect.MethodSignature;
+
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory.ContractVerifierBuilder;
-
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.reflect.MethodSignature;
 
 /**
  * AspectJ-based implementation of the {@link ContractLifecycle}.
@@ -39,7 +38,6 @@ public final class AspectContractLifecycle extends ContractLifecycle {
     }
 
     @Override
-    @SuppressWarnings(CompilerWarnings.NULL)
     protected ContractVerifier createVerifier() {
         final ContractVerifierBuilder builder = getContractVerifierFactory().createContractVerifier();
         final MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
@@ -54,7 +52,6 @@ public final class AspectContractLifecycle extends ContractLifecycle {
     }
 
     @Override
-    @SuppressWarnings(CompilerWarnings.NULL)
     protected Object executeMethod() throws Throwable {
         return pjp.proceed();
     }

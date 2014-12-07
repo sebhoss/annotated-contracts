@@ -6,11 +6,9 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-
 import org.apache.commons.jexl2.JexlEngine;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configuration for a JEXL based {@link ContractContextFactory}.
@@ -29,8 +27,8 @@ public class JexlConfiguration {
     /**
      * @return A new JexlEngine
      */
-    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     @Bean
+    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     public JexlEngine engine() {
         return new JexlEngine();
     }

@@ -9,18 +9,18 @@ package com.github.sebhoss.contract.verifier.impl;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.annotation.Contract;
-import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
-
 import org.junit.Test;
 import org.mockito.Matchers;
 import org.mockito.Mockito;
 
+import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
+import com.github.sebhoss.warnings.CompilerWarnings;
+
 /**
  * Test cases for the {@link DelegatingContractSyntaxCheck}.
  */
-@SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
+@SuppressWarnings({ CompilerWarnings.STATIC_METHOD })
 public final class DelegatingSyntaxCheckTest {
 
     /**

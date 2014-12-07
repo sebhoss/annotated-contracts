@@ -7,8 +7,4 @@
 /**
  * Guice modules for annotated-contracts.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.example;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

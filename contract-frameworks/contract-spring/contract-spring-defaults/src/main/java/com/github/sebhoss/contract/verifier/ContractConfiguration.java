@@ -13,9 +13,6 @@ import com.github.sebhoss.contract.verifier.impl.ContractSemanticCheckConfigurat
 import com.github.sebhoss.contract.verifier.impl.ContractSyntaxCheckConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ContractVerifierConfiguration;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-
 /**
  * Meta-configuration for several contract interfaces.
  */

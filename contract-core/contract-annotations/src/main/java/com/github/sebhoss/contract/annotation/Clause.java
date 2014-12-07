@@ -6,7 +6,7 @@
  */
 package com.github.sebhoss.contract.annotation;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * A single clause of a method contract.

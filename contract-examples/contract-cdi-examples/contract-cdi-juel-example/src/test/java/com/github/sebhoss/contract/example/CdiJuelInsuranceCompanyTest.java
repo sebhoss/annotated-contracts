@@ -6,7 +6,6 @@
  */
 package com.github.sebhoss.contract.example;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import com.github.sebhoss.contract.annotation.JUEL;
@@ -23,7 +22,6 @@ public class CdiJuelInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject
     @JUEL
-    @Nullable
     private InsuranceCompany injectedCompany;
 
     /**

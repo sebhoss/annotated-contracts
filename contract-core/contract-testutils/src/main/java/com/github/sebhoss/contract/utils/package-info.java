@@ -7,8 +7,4 @@
 /**
  * Test utilities for contract-based tests.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.utils;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

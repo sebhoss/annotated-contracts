@@ -13,7 +13,7 @@ import javax.enterprise.inject.Produces;
 import ch.qos.cal10n.IMessageConveyor;
 import ch.qos.cal10n.MessageConveyor;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures English error messages.

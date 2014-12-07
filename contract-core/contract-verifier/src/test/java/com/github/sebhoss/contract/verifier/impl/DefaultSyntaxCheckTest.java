@@ -6,18 +6,18 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.contract.annotation.Contract;
-import com.github.sebhoss.contract.utils.ContractFactory;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.contract.utils.ContractFactory;
+import com.github.sebhoss.warnings.CompilerWarnings;
+
 /**
  * Test cases for the default syntax checks.
  */
-@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
+@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.STATIC_METHOD })
 public final class DefaultSyntaxCheckTest {
 
     /** Catches expected exceptions during test execution. */

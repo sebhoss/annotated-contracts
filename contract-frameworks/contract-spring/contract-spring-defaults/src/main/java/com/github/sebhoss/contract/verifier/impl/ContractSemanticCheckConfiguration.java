@@ -8,11 +8,8 @@ package com.github.sebhoss.contract.verifier.impl;
 
 import java.util.HashSet;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configuration for the {@link ContractSemanticCheck}.

@@ -8,9 +8,9 @@ package com.github.sebhoss.contract.verifier.impl;
 
 import java.lang.reflect.Method;
 
-import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
+import com.github.sebhoss.nullanalysis.Nullsafe;
 
 /**
  * Retrieves contracts based on annotations.

@@ -11,8 +11,8 @@ import javax.enterprise.inject.Produces;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Script;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures a JavaScript-based contract validation.
@@ -22,7 +22,6 @@ public class JavaScriptConfiguration {
 
     @Produces
     @Default
-    @SuppressWarnings(CompilerWarnings.NULL)
     ScriptEngine javaScriptEngine() {
         return new ScriptEngineManager().getEngineByName("JavaScript"); //$NON-NLS-1$
     }

@@ -11,7 +11,7 @@ import java.lang.reflect.Constructor;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Test cases for the {@link ContractFactory}.

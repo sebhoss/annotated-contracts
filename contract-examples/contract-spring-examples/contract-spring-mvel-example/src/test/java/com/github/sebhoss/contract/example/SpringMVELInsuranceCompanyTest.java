@@ -6,11 +6,9 @@
  */
 package com.github.sebhoss.contract.example;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-
 import org.junit.Before;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Test cases for a MVEL {@link InsuranceCompany}.

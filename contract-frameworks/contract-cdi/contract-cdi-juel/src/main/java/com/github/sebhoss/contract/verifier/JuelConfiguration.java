@@ -9,8 +9,8 @@ package com.github.sebhoss.contract.verifier;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.JUEL;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures a JUEL-based contract validation.

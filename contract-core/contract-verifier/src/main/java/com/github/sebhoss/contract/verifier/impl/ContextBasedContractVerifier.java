@@ -6,12 +6,12 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractContext;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
+import com.github.sebhoss.nullanalysis.Nullsafe;
 
 /**
  * A {@link ContractVerifier} which delegates its work to a {@link ContractContext}.

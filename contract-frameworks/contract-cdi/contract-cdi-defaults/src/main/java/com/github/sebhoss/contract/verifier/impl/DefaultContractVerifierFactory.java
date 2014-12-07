@@ -9,7 +9,6 @@ package com.github.sebhoss.contract.verifier.impl;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
@@ -17,6 +16,7 @@ import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
 import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures the default ContractVerifierFactory.

@@ -7,8 +7,4 @@
 /**
  * Aspect(s) for contract annotations.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.aspect;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

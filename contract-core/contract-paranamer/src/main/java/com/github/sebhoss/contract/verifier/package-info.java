@@ -4,8 +4,4 @@
  * terms of the Do What The Fuck You Want To Public License, Version 2,
  * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.verifier;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

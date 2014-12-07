@@ -7,8 +7,4 @@
 /**
  * Default configurations for Spring-based projects.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.configuration;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

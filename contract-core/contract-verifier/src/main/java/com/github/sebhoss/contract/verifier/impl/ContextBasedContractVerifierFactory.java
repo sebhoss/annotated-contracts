@@ -9,10 +9,10 @@ package com.github.sebhoss.contract.verifier.impl;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import com.github.sebhoss.common.annotation.Nullsafe;
+import org.eclipse.jdt.annotation.Nullable;
+
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractContext;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
@@ -23,6 +23,7 @@ import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
 import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
+import com.github.sebhoss.nullanalysis.Nullsafe;
 
 /**
  * Creates {@link ContractVerifier} which are based on a {@link ContractContext}.

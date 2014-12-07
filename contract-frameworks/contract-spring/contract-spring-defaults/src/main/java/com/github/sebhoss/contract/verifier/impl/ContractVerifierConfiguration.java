@@ -6,16 +6,12 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configuration for the {@link ContractVerifierFactory}.
@@ -25,32 +21,26 @@ public class ContractVerifierConfiguration {
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     ContractRetrievalConfiguration        retrieval;
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     ContractSyntaxCheckConfiguration      syntaxCheck;
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     ParameterNamesLookupConfiguration     namesLookup;
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     ContractSemanticCheckConfiguration    semanticCheck;
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     ContractContextFactory                contextFactory;
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     ContractExceptionFactoryConfiguration exceptionFactory;
 
     /**

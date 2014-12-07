@@ -10,7 +10,7 @@ import javax.el.ExpressionFactory;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures the default ExpressionFactory.
@@ -22,7 +22,7 @@ public class DefaultExpressionFactory {
      */
     @Produces
     @Default
-    @SuppressWarnings({ CompilerWarnings.NULL, CompilerWarnings.STATIC_METHOD })
+    @SuppressWarnings({ CompilerWarnings.STATIC_METHOD })
     public ExpressionFactory factory() {
         return ExpressionFactory.newInstance();
     }

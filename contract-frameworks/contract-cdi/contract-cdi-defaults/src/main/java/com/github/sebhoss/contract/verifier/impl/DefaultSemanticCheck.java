@@ -9,8 +9,8 @@ package com.github.sebhoss.contract.verifier.impl;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configures the default syntax checks.

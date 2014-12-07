@@ -8,11 +8,8 @@ package com.github.sebhoss.contract.verifier;
 
 import javax.el.ExpressionFactory;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.common.annotation.Nullsafe;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.github.sebhoss.nullanalysis.Nullsafe;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Configuration for a JUEL based {@link ContractContextFactory}.

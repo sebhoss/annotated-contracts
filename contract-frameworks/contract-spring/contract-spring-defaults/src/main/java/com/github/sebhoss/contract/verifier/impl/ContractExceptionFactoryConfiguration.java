@@ -6,16 +6,12 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import ch.qos.cal10n.IMessageConveyor;
 
-import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.github.sebhoss.nullanalysis.Nullsafe;
 
 /**
  * Configures the {@link ContractExceptionFactory}.
@@ -25,7 +21,6 @@ public class ContractExceptionFactoryConfiguration {
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     IMessageConveyor messages;
 
     /**

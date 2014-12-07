@@ -9,9 +9,9 @@ package com.github.sebhoss.contract.utils;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Test cases for the {@link ContractFactory}'s creation of new {@link Contract} instances.

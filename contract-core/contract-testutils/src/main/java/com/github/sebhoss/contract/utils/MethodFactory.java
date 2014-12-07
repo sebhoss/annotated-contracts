@@ -8,9 +8,9 @@ package com.github.sebhoss.contract.utils;
 
 import java.lang.reflect.Method;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.annotation.Clause;
 import com.github.sebhoss.contract.annotation.Contract;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Factory for {@link Method} instances.

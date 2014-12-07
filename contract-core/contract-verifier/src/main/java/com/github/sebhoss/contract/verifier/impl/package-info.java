@@ -7,8 +7,4 @@
 /**
  * Verifier implementations.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.verifier.impl;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

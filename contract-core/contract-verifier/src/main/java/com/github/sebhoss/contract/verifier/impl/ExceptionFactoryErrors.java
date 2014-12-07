@@ -10,8 +10,8 @@ import ch.qos.cal10n.BaseName;
 import ch.qos.cal10n.Locale;
 import ch.qos.cal10n.LocaleData;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Enumeration of errors of a {@link ContractExceptionFactory}

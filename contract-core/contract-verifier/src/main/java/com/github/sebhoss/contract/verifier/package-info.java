@@ -7,8 +7,4 @@
 /**
  * Verifier verify a method contract.
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.verifier;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
-

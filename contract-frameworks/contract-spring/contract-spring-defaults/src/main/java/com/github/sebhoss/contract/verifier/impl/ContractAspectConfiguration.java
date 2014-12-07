@@ -6,15 +6,11 @@
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import com.github.sebhoss.common.annotation.Nullsafe;
 import com.github.sebhoss.contract.aspect.ContractAspect;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.github.sebhoss.nullanalysis.Nullsafe;
 
 /**
  * Configuration for the {@link ContractAspect}.
@@ -24,7 +20,6 @@ public class ContractAspectConfiguration {
 
     @Inject
     // @Nullable required for FindBugs analysis
-    @Nullable
     private ContractVerifierFactory verifierFactory;
 
     /**

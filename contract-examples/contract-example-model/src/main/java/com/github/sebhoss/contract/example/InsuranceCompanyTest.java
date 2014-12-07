@@ -6,19 +6,18 @@
  */
 package com.github.sebhoss.contract.example;
 
-import javax.annotation.Nullable;
-
+import org.eclipse.jdt.annotation.Nullable;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Test cases for the {@link InsuranceCompany}.
  */
-@SuppressWarnings({ CompilerWarnings.NLS, CompilerWarnings.NULL })
+@SuppressWarnings({ CompilerWarnings.NLS })
 public abstract class InsuranceCompanyTest {
 
     /** Catches expected exceptions */

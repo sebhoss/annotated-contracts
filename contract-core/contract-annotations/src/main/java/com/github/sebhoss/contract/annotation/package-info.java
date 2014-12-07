@@ -7,8 +7,5 @@
 /**
  * Annotations for contracts
  */
-@NotNullByDefault
 package com.github.sebhoss.contract.annotation;
-
-import com.github.sebhoss.common.annotation.NotNullByDefault;
 

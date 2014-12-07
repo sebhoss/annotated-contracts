@@ -8,9 +8,6 @@ package com.github.sebhoss.contract.configuration;
 
 import com.github.sebhoss.contract.verifier.JexlConfiguration;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-
 /**
  * Default configuration for JEXL-based contracts.
  */

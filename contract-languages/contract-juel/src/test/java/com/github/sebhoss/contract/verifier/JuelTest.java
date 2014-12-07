@@ -16,7 +16,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 import de.odysseus.el.util.SimpleContext;
 
@@ -27,7 +27,6 @@ import de.odysseus.el.util.SimpleContext;
 public class JuelTest {
 
     /** Catches thrown expected exceptions inside of tests. */
-    @SuppressWarnings(CompilerWarnings.NULL)
     @Rule
     public final ExpectedException thrown = ExpectedException.none();
 

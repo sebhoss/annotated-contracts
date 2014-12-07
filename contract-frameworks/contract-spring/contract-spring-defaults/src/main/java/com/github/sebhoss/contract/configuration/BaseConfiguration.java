@@ -10,9 +10,6 @@ import com.github.sebhoss.contract.verifier.ContractConfiguration;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
 import com.github.sebhoss.contract.verifier.impl.ErrorMessageConfiguration;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-
 /**
  * Base configuration for Spring-based projects. Extend this class and @Import a specific language configuration.
  */

@@ -11,13 +11,11 @@ import java.util.Set;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
-import com.github.sebhoss.common.annotation.Nullsafe;
+import com.github.sebhoss.nullanalysis.Nullsafe;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
 // TODO: We only need this for pax-exam
-@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
 class PaxExamConfiguration {
 
     @Produces
