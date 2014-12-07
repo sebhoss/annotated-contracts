@@ -79,7 +79,7 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>com.github.sebhoss</groupId>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>guice-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
@@ -103,6 +103,13 @@
         <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>sebhoss-bom</artifactId>
         <version>${version.bom}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>4.1.2.RELEASE</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -328,5 +335,5 @@
       <artifactId>cal10n-api</artifactId>
     </dependency>
   </dependencies>
-  
+
 </project>
