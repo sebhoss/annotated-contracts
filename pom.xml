@@ -373,6 +373,11 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss</groupId>
+      <artifactId>suppress-warnings</artifactId>
+    </dependency>
+    <!-- 
+    <dependency>
+      <groupId>com.github.sebhoss</groupId>
       <artifactId>null-analysis</artifactId>
     </dependency>
     <dependency>
@@ -383,6 +388,7 @@
       <groupId>ch.qos.cal10n</groupId>
       <artifactId>cal10n-api</artifactId>
     </dependency>
+     -->
   </dependencies>
 
 </project>

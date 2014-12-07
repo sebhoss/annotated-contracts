@@ -8,28 +8,27 @@ package com.github.sebhoss.contract.interceptor;
 
 import javax.inject.Inject;
 
-import org.aopalliance.intercept.MethodInterceptor;
-import org.aopalliance.intercept.MethodInvocation;
-
 import com.github.sebhoss.contract.lifecycle.AopLifecycle;
 import com.github.sebhoss.contract.lifecycle.ContractLifecycle;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
-import com.github.sebhoss.warnings.CompilerWarnings;
+
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
 
 /**
  * AOP interceptor which verifies a method contract.
  */
 public final class ContractInterceptor implements MethodInterceptor {
 
-    @Inject
-    private ContractVerifierFactory contractVerifierFactory;
+	@Inject
+	private ContractVerifierFactory contractVerifierFactory;
 
-    @Override
-    @SuppressWarnings(CompilerWarnings.NULL)
-    public Object invoke(final MethodInvocation invocation) throws Throwable {
-        final ContractLifecycle lifecycle = new AopLifecycle(invocation, contractVerifierFactory);
+	@Override
+	public Object invoke(final MethodInvocation invocation) throws Throwable {
+		final ContractLifecycle lifecycle = new AopLifecycle(invocation,
+				contractVerifierFactory);
 
-        return lifecycle.performLifecycle();
-    }
+		return lifecycle.performLifecycle();
+	}
 
 }

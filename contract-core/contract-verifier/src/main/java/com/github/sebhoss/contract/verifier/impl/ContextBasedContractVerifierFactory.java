@@ -11,8 +11,6 @@ import java.util.Arrays;
 
 import javax.inject.Inject;
 
-import org.eclipse.jdt.annotation.Nullable;
-
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractContext;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
@@ -24,6 +22,7 @@ import com.github.sebhoss.contract.verifier.ContractVerifier;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
 import com.github.sebhoss.nullanalysis.Nullsafe;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Creates {@link ContractVerifier} which are based on a {@link ContractContext}.
@@ -114,25 +113,18 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
     /**
      * Builds {@link ContractVerifier}
      */
-    @Nullable
     public class ContextBasedContractVerifierBuilder implements ContractVerifierBuilder {
 
-        @Nullable
         private Method          method;
 
-        @Nullable
         private Object          instance;
 
-        @Nullable
         private Object[]        arguments;
 
-        @Nullable
         private Contract        contract;
 
-        @Nullable
         private String[]        parameterNames;
 
-        @Nullable
         private ContractContext context;
 
         @Override
@@ -238,10 +230,12 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
             return Nullsafe.nullsafe(method);
         }
 
+        @SuppressWarnings(CompilerWarnings.NULL)
         private String[] getParameterNames() {
             return Nullsafe.nullsafe(parameterNames);
         }
 
+        @SuppressWarnings(CompilerWarnings.NULL)
         private Object[] getArguments() {
             return Nullsafe.nullsafe(arguments);
         }

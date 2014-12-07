@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
 import com.github.sebhoss.contract.annotation.Contract;
 import com.github.sebhoss.contract.verifier.ContractRetrieval;
 import com.github.sebhoss.nullanalysis.Nullsafe;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Retrieves contracts based on annotations.
@@ -18,6 +19,7 @@ import com.github.sebhoss.nullanalysis.Nullsafe;
 public final class AnnotationBasedContractRetrieval implements ContractRetrieval {
 
     @Override
+    @SuppressWarnings(CompilerWarnings.NULL)
     public Contract retrieveContract(final Method method) {
         return Nullsafe.nullsafe(method.getAnnotation(Contract.class));
     }
