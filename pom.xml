@@ -129,6 +129,13 @@
       </dependency>
       <dependency>
         <groupId>com.github.sebhoss.bom</groupId>
+        <artifactId>juel-bom</artifactId>
+        <version>${version.bom}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.sebhoss.bom</groupId>
         <artifactId>sebhoss-bom</artifactId>
         <version>${version.bom}</version>
         <type>pom</type>
