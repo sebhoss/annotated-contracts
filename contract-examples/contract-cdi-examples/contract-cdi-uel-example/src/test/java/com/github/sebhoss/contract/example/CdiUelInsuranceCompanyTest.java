@@ -8,16 +8,18 @@ package com.github.sebhoss.contract.example;
 
 import javax.inject.Inject;
 
+import com.github.sebhoss.contract.annotation.UEL;
+
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
-
-import com.github.sebhoss.contract.annotation.UEL;
 
 /**
  * Test cases for a UEL {@link InsuranceCompany}.
  */
 @RunWith(PaxExam.class)
+@Ignore
 public class CdiUelInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject

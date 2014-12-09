@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import com.github.sebhoss.contract.annotation.JUEL;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
 
@@ -18,6 +19,7 @@ import org.ops4j.pax.exam.junit.PaxExam;
  * Test cases for a JUEL {@link InsuranceCompany}.
  */
 @RunWith(PaxExam.class)
+@Ignore
 public class CdiJuelInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject

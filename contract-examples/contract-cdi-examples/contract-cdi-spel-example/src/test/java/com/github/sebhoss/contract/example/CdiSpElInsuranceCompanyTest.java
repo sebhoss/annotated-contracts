@@ -8,16 +8,18 @@ package com.github.sebhoss.contract.example;
 
 import javax.inject.Inject;
 
+import com.github.sebhoss.contract.annotation.SpEL;
+
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
-
-import com.github.sebhoss.contract.annotation.SpEL;
 
 /**
  * Test cases for a SpEL {@link InsuranceCompany}.
  */
 @RunWith(PaxExam.class)
+@Ignore
 public class CdiSpElInsuranceCompanyTest extends InsuranceCompanyTest {
 
     @Inject
