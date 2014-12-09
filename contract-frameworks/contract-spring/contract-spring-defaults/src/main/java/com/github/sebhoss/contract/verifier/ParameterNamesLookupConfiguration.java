@@ -6,9 +6,11 @@
  */
 package com.github.sebhoss.contract.verifier;
 
-import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
-
 import com.github.sebhoss.warnings.CompilerWarnings;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
 
 /**
  * Configuration for the {@link ParameterNamesLookup}.

@@ -22,7 +22,7 @@ public class GuiceUelInsuranceCompanyTest extends InsuranceCompanyTest {
     @Before
     public void createCompany() {
         final Injector injector = Guice.createInjector(new GuiceUelModule());
-        insurance = injector.getInstance(InsuranceCompany.class);
+        setInsuranceCompany(injector.getInstance(InsuranceCompany.class));
     }
 
 }

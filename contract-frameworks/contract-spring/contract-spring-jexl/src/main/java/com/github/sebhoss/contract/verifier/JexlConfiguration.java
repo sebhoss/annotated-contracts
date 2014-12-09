@@ -7,6 +7,8 @@
 package com.github.sebhoss.contract.verifier;
 
 import org.apache.commons.jexl2.JexlEngine;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import com.github.sebhoss.warnings.CompilerWarnings;
 

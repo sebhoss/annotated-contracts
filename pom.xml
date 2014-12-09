@@ -391,4 +391,39 @@
      -->
   </dependencies>
 
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                   BUILD                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <build>
+    <plugins>
+      <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>cobertura-maven-plugin</artifactId>
+    <configuration>
+        <format>xml</format>
+        <maxmem>256m</maxmem>
+        <!-- aggregated reports for multi-module projects -->
+        <aggregate>true</aggregate>
+    </configuration>
+</plugin>
+      <plugin>
+        <groupId>com.versioneye</groupId>
+        <artifactId>versioneye-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <apiKey>${VERSION_EYE_KEY}</apiKey>
+          <updatePropertiesAfterCreate>false</updatePropertiesAfterCreate>
+          <projectId>54876dff03a57b9cf2009956</projectId>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eluder.coveralls</groupId>
+        <artifactId>coveralls-maven-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+          <repoToken>${COVERALLS_TOKEN}</repoToken>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

@@ -30,11 +30,55 @@
   <dependencies>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
+      <artifactId>contract-verifier</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-spring-defaults</artifactId>
     </dependency>
     <dependency>
       <groupId>com.github.sebhoss.contract</groupId>
       <artifactId>contract-juel</artifactId>
     </dependency>
+    <dependency>
+      <groupId>de.odysseus.juel</groupId>
+      <artifactId>juel-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss</groupId>
+      <artifactId>null-analysis</artifactId>
+    </dependency>
   </dependencies>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                   BUILD                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <usedDependencies>
+            <!--
+              Ignore common annotations because @SuppressWarnings is not retained
+              in byte code. There the plugin detects a false positive.
+             -->
+            <usedDependency>com.github.sebhoss:suppress-warnings</usedDependency>
+          </usedDependencies>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.ning.maven.plugins</groupId>
+        <artifactId>maven-duplicate-finder-plugin</artifactId>
+        <version>1.0.9</version>
+        <configuration>
+          <ignoredResources>
+            <ignoredResource>META-INF/beans.xml</ignoredResource>
+          </ignoredResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

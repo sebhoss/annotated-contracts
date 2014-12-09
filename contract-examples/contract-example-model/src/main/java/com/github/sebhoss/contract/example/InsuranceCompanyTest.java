@@ -6,13 +6,13 @@
  */
 package com.github.sebhoss.contract.example;
 
-import org.eclipse.jdt.annotation.Nullable;
+import com.github.sebhoss.nullanalysis.Nullsafe;
+import com.github.sebhoss.warnings.CompilerWarnings;
+
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
-import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Test cases for the {@link InsuranceCompany}.
@@ -22,17 +22,24 @@ public abstract class InsuranceCompanyTest {
 
     /** Catches expected exceptions */
     @Rule
-    public ExpectedException   thrown = ExpectedException.none();
+    public ExpectedException thrown = ExpectedException.none();
 
-    @Nullable
-    protected InsuranceCompany insurance;
+    private InsuranceCompany insurance;
+
+    protected InsuranceCompany getInsuranceCompany() {
+        return insurance;
+    }
+
+    protected void setInsuranceCompany(final InsuranceCompany insurance) {
+        this.insurance = insurance;
+    }
 
     /**
      * Ensures that the insurance company can calculate payouts based on a positive damage input.
      */
     @Test
     public void shouldAcceptPositiveDamages() {
-        final double result = insurance.calculateCover(10);
+        final double result = Nullsafe.nullsafe(getInsuranceCompany()).calculateCover(10);
 
         Assert.assertEquals(5.0, result, 0d);
     }
@@ -45,7 +52,7 @@ public abstract class InsuranceCompanyTest {
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage("Reported damage must be positive!");
 
-        insurance.calculateCover(-10);
+        Nullsafe.nullsafe(getInsuranceCompany()).calculateCover(-10);
     }
 
     /**
@@ -56,7 +63,7 @@ public abstract class InsuranceCompanyTest {
         thrown.expect(IllegalStateException.class);
         thrown.expectMessage("We won't pay that!");
 
-        insurance.calculateCover(5001);
+        Nullsafe.nullsafe(getInsuranceCompany()).calculateCover(5001);
     }
 
     /**
@@ -67,7 +74,7 @@ public abstract class InsuranceCompanyTest {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("We can't pay that much!");
 
-        insurance.calculateCover(5000);
+        Nullsafe.nullsafe(getInsuranceCompany()).calculateCover(5000);
     }
 
 }

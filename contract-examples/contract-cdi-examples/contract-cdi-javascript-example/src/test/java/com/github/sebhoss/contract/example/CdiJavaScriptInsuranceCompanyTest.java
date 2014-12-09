@@ -29,6 +29,6 @@ public class CdiJavaScriptInsuranceCompanyTest extends InsuranceCompanyTest {
      */
     @Before
     public void bind() {
-        insurance = injectedCompany;
+        setInsuranceCompany(injectedCompany);
     }
 }

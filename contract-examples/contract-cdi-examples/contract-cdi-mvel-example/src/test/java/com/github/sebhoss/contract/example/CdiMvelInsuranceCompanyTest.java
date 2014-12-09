@@ -29,7 +29,7 @@ public class CdiMvelInsuranceCompanyTest extends InsuranceCompanyTest {
      */
     @Before
     public void bind() {
-        insurance = injectedCompany;
+        setInsuranceCompany(injectedCompany);
     }
 
 }

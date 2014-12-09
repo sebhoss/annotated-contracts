@@ -6,6 +6,9 @@
  */
 package com.github.sebhoss.contract.verifier;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**

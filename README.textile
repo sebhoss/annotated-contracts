@@ -1,4 +1,4 @@
-h1. annotated-contracts "!https://secure.travis-ci.org/sebhoss/annotated-contracts.png!":http://travis-ci.org/sebhoss/annotated-contracts "!https://www.ohloh.net/p/annotated-contracts/widgets/project_thin_badge.gif!":https://www.ohloh.net/p/annotated-contracts/
+h1. annotated-contracts "!https://www.ohloh.net/p/annotated-contracts/widgets/project_thin_badge.gif!":https://www.ohloh.net/p/annotated-contracts/ "!https://secure.travis-ci.org/sebhoss/annotated-contracts.png!":http://travis-ci.org/sebhoss/annotated-contracts !https://coveralls.io/repos/sebhoss/annotated-contracts/badge.png(Coverage Status)!:https://coveralls.io/r/sebhoss/annotated-contracts
 
 p. "Design by Contract":http://en.wikipedia.org/wiki/Design_by_contract based on annotations. It allows easy usage of contracts without any need for extra JVM parameters, JVM agents, special classloaders or compilers. Instead it leverages "dependency injection":http://en.wikipedia.org/wiki/Dependency_injection to capture method calls which are annotation with a contract. The project is highly flexible and can be extended to support new contract annotations and other contract clause definitions (see below).
 

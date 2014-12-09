@@ -12,6 +12,7 @@ import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 
 import com.github.sebhoss.nullanalysis.Nullsafe;
+import com.github.sebhoss.warnings.CompilerWarnings;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
@@ -20,6 +21,7 @@ class PaxExamConfiguration {
 
     @Produces
     @Default
+    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }

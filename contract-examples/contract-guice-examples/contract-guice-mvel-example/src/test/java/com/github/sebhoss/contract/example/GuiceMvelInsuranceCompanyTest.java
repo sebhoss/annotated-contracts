@@ -14,7 +14,7 @@ import org.junit.Before;
 /**
  * Test cases for a MVEL {@link InsuranceCompany}.
  */
-public class MvelInsuranceCompanyTest extends InsuranceCompanyTest {
+public class GuiceMvelInsuranceCompanyTest extends InsuranceCompanyTest {
 
     /**
      * Creates a new insurance company for each test.
@@ -22,7 +22,7 @@ public class MvelInsuranceCompanyTest extends InsuranceCompanyTest {
     @Before
     public void createCompany() {
         final Injector injector = Guice.createInjector(new GuiceMvelModule());
-        insurance = injector.getInstance(InsuranceCompany.class);
+        setInsuranceCompany(injector.getInstance(InsuranceCompany.class));
     }
 
 }

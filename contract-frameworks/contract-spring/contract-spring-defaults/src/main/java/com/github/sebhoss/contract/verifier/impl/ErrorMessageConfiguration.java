@@ -13,6 +13,9 @@ import ch.qos.cal10n.MessageConveyor;
 
 import com.github.sebhoss.warnings.CompilerWarnings;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Configuration for the {@link IMessageConveyor}.
  */

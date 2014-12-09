@@ -14,7 +14,7 @@ import org.junit.Before;
 /**
  * Test cases for a OGNL {@link InsuranceCompany}.
  */
-public class OgnlInsuranceCompanyTest extends InsuranceCompanyTest {
+public class GuiceOgnlInsuranceCompanyTest extends InsuranceCompanyTest {
 
     /**
      * Creates a new insurance company for each test.
@@ -22,7 +22,7 @@ public class OgnlInsuranceCompanyTest extends InsuranceCompanyTest {
     @Before
     public void createCompany() {
         final Injector injector = Guice.createInjector(new GuiceOgnlModule());
-        insurance = injector.getInstance(InsuranceCompany.class);
+        setInsuranceCompany(injector.getInstance(InsuranceCompany.class));
     }
 
 }

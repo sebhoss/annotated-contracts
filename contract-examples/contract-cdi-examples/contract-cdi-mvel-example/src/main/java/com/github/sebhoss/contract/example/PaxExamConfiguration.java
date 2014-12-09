@@ -17,11 +17,11 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.Service;
 
 // TODO: We only need this for pax-exam
-@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
 class PaxExamConfiguration {
 
     @Produces
     @Default
+    @SuppressWarnings(CompilerWarnings.STATIC_METHOD)
     Set<Service> services() {
         return Nullsafe.nullsafe(ImmutableSet.<Service> of());
     }

@@ -12,17 +12,17 @@ import com.google.inject.Injector;
 import org.junit.Before;
 
 /**
- * Test cases for a JUEL {@link InsuranceCompany}.
+ * Test cases for a JavaScript {@link InsuranceCompany}.
  */
-public class JuelInsuranceCompanyTest extends InsuranceCompanyTest {
+public class GuiceJavaScriptInsuranceCompanyTest extends InsuranceCompanyTest {
 
     /**
      * Creates a new insurance company for each test.
      */
     @Before
     public void createCompany() {
-        final Injector injector = Guice.createInjector(new GuiceJuelModule());
-        insurance = injector.getInstance(InsuranceCompany.class);
+        final Injector injector = Guice.createInjector(new GuiceJavaScriptModule());
+        setInsuranceCompany(injector.getInstance(InsuranceCompany.class));
     }
 
 }

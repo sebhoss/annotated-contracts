@@ -6,6 +6,8 @@
  */
 package com.github.sebhoss.contract.configuration;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * Enables Spring-AOP.

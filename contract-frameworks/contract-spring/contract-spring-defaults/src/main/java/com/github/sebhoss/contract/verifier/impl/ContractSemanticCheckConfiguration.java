@@ -11,6 +11,9 @@ import java.util.HashSet;
 import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
 import com.github.sebhoss.warnings.CompilerWarnings;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Configuration for the {@link ContractSemanticCheck}.
  */

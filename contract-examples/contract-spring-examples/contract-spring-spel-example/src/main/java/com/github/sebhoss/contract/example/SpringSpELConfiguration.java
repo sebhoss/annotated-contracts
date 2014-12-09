@@ -6,6 +6,10 @@
  */
 package com.github.sebhoss.contract.example;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
 import com.github.sebhoss.contract.configuration.DefaultSpELConfiguration;
 import com.github.sebhoss.warnings.CompilerWarnings;
 

@@ -7,6 +7,8 @@
 package com.github.sebhoss.contract.example;
 
 import org.junit.Before;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.github.sebhoss.warnings.CompilerWarnings;
 
@@ -22,7 +24,7 @@ public class SpringJUELInsuranceCompanyTest extends InsuranceCompanyTest {
     @SuppressWarnings(CompilerWarnings.RESOURCE)
     public void createCompany() {
         final ApplicationContext context = new AnnotationConfigApplicationContext(SpringJuelConfiguration.class);
-        insurance = context.getBean(InsuranceCompany.class);
+        setInsuranceCompany(context.getBean(InsuranceCompany.class));
     }
 
 }

@@ -12,6 +12,9 @@ import com.github.sebhoss.contract.aspect.ContractAspect;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.nullanalysis.Nullsafe;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Configuration for the {@link ContractAspect}.
  */

@@ -8,6 +8,9 @@ package com.github.sebhoss.contract.verifier;
 
 import javax.el.ExpressionFactory;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import com.github.sebhoss.nullanalysis.Nullsafe;
 import com.github.sebhoss.warnings.CompilerWarnings;
 

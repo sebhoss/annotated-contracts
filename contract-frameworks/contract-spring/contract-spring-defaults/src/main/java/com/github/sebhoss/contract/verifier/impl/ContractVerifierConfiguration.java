@@ -11,7 +11,9 @@ import javax.inject.Inject;
 import com.github.sebhoss.contract.verifier.ContractContextFactory;
 import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
 import com.github.sebhoss.contract.verifier.ParameterNamesLookupConfiguration;
-import com.github.sebhoss.warnings.CompilerWarnings;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Configuration for the {@link ContractVerifierFactory}.
@@ -47,7 +49,6 @@ public class ContractVerifierConfiguration {
      * @return A context-based {@link ContractVerifierFactory}.
      */
     @Bean
-    @SuppressWarnings(CompilerWarnings.NULL)
     public ContractVerifierFactory contextBasedFactory() {
         return new ContextBasedContractVerifierFactory(retrieval.annotationBasedRetrieval(),
                 syntaxCheck.noSyntaxChecks(), namesLookup.localVariableTableLookup(), semanticCheck.noSemanticChecks(),

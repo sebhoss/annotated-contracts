@@ -13,6 +13,9 @@ import ch.qos.cal10n.IMessageConveyor;
 import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
 import com.github.sebhoss.nullanalysis.Nullsafe;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Configures the {@link ContractExceptionFactory}.
  */

@@ -6,6 +6,9 @@
  */
 package com.github.sebhoss.contract.configuration;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
 import com.github.sebhoss.contract.verifier.JuelConfiguration;
 
 /**
