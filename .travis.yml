@@ -6,3 +6,5 @@ env:
   - secure: Opjnt4LKgJcC+OqMV6s+aok6ocSS3iREtxTH67HdH+52v1CQxRiBmKx4omxoPwYS5pw2/z87yzYNz4bMMHehnU97aNpWGnXXeMYmbKah5pl5QHJ0nWDyvrluNIAsAkt5IyPUeIVfu+RcvZUNNkMPKFXg8pzD0bvUed05oCzVTCU=
   - secure: hWHwRA7x5SiqWNh0BIUVMkMmTbWiEDqssI6075YPiAWEwwa46EZTk3+57JQ94nUKbMvKyXHMAviOTiW+TvOWRnfK3a+92ksufe/l+U0N+OT8/6x6KGL8q/y3ULsu8wrl7VigRT2lW46EiT6h+K7iR9dRNM7At6Dws/wMjzraRYk=
 sudo: false
+after_success:
+  - mvn clean test jacoco:report coveralls:report
