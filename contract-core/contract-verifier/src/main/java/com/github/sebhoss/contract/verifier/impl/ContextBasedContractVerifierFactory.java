@@ -1,28 +1,34 @@
 /*
- * Copyright © 2012 Sebastian Hoß <mail@shoss.de>
- * This work is free. You can redistribute it and/or modify it under the
- * terms of the Do What The Fuck You Want To Public License, Version 2,
- * as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+ * This is free and unencumbered software released into the public domain.
+ *
+ * Anyone is free to copy, modify, publish, use, compile, sell, or
+ * distribute this software, either in source code form or as a compiled
+ * binary, for any purpose, commercial or non-commercial, and by any
+ * means.
+ *
+ * In jurisdictions that recognize copyright laws, the author or authors
+ * of this software dedicate any and all copyright interest in the
+ * software to the public domain. We make this dedication for the benefit
+ * of the public at large and to the detriment of our heirs and
+ * successors. We intend this dedication to be an overt act of
+ * relinquishment in perpetuity of all present and future rights to this
+ * software under copyright law.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * For more information, please refer to <http://unlicense.org>
  */
 package com.github.sebhoss.contract.verifier.impl;
 
-import java.lang.reflect.Method;
-import java.util.Arrays;
+import com.github.sebhoss.contract.verifier.*;
 
 import javax.inject.Inject;
-
-import com.github.sebhoss.contract.annotation.Contract;
-import com.github.sebhoss.contract.verifier.ContractContext;
-import com.github.sebhoss.contract.verifier.ContractContextFactory;
-import com.github.sebhoss.contract.verifier.ContractExceptionFactory;
-import com.github.sebhoss.contract.verifier.ContractRetrieval;
-import com.github.sebhoss.contract.verifier.ContractSemanticCheck;
-import com.github.sebhoss.contract.verifier.ContractSyntaxCheck;
-import com.github.sebhoss.contract.verifier.ContractVerifier;
-import com.github.sebhoss.contract.verifier.ContractVerifierFactory;
-import com.github.sebhoss.contract.verifier.ParameterNamesLookup;
-import com.github.sebhoss.nullanalysis.Nullsafe;
-import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Creates {@link ContractVerifier} which are based on a {@link ContractContext}.
@@ -51,9 +57,12 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
      *            The factory to create contract violation exceptions.
      */
     @Inject
-    public ContextBasedContractVerifierFactory(final ContractRetrieval contractRetrieval,
-            final ContractSyntaxCheck contractSyntaxCheck, final ParameterNamesLookup parameterNamesLookup,
-            final ContractSemanticCheck contractSemanticCheck, final ContractContextFactory contractContextFactory,
+    public ContextBasedContractVerifierFactory(
+            final ContractRetrieval contractRetrieval,
+            final ContractSyntaxCheck contractSyntaxCheck,
+            final ParameterNamesLookup parameterNamesLookup,
+            final ContractSemanticCheck contractSemanticCheck,
+            final ContractContextFactory contractContextFactory,
             final ContractExceptionFactory contractExceptionFactory) {
         this.contractRetrieval = contractRetrieval;
         this.contractSyntaxCheck = contractSyntaxCheck;
@@ -65,189 +74,8 @@ public final class ContextBasedContractVerifierFactory implements ContractVerifi
 
     @Override
     public ContractVerifierBuilder createContractVerifier() {
-        return new ContextBasedContractVerifierBuilder();
-    }
-
-    /**
-     * @return the contractRetrieval
-     */
-    ContractRetrieval getContractRetrieval() {
-        return contractRetrieval;
-    }
-
-    /**
-     * @return the contractSyntaxCheck
-     */
-    ContractSyntaxCheck getContractSyntaxCheck() {
-        return contractSyntaxCheck;
-    }
-
-    /**
-     * @return the parameterNamesLookup
-     */
-    ParameterNamesLookup getParameterNamesLookup() {
-        return parameterNamesLookup;
-    }
-
-    /**
-     * @return the contractSemanticCheck
-     */
-    ContractSemanticCheck getContractSemanticCheck() {
-        return contractSemanticCheck;
-    }
-
-    /**
-     * @return the contractContextFactory
-     */
-    ContractContextFactory getContractContextFactory() {
-        return contractContextFactory;
-    }
-
-    /**
-     * @return the contractExceptionFactory
-     */
-    ContractExceptionFactory getContractExceptionFactory() {
-        return contractExceptionFactory;
-    }
-
-    /**
-     * Builds {@link ContractVerifier}
-     */
-    public class ContextBasedContractVerifierBuilder implements ContractVerifierBuilder {
-
-        private Method          method;
-
-        private Object          instance;
-
-        private Object[]        arguments;
-
-        private Contract        contract;
-
-        private String[]        parameterNames;
-
-        private ContractContext context;
-
-        @Override
-        public ContractVerifierBuilder method(final Method newMethod) {
-            method = newMethod;
-
-            return this;
-        }
-
-        @Override
-        public ContractVerifierBuilder instance(final Object newInstance) {
-            instance = newInstance;
-
-            return this;
-        }
-
-        @Override
-        public ContractVerifierBuilder arguments(final Object[] newArguments) {
-            arguments = Arrays.copyOf(newArguments, newArguments.length);
-
-            return this;
-        }
-
-        @Override
-        public ContractVerifierBuilder contract(final Contract newContract) {
-            contract = newContract;
-
-            return this;
-        }
-
-        @Override
-        public ContractVerifierBuilder parameterNames(final String[] newParameterNames) {
-            parameterNames = Arrays.copyOf(newParameterNames, newParameterNames.length);
-
-            return this;
-        }
-
-        @Override
-        public ContractVerifierBuilder context(final ContractContext newContext) {
-            context = newContext;
-
-            return this;
-        }
-
-        @Override
-        public ContractVerifier get() {
-            if (needsContractRetrieval()) {
-                retrieveContract();
-            }
-
-            checkContractSyntax();
-
-            if (needsParameterNamesLookup()) {
-                lookupParameterNames();
-            }
-
-            checkContractSemantic();
-
-            if (missesContractContext()) {
-                createContractContext();
-            }
-
-            return new ContextBasedContractVerifier(getContract(), getContext(), getContractExceptionFactory());
-        }
-
-        private boolean needsContractRetrieval() {
-            return contract == null;
-        }
-
-        private void retrieveContract() {
-            contract = getContractRetrieval().retrieveContract(getMethod());
-        }
-
-        private void checkContractSyntax() {
-            getContractSyntaxCheck().validate(getContract());
-        }
-
-        private boolean needsParameterNamesLookup() {
-            return parameterNames == null;
-        }
-
-        private void lookupParameterNames() {
-            parameterNames = getParameterNamesLookup().lookupParameterNames(getMethod());
-        }
-
-        private void checkContractSemantic() {
-            getContractSemanticCheck().validate(getContract(), getParameterNames());
-        }
-
-        private boolean missesContractContext() {
-            return context == null;
-        }
-
-        private void createContractContext() {
-            context = getContractContextFactory().createContext(getInstance(), getArguments(), getParameterNames());
-        }
-
-        private Contract getContract() {
-            return Nullsafe.nullsafe(contract);
-        }
-
-        private Method getMethod() {
-            return Nullsafe.nullsafe(method);
-        }
-
-        @SuppressWarnings(CompilerWarnings.NULL)
-        private String[] getParameterNames() {
-            return Nullsafe.nullsafe(parameterNames);
-        }
-
-        @SuppressWarnings(CompilerWarnings.NULL)
-        private Object[] getArguments() {
-            return Nullsafe.nullsafe(arguments);
-        }
-
-        private Object getInstance() {
-            return Nullsafe.nullsafe(instance);
-        }
-
-        private ContractContext getContext() {
-            return Nullsafe.nullsafe(context);
-        }
-
+        return new ContextBasedContractVerifierBuilder(contractRetrieval, contractSyntaxCheck, parameterNamesLookup, contractSemanticCheck,
+                contractContextFactory, contractExceptionFactory);
     }
 
 }

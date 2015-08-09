@@ -4,3 +4,4 @@ target/
 .project
 .classpath
 .pmd
+*.iml
