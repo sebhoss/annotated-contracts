@@ -60,6 +60,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <properties>
     <failBuildOnDuplicates>false</failBuildOnDuplicates>
+    <failBuildOnDependencyVersionProblem>false</failBuildOnDependencyVersionProblem>
     <failBuildOnDependencyProblem>false</failBuildOnDependencyProblem>
   </properties>
 
